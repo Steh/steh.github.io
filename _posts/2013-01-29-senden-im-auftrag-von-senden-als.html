@@ -1,0 +1,30 @@
+---
+layout: post
+title: Senden im Auftrag von / Senden als
+categories:
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+- Verwaltungskonsole
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '217'
+  _wp_old_slug: '217'
+  _elasticsearch_indexed_on: '2013-01-29 08:56:19'
+  geo_public: '0'
+---
+<h1>Senden im Auftrag von</h1>
+<h2>Verwaltungskonsole</h2>
+Nachrichtenübermittlungseinstellungen -&gt; Zustellungsoptionen
+<h2>Powershell</h2>
+[code lang="powershell" light="true"]Set-Mailbox  -GrantSendOnBehalfTo Vollständiger-Domain-Name[/code]
+<h1>Senden als</h1>
+<h2>Verwaltungskonsole</h2>
+Rechtsklick auf Mailbox -&gt; Berechtigung "Senden als" verwalten
+<h2>Powershell</h2>
+[code lang="powershell" light="true"]Add-AdPermission  -user  -ExtendedRights &quot;Send As&quot;[/code]

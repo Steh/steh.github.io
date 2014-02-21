@@ -1,0 +1,22 @@
+---
+layout: post
+title: Getrennte Mailboxen wieder einbinden
+categories:
+- Exchange
+tags:
+- Exhcange
+- GetrennteMailbox
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '8'
+  _wp_old_slug: '8'
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _elasticsearch_indexed_on: '2012-10-30 15:36:00'
+---
+[code language="powershell" light="true"]#Bindet eine gelöschte Mailbox wieder an einen AD Benutzer
+Connect-Mailbox -Identity &quot;RunspaceId-der-gelöschten-Mailbox&quot; -Database &quot;Ziel-Datenbank&quot; -User &quot;ADUser&quot; -Alias &quot;ExchangeAlias&quot;[/code]

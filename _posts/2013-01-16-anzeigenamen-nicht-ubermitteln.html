@@ -1,0 +1,19 @@
+---
+layout: post
+title: Anzeigenamen nicht übermitteln
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '144'
+  _wp_old_slug: '144'
+  _elasticsearch_indexed_on: '2013-01-16 12:56:05'
+---
+Exchange-Verwaltungskonsole -&gt; Organisationskondiguration -&gt; Hub-Transport -&gt; Remotedomänen
+<a href="http://stiki.de/blog/?attachment_id=145" rel="attachment wp-att-145"><img class="alignnone size-medium wp-image-145" alt="anzeigenname_unterdrücken" src="http://steh-blog.de/wp-content/uploads/2013/01/unbenannt1.png?w=269&h=300" width="269" height="300" /></a>
+
+Powershell:
+<pre><code>Set-RemoteDomain <em>default</em> -DisplaySenderName:$false</code></pre>

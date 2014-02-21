@@ -1,0 +1,24 @@
+---
+layout: post
+title: Individuelle Filter für Adressrichtlinien
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '187'
+  _wp_old_slug: '187'
+  _elasticsearch_indexed_on: '2013-01-23 14:31:40'
+---
+<h2>Filter erstellen</h2>
+<p>Filter nach NutzerMailboxen die Stiki im Firmenfeld haben oder Dynamische Verteilerlisten sind die mit VL-Stiki-* beginnen.
+<pre>(((Company -eq 'Stiki') -and (RecipientType -eq 'UserMailbox')) -or ((Alias -like 'VL-Stiki-*') -and (RecipientType -eq 'DynamicDistributionGroup')))</pre></p>
+<h2>Filter testen</h2>
+Gibt alle Objekte zurück die auf den Filter zutreffen 
+<pre>Get-Recipient -RecipientPreviewFilter "FILTER"</pre>
+<h2>Filter setzten</h2>
+Setzt den Filter für die angegebene Policy
+<pre>Set-EmailAdressPolicy ALIAS -RecipientFilter "FILTER"</pre>

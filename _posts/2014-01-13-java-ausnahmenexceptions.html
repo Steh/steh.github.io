@@ -1,0 +1,57 @@
+---
+layout: post
+title: 'Java: Ausnahmen/Exceptions'
+categories:
+- Java
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+<h1>Try und Catch - Fehlerbehandlung in der Methode</h1>
+
+<p>Beispiel für <em>Try and Catch</em>:
+Im Try Block wird die Ausnahmen MyException ausgelöst, der Catch Block fängt diese ab und gibt die Fehlermeldung aus.
+Alle anderen Fehler sollten im zweiten Block aufgefangen werden.</p>
+
+<pre><code>try{  
+   throw new MyException("Fehler aufgetreten...");  
+} catch (MyException e) {  
+   System.out.print(e.getMessage());  
+} catch(Exception e) {  
+   System.out.print("Unbekannter Fehler aufgetreten...");  
+} [finally] {
+  System.out.println("Der Finally Block, ist optional, wird immer ausgeführt");
+}
+</code></pre>
+
+<h1>Eigene Ausnahmen</h1>
+
+<p>Es ist auch möglich die Ausnahmebehandlung weiter zu reichen.
+Dazu wird nach den Parametern "throws <em>EXCEPTION</em>" angegeben.</p>
+
+<pre><code>/** Wenn die Ware nicht auf den LKW passt wird eine Ausnahme ausgelöst **/
+public void beladen(int ware) throws beladenAusnahme {
+  if((ladung + ware) &gt; maxLadung) {
+     throw new beladenAusnahme(ware, ladung);
+  } else {
+     ladung += ware;
+  }
+}
+</code></pre>
+
+<p>Entsprechnende Ausnahme:</p>
+
+<pre><code>public class beladenAusnahme extends Exception {
+   int ware;
+   int ladung;
+
+   public DivisionException(int waree, int ladung) {
+      super ("LKW kann nicht beladen werden: " + (ladung + ware));
+   }
+}
+</code></pre>

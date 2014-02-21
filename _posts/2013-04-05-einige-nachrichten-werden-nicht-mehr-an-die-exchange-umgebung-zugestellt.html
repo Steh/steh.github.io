@@ -1,0 +1,26 @@
+---
+layout: post
+title: Einige Nachrichten werden nicht mehr an die Exchange Umgebung zugestellt
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '324'
+  _wp_old_slug: '324'
+  _elasticsearch_indexed_on: '2013-04-05 09:45:01'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+---
+1. Die Warteschlange überprüfen
+[code lang="powershell"]#Gibt die NextHopDomain der Warteschlange mit dem Fehler Code 451... aus
+(get-queue | where {$_.LastError -like &quot;451 4.4.0*&quot;}).NextHopDomain[/code]
+2. Betroffene Connectoren anzeigen
+[code lang="powershell"]#Gibt die ... Empfangskonnektoren aus
+get-exchangeserver | where {$_.site -like '*'+$remotesite} | get-transportserver | Get-ReceiveConnector | where {$_.Bindings -like '*:25*'} | where {$_.AuthMechanism -notlike '*Exchange*'}[/code]
+3. Überprüfen ob die Connectoren, bei "<em>Authentication</em>", die "<em>Exchange Server authentication</em>" aktiviert haben.
+
+<a title="Technet" href="http://support.microsoft.com/kb/979175/en-us" target="_blank">Quelle: Technet</a>

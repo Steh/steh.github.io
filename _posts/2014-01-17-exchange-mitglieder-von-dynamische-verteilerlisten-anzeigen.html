@@ -1,0 +1,20 @@
+---
+layout: post
+title: 'Exchange: Mitglieder von Dynamische Verteilerlisten anzeigen'
+categories:
+- Exchange
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+  _wpas_done_all: '1'
+  sharing_disabled: '1'
+---
+<pre><code>$DyDiMe = Get-DynamicDistributionGroup -Identity dg-steh-blog
+Get-Recipient -RecipientPreviewFilter $DyDiMe.RecipientFilter
+</code></pre>

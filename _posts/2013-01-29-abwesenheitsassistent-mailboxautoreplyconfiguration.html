@@ -1,0 +1,31 @@
+---
+layout: post
+title: Abwesenheitsassistent (MailboxAutoReplyConfiguration)
+categories:
+- Abwesenheitsassistent
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '203'
+  _wp_old_slug: '203'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-01-29 06:55:24'
+---
+Auch OoO genannt <strong>Out of Office</strong>
+
+Assisten aktivieren:
+[code lang="powershell" light="true"]Set-MailboxAutoReplyConfiguration -Identity stiki -AutoReplyState Scheduled -StartTime &quot;1/1/2013 08:00:00&quot; -EndTime &quot;1/16/2013 17:00:00&quot; -InternalMessage &quot;Ich bin im Urlaub&quot;-ExternalMessage &quot;Ich bin bis zum 16.01.2013 im Urlaub&quot;[/code]
+Mailboxen die OoO aktiviert haben:
+[code lang="powershell" light="true"]Get-Mailbox | Get-MailboxAutoReplyConfiguration | Where-Object { $_.AutoReplyState –eq “scheduled”[/code]
+Quellen und Referenzen:
+<ul>
+	<li><a title="Technet: Set-MailboxAutoReplyConfiguration" href="http://technet.microsoft.com/en-us/library/dd638081.aspx" target="_blank">Technet: Set-MailboxAutoReplyConfiguration</a></li>
+	<li><a title="Technet: Get-MailboxAutoReplyConfiguration" href="http://technet.microsoft.com/en-us/library/dd638081.aspx" target="_blank">Technet: Get-MailboxAutoReplyConfiguration</a></li>
+</ul>

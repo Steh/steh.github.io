@@ -1,0 +1,29 @@
+---
+layout: post
+title: Mailbox umhängen
+categories:
+- Exchange
+tags:
+- connect mailbox
+- Exchange
+- GetrennteMailbox
+- Mailbox
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _elasticsearch_indexed_on: '2013-05-27 11:07:14'
+---
+<ol>
+	<li>Mailbox vom alten User trennen</li>
+	[code language="Powershell" light="true"]Disable-Mailbox stiki@stiki.de[/code]
+	<li>Datenbank Updaten</li>
+	[code language="Powershell" light="true"]Get-MailboxDatabase &quot;stiki-db01&quot; | Clean-MailboxDatabase[/code]
+	<li>Gelöschte Mailbox suchen</li>
+	[code language="Powershell" light="true"]Get-MailboxStatistics -server &quot;mbx01&quot; | Where {$_.DisconnectDate -ne $null}[/code]
+	<li>Mailbox anbinden</li>
+	[code language="Powershell" light="true"]Connect-Mailbox -Identity 'Mailbox-Guid' -Database 'stiki-db01' -User 'stehson' -Alias 'stehson'[/code]
+</ol>
+

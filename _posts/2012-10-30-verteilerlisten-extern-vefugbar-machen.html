@@ -1,0 +1,29 @@
+---
+layout: post
+title: 'Verteilerlisten: extern vefügbar machen'
+categories:
+- Exchange
+tags:
+- Powershell
+- Verteilerliste
+- Verwaltungskonsole
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '12'
+  _wp_old_slug: '12'
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _elasticsearch_indexed_on: '2012-10-30 15:38:09'
+---
+<h2>Exchange Verwaltungs Konsolen:</h2>
+<ol>
+	<li>Eigenschaften</li>
+	<li>Nachrichtenübermittlungseinstellungen</li>
+	<li>“Einstellungen für die Nachrichtenzustellung” </li>
+	<li>“Authentifizierung aller Absender anfordern” dort Haken entfernen</li>
+</ol>
+<h2>PowerShell:</h2>
+[code language="Powershell" light="true"]Set-DistributionGroup -BypassSecurityGroupManagerCheck -RequireSenderAuthenticationEnabled:$false -Identity &quot;Name-der-VerteilerGruppe&quot;[/code]

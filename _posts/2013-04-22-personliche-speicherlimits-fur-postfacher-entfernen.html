@@ -1,0 +1,23 @@
+---
+layout: post
+title: Persönliche Speicherlimits für Postfächer entfernen
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+- Status
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '393'
+  _wp_old_slug: '393'
+  _elasticsearch_indexed_on: '2013-04-22 07:08:18'
+---
+[code language="powershell" light="true"]#Benutzen der Standardwerte für die Postfachdatenbank
+#entfernt alle persönlichen Limits
+Set-Mailbox -UseDatabaseQuotaDefaults $true -IssueWarningQuota 'unlimited' -ProhibitSendQuota 'unlimited' -ProhibitSendReceiveQuota 'unlimited'[/code]

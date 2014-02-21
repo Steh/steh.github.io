@@ -1,0 +1,18 @@
+---
+layout: post
+title: Eigene Filter für Dynamische verteilerlisten erstellen
+categories:
+- Exchange
+tags:
+- Exchange
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '22'
+  _wp_old_slug: '22'
+  _elasticsearch_indexed_on: '2012-10-30 15:40:58'
+---
+<pre><code>Set-DynamicDistributionGroup -Identity '&lt;GRUPPEN NAME&gt;' -RecipientFilter {Department -like 'Sales*'}</code></pre>

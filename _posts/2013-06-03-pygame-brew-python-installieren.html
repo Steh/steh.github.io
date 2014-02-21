@@ -1,0 +1,30 @@
+---
+layout: post
+title: 'Pygame: brew Python installieren'
+categories:
+- MacOS
+- Pygame
+tags:
+- MacOS
+- Pygame
+- Python
+status: draft
+type: post
+published: false
+meta:
+  sharing_disabled: '1'
+  switch_like_status: '1'
+---
+[code language="bash"]# brew basiertes Python installieren
+brew install python
+brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
+
+# Testet was überschrieben wird
+brew link --overwrite --dry-run python
+brew link --overwrite python[/code]
+
+Pygames Downloaden sourc
+config.py ausführen
+setup.py build
+setup.py install
+

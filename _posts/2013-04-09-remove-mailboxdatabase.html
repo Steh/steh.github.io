@@ -1,0 +1,23 @@
+---
+layout: post
+title: Remove MailboxDatabase
+categories:
+- Database
+- Exchange
+- Exchange 2010
+- PowerShell
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  original_post_id: '339'
+  _wp_old_slug: '339'
+---
+searching for all copy´s
+<pre><code>Get-MailboxDatabaseCopyStatus &lt;MailboxDatabase&gt;</code></pre>
+<a href="http://steh-blog.de/wp-content/uploads/2013/04/removemailboxdatabase01.png"><img src="http://steh-blog.de/wp-content/uploads/2013/04/removemailboxdatabase01.png?w=300&h=28" alt="removeMailboxDatabase01" width="300" height="28" class="alignnone size-medium wp-image-340" /></a>
+remove copy´s
+<pre>code&gt;Remove-MailboxDatabaseCopy &lt;MailboxDatabaseServer&gt;</code></pre>
+
+Delete the Log- and Mailboxfile on both Mailboxservers.

@@ -1,0 +1,54 @@
+---
+layout: post
+title: Verschiedene Leistungsdaten abfragen
+categories:
+- Exchange
+tags:
+- ActiveSync
+- get-counter
+- OWA
+- Powershell
+- RPC
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _elasticsearch_indexed_on: '2013-05-27 12:34:38'
+---
+[code language="powershell" light="true"]#Gibt die Anzahl der aktiven RPC Benutzer aus
+
+$RPCS = Get-Counter &quot;MSExchange RpcClientAccessAnzahl Benutzer&quot; -ComputerName cas01.stiki.de
+$RPCS.CounterSamples[0].CookedValue[/code]
+<p style="text-align:center;"><span style="color:#ff0000;"><strong>DIE COUNTER WURDEN LOKALISIERT: "Anzahl Benuter" entspricht "User Count"</strong></span></p>
+
+<h1>Weitere Counter</h1>
+Eine übersicht aller verfügbaren <strong>Counter</strong> kann mit diesem  Befehl abgerufen werden:
+
+[code language="powershell" light="true"]Get-Counter -CounterList * -Computername cas01.stiki.de[/code]
+
+<strong>Hier einige Counter Beispiele:</strong>
+<span style="color:#808080;"><em>Beim Abfragen der Werte ist zu beachten, dass die Counter lokalisiert wurden.
+Und entsprechend der Systemsprache der Counter ausgewählt werden muss.</em></span>
+<pre>RPC Sessions
+Deutsch: MSExchange RpcClientAccessAnzahl Benutzer
+English: MSExchange RpcClientAccessUser Count
+
+OWA Sessions
+Deutsch: MSExchange OWAAktuelle eindeutige Benutzer
+English: MSExchange OWACurrent Unique Users
+
+ActiveSync
+Deutsch: MSExchange ActiveSyncAktuelle Anforderungen
+English: MSExchange ActivSyncConnections Current
+
+Imap
+Deutsch: MSExchangeImap4(*)Aktuelle Verbindungen
+English: MSExchangeImap4(*)Connections Current
+
+POP3
+Deutsch: MSExchangePop3(*)Aktuelle Verbindungen
+English: MSExchangePop3(*)Connections Current</pre>
+<a title="Mikepfeifer" href="http://www.mikepfeiffer.net/2011/04/determine-the-number-of-active-users-on-exchange-2010-client-access-servers-with-powershell/">Quelle</a>

@@ -1,0 +1,21 @@
+---
+layout: post
+title: Mailbox verschieben
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '93'
+  _wp_old_slug: '93'
+  _elasticsearch_indexed_on: '2012-11-26 07:55:49'
+---
+
+<pre class="lang:ps decode:true " title="MoveRequest">#Verschiebt nur die Mailbox, nicht das Archiv.
+New-MoveRequest -Identity Michael -targetDatabase MailboxDB-Stiki -PrimaryOnly
+
+#Status der Verschiebeanforderung anzeigen, inklusive ausführlichem Report
+Get-MoveRequestStatistics -Identity Michael -IncludeReport
+</pre> 

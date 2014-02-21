@@ -1,0 +1,24 @@
+---
+layout: post
+title: 'PowerShell 3.0: Out-GridView -PassThru'
+categories:
+- Exchange
+- PowerShell
+tags:
+- PowerShell 3.0
+status: publish
+type: post
+published: true
+meta:
+  geo_public: '0'
+  _publicize_pending: '1'
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _elasticsearch_indexed_on: '2013-07-19 08:56:25'
+---
+Der Parameter PassThru leitet die Markierten ([STRG]+LinksKlick) Spalten an den nächsten Befehl weiter.
+
+<strong>Beispiel:</strong>
+[code lang="powershell" light="true"]#Gibt alle ActiveSync Geräte in einer Tabelle aus
+#leitet die Markierten Spalten an den nächsten Befehl weiter
+Get-ActiveSyncDevice | Out-GridView -PassThru | Get-ActiveSyncDeviceStatistics [/code]

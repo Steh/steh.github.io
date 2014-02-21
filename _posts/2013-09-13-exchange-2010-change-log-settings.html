@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'Exchange 2010: Change Log Settings'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _wpas_done_all: '1'
+  sharing_disabled: '1'
+  _edit_last: '1'
+---
+The Log Settings are located in <em>..\MicrosoftExchange Server\V14\Bin</em>.
+<ul>
+	<li>microsoft.exchange.addressbook.service.exe.config</li>
+	<li>Microsoft.Exchange.RpcClientAccess.Service.exe.config</li>
+	<li>...</li>
+</ul>
+In these Files you can Change the:
+<ul>
+	<li>LogPath</li>
+	<li>MaxDirectorySize</li>
+	<li>MaxRetentionPeriod</li>
+</ul>
+
+After Changes you have to restart the affected Service.

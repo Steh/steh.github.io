@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Exchange: Funktionspostfächer administrieren"
+description: "Erstellen und Administrieren von Funktionpostfächern mit der PowerShell"
+category: Exchange
+tags: ["Exchange", "PowerShell", "Funktionpostfächer", "Shared-Mailbox"]
+---
+# Erstellen von Funktionspostfächern
+
+    #Neues Funktionspostfach
+    New-Mailbox -UserPrincipalName <alias>@<domain> -Alias <alias> -Name <Name> -Database <Database> -OrganizationalUnit <OrganisationalUnit> -Shared
+
+	# Bestehende Mailbox konvertieren
+    Get-Mailbox  | Set-Mailbox -type Shared
+
+# Rechte vergeben
+## Vollzugriff
+Vergibt Vollzugriff auf alle Unterordner eines bestimmten Postfachs und zeigt es Automatisch in Outlook an.
+
+    Add-MailboxPermission -Identity "" -User  -AccessRights Fullaccess -InheritanceType all -Automapping $true
+
+## Senden Als
+
+    Add-MailboxPermission -Identity "" -User  -ExtendedRights 'Send-as'
+
+## Manager
+
+    Set-User -IgnoreDefaultScope -Manager " -Identity ""
+
+{% include JB/setup %}
