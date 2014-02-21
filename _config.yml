@@ -126,7 +126,4 @@ JB :
   # Setting any helper's provider to 'custom' will bypass the helper code
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
-  # where [HELPER] is the name of the helper you are overriding.
-  
-=======
->>>>>>> 24673724694ae5dbeba85f6f06176c6b978cc59a
+  # where [HELPER] is the name of the helper you are overriding
