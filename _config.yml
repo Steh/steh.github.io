@@ -10,21 +10,14 @@ extensions: [fenced_code_blocks]
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-<<<<<<< HEAD
-title :		Steh-Blog.de
-tagline: 	PowerShell
-author :	Steh Sa
-  name :	Steh Sa
-  email :	stehsa@email.test
-  github :	steh
-=======
+
 title : Steh-Blog.de
 tagline: PowerShell und was mir sonst noch so in die Quere kommt
 author : 
   name : Steh Sa
   email : stehsa@posteo.de
   github : steh
->>>>>>> 24673724694ae5dbeba85f6f06176c6b978cc59a
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
