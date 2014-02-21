@@ -6,7 +6,6 @@ title: Steh-Blog.de
 tagline: PowerShell und alles
 ---
 
-<<<<<<< HEAD
 <!-- Show last 5 posts here -->
 {% for post in site.posts limit: 5 %}
 <article>
