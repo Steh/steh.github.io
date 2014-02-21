@@ -1,12 +1,9 @@
 ---
-<<<<<<< HEAD
 layout: default
 title: Home
-=======
 layout: page
 title: Steh-Blog.de
 tagline: PowerShell und alles
->>>>>>> 24673724694ae5dbeba85f6f06176c6b978cc59a
 ---
 
 <<<<<<< HEAD
@@ -25,10 +22,8 @@ tagline: PowerShell und alles
 
 </article>
 {% endfor %}
-=======
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
->>>>>>> 24673724694ae5dbeba85f6f06176c6b978cc59a
