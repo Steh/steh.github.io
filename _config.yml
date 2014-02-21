@@ -79,7 +79,7 @@ JB :
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
   #
-  comments :
+  comments : 
     provider : false
     disqus :
       short_name : jekyllbootstrap
@@ -97,10 +97,10 @@ JB :
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
-  analytics :
-    provider : false 
+  analytics :	
+    provider : 	false 
     google : 
-        tracking_id : 'UA-***'
+        tracking_id : 'UA-123-12'
     getclicky :
       site_id : 
     mixpanel :
@@ -128,3 +128,5 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
+=======
+>>>>>>> 24673724694ae5dbeba85f6f06176c6b978cc59a
