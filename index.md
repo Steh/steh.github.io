@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Steh-Blog.de
 tagline: PowerShell und alles
 ---
