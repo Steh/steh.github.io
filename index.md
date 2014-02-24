@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Home
 layout: page
 title: Steh-Blog.de
