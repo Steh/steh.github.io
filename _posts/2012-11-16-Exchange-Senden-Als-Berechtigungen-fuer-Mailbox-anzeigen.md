@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Senden als Berechtigungen für Mailbox anzeigen
+title: Exchange: Senden-Als Berechtigungen für Mailbox anzeigen
 categories: [Exchange]
 tags: []
 meta:
