@@ -2,7 +2,6 @@
 layout: page
 title: Steh-Blog.de
 tagline: PowerShell und alles
-group: navigation
 ---
 {% include JB/setup %}
 
