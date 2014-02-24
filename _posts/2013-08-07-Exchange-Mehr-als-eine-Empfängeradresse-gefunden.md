@@ -23,7 +23,9 @@ Empfänger suchen
 
 ## Bereinigen
 Open ADSI Edit an navigate to the User you want to change:
+
 <a href="http://steh-blog.de/wp-content/uploads/2013/08/adsiedit-suche.png"><img src="http://steh-blog.de/wp-content/uploads/2013/08/adsiedit-suche-300x295.png" alt="adsiedit-suche" width="300" height="295" class="alignnone size-medium wp-image-846" /></a>
+
 Organizational Unit from desired user
 
 Now you have to change the usern LegacyExchangeDN to an <strong>unique</strong> one.
