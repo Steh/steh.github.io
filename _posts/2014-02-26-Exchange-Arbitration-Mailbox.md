@@ -8,7 +8,7 @@ autor: Steh Sa
 ---
 ## Was sind diese "Arbitration" Mailboxen
 
-   Arbitration = Vermittlung
+    Arbitration = Vermittlung
 
 Sind Vermittlungspostfächer die zum speichern von organisationsweiten Daten verwendet werden. 
 zum Beispiel: Administrator-Überwachungsprotokolle, eDiscovery-Suchmetadaten, Unified Messaging-Daten
@@ -23,8 +23,8 @@ Listen von Arbitration Mailboxen:
 
 ## PowerShell Befehle 
 
-   # Mailboxen anzeigen
-   Get-Mailbox -Arbitration
+    # Mailboxen anzeigen
+    Get-Mailbox -Arbitration
 
 ## Mailboxen verschieben
 Wenn die Server auf denen die Arbitration Mailboxen liegen gelöscht werden müssen die Mailboxen verschoben werden.
@@ -33,8 +33,8 @@ Wenn die Server auf denen die Arbitration Mailboxen liegen gelöscht werden müs
 ## Funktion Testen
 Überprüfen ob folgedenes Problemlos möglich ist
 
-   # Cmdlet ausführen
-   Search-AdminAuditLog
+    # Cmdlet ausführen
+    Search-AdminAuditLog
 
 
 ## Quelle
