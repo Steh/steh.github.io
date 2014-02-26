@@ -25,6 +25,10 @@ Listen von Arbitration Mailboxen:
 
     # Mailboxen anzeigen
     Get-Mailbox -Arbitration
+    
+    # letzte Systemmailbox löschen
+    Get-Mailbox -Arbitration | Remove-Mailbox -Arbitration -RemoveLastArbitrationMailboxAllowed
+
 
 ## Mailboxen verschieben
 Wenn die Server auf denen die Arbitration Mailboxen liegen gelöscht werden müssen die Mailboxen verschoben werden.
