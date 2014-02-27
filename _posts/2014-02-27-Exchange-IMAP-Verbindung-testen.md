@@ -6,6 +6,11 @@ category: Exchange
 tags: ["IMAP","Telnet"]
 autor: Steh Sa
 ---
+## IMAP Config ausgeben
+Exchange PowerShel öffnen
+
+    Get-ExchangeServer <ServerName> | Get-ImapSettings
+
 ## Telnet
 CMD/PowerShell öffnen
 
