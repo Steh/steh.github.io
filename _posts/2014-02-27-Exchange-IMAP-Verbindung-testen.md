@@ -8,13 +8,13 @@ autor: Steh Sa
 ---
 ## Telnet
 CMD/PowerShell öffnen
-    
+    # Unverschlüsselt
     telnet <SERVER-IP> 143
     
-    # SSL
+    # Verschlüsselt (SSL)
     telnet <SERVER-IP> 993
 
-
+Sollte kein Wenn möglich nun das AnwendungsLog auf Fehlerüberprüfen.
 
 ## Quelle
 [Webstersprodigy: Powershell Portscanner](http://webstersprodigy.net/2013/07/01/powershell-portscanner/ "Webstersprodigy: Powershell Portscanner")
