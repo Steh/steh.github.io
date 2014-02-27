@@ -1,45 +1,21 @@
 ---
 layout: post
-title: "Exchange: Arbitration Mailbox verschieben"
-description: "Was sind Arbitration Mailboxen und wie werden diese Behandelt"
+title: "Exchange: IMAP Verbindung testen"
+description: "Wie können IMAP verbindungen überprüft werden"
 category: Exchange
-tags: ["Arbitration","Move-Request"]
+tags: ["IMAP","Telnet"]
 autor: Steh Sa
 ---
-## Was sind diese "Arbitration" Mailboxen
-
-    Arbitration = Vermittlung
-
-Sind Vermittlungspostfächer die zum speichern von organisationsweiten Daten verwendet werden. 
-zum Beispiel: Administrator-Überwachungsprotokolle, eDiscovery-Suchmetadaten, Unified Messaging-Daten
-
-Arbitration mailboxen werden beim Anlegen der Exchange Organisation erstellt.
-
-Listen von Arbitration Mailboxen:
-* Microsoft Exchange Approval Assistant
-* Microsoft Exchange
-* Discovery Search Mailbox
-* Microsoft Exchange Federation Mailbox
-
-## PowerShell Befehle 
-
-    # Mailboxen anzeigen
-    Get-Mailbox -Arbitration
+## Telnet
+CMD/PowerShell öffnen
     
-    # letzte Systemmailbox löschen
-    Get-Mailbox -Arbitration | Remove-Mailbox -Arbitration -RemoveLastArbitrationMailboxAllowed
+    telnet <SERVER-IP> 143
+    
+    # SSL
+    telnet <SERVER-IP> 993
 
-
-## Mailboxen verschieben
-Wenn die Server auf denen die Arbitration Mailboxen liegen gelöscht werden müssen die Mailboxen verschoben werden.
-
-   
-## Funktion Testen
-Überprüfen ob folgedenes Problemlos möglich ist
-
-    # Cmdlet ausführen
-    Search-AdminAuditLog
 
 
 ## Quelle
-[Technet: Verschieben des Exchange 2010-Systempostfachs nach Exchange 2013](http://technet.microsoft.com/de-de/library/dn249849%28v=exchg.150%29.aspx "Technet: Verschieben des Exchange 2010-Systempostfachs nach Exchange 2013")
+[Webstersprodigy: Powershell Portscanner](http://webstersprodigy.net/2013/07/01/powershell-portscanner/ "Webstersprodigy: Powershell Portscanner")
+[Github: Invoke-Portscan](https://github.com/webstersprodigy/PowerSploit/blob/Portscan/Recon/Invoke-Portscan.ps1 "Github: Invoke-Portscan")
