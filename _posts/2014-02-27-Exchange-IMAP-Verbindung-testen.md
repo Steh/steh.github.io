@@ -17,6 +17,10 @@ CMD/PowerShell öffnen
 
 Sollte ein Fehler auftreten, Wenn möglich nun das AnwendungsLog auf Fehler überprüfen.
 
+Wenn die Verbindung aufgebaut werden kann, wird folgendes ausgeschrieben:
+    
+    * OK Microsoft Exchange Server 2003 IMAP4rev1 server version 6.5.7638.1
+
 ## Quelle
 [Webstersprodigy: Powershell Portscanner](http://webstersprodigy.net/2013/07/01/powershell-portscanner/ "Webstersprodigy: Powershell Portscanner")
 [Github: Invoke-Portscan](https://github.com/webstersprodigy/PowerSploit/blob/Portscan/Recon/Invoke-Portscan.ps1 "Github: Invoke-Portscan")
