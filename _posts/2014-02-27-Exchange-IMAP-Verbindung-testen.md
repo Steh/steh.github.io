@@ -8,6 +8,7 @@ autor: Steh Sa
 ---
 ## Telnet
 CMD/PowerShell öffnen
+
     # Unverschlüsselt
     telnet <SERVER-IP> 143
     
