@@ -14,7 +14,7 @@ tags: ["Exchange", "Outlook"]
 
 2. Scanpst.exe ausführen und Datei reparieren
    
-   # Pfad zur Exe
-   C:\Program Files (x86)\Microsoft Office\Office14\SCANPST.EXE
+    # Pfad zur Exe
+    C:\Program Files (x86)\Microsoft Office\Office14\SCANPST.EXE
 
 [office.microsoft.com: Reparieren von Outlook Datendateien](http://office.microsoft.com/de-de/outlook-help/reparieren-von-outlook-datendateien-pst-und-ost-HA010354964.aspx)
