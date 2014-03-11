@@ -4,7 +4,8 @@ title: "Outlook: Postfach Datendatei reparieren"
 categories: Outlook
 tags: ["Exchange", "Outlook"]
 --- 
-1. Herrausfinden wo die Outlook-Datendatei liegt
+
+## 1. Herrausfinden wo die Outlook-Datendatei liegt
 
     # Meistens
     C:\Users\<USER>\AppData\Local\Microsoft\Outlook\*.ost
@@ -12,7 +13,7 @@ tags: ["Exchange", "Outlook"]
     # Wenn nicht dann in Outlook nachsehen
     Datei -> Kontoeinstellungen -> Datendateien -> Einstellungen -> Erweitert -> Outlook-Datendateieinstellungen...
 
-2. Scanpst.exe ausführen und Datei reparieren
+## 2. Scanpst.exe ausführen und Datei reparieren
    
     # Pfad zur Exe
     C:\Program Files (x86)\Microsoft Office\Office14\SCANPST.EXE
