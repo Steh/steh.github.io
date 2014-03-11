@@ -12,5 +12,3 @@ tags: ["ActiveDirectory", "SID"]
 ## User zu SID suchen
 
     Get-ADUser -Filter {SID -like "<SID>"} -Server <GLOBAL-CATALOG>:3268 | Select Name,SID | Format-Table -Auto
-
-[office.microsoft.com: Reparieren von Outlook Datendateien](http://office.microsoft.com/de-de/outlook-help/reparieren-von-outlook-datendateien-pst-und-ost-HA010354964.aspx)
