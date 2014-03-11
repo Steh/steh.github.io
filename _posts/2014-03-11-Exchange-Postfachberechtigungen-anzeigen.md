@@ -11,4 +11,7 @@ tags: ["Exchange", "PowerShell"]
 ## Senden Als berechtigung ausgeben
     Get-Mailbox <Mailbox> | Get-ADPermission | ? {($_.ExtendedRights -like "*send-as*") -and -not ($_.User -like "nt authority\self")} | ft Identity, User
 
+## Stellvertreter zugriff ausgeben
+    Get-Mailbox <Mailbox> | ? {$_.GrantSendOnBehalfTo} | ft Alias,GrantSendOnBehalfTo -AutoSize
+
 [cammckenzie.com: powershell-command-to-check-send-as-permissions](https://www.cammckenzie.com/blog/index.php/2012/11/08/powershell-command-to-check-send-as-permissions/)
