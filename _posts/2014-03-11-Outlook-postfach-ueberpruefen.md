@@ -20,7 +20,7 @@ tags: ["Exchange", "Outlook"]
     C:\Program Files (x86)\Microsoft Office\Office14\SCANPST.EXE
 
 ## Microsoft Office Configuration Analyzer
-1. [Microsoft Office Configuration Analyzer](http://www.microsoft.com/en-us/download/confirmation.aspx?id=36852)Downloaden
+1. Microsoft Office Configuration Analyzer[Downloaden](http://www.microsoft.com/en-us/download/confirmation.aspx?id=36852)
 2. Ausführen und fehler überprüfen
 
 ## Quellen
