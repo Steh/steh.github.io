@@ -23,5 +23,7 @@ tags: ["Exchange", "Outlook"]
 1. [Microsoft Office Configuration Analyzer](http://www.microsoft.com/en-us/download/confirmation.aspx?id=36852)](http://www.microsoft.com/en-us/download/confirmation.aspx?id=36852) Downloaden
 2. Ausführen und fehler überprüfen
 
+## Quellen
 [office.microsoft.com: Reparieren von Outlook Datendateien](http://office.microsoft.com/de-de/outlook-help/reparieren-von-outlook-datendateien-pst-und-ost-HA010354964.aspx)
+
 [microsoft.com: Microsoft Office Configuration Analyzer](http://www.microsoft.com/en-us/download/confirmation.aspx?id=36852)
