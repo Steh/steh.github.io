@@ -24,8 +24,8 @@ Vergibt Vollzugriff auf alle Unterordner eines bestimmten Postfachs und zeigt es
 
 ### Senden Als
 
-    Add-MailboxPermission -Identity "" -User  -ExtendedRights 'Send-as'
+    Add-MailboxPermission -Identity <Funktionspostfach> -User <Benutzer> -ExtendedRights 'Send-as'
 
 ### Manager
 
-    Set-User -IgnoreDefaultScope -Manager " -Identity ""
+    Set-User -IgnoreDefaultScope -Identity <Funktionspostfach> -Manager <Benutzer> 
