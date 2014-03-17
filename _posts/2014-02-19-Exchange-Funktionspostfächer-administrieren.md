@@ -12,6 +12,7 @@ tags: ["Exchange", "PowerShell", "Funktionpostfächer", "Shared-Mailbox"]
 
 	# Bestehende Mailbox konvertieren
     Get-Mailbox  | Set-Mailbox -type Shared
+    Get-Mailbox  | Set-Mailbox -type Shared
 
 # Rechte vergeben
 ## Vollzugriff
