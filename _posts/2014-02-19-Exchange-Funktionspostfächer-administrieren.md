@@ -5,27 +5,27 @@ description: "Erstellen und Administrieren von Funktionpostfächern mit der Powe
 category: Exchange
 tags: ["Exchange", "PowerShell", "Funktionpostfächer", "Shared-Mailbox"]
 ---
-# Erstellen von Funktionspostfächern
+## Erstellen von Funktionspostfächern
 
     #Neues Funktionspostfach
     New-Mailbox -UserPrincipalName <alias>@<domain> -Alias <alias> -Name <Name> -Database <Database> -OrganizationalUnit <OrganisationalUnit> -Shared
 
-	# Bestehende Mailbox konvertieren
+	# User-Mailbox -> Funktionspostfach
     Get-Mailbox  | Set-Mailbox -type Shared
-    Get-Mailbox  | Set-Mailbox -type Shared
+    
+    # Funktionspostfach -> User-Mailbox
+    Get-Mailbox  | Set-Mailbox -type Regular
 
-# Rechte vergeben
-## Vollzugriff
+## Rechte vergeben
+### Vollzugriff
 Vergibt Vollzugriff auf alle Unterordner eines bestimmten Postfachs und zeigt es Automatisch in Outlook an.
 
     Add-MailboxPermission -Identity "" -User  -AccessRights Fullaccess -InheritanceType all -Automapping $true
 
-## Senden Als
+### Senden Als
 
     Add-MailboxPermission -Identity "" -User  -ExtendedRights 'Send-as'
 
-## Manager
+### Manager
 
     Set-User -IgnoreDefaultScope -Manager " -Identity ""
-
-{% include JB/setup %}
