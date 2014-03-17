@@ -20,7 +20,7 @@ tags: ["Exchange", "PowerShell", "Funktionpostfächer", "Shared-Mailbox"]
 ### Vollzugriff
 Vergibt Vollzugriff auf alle Unterordner eines bestimmten Postfachs und zeigt es Automatisch in Outlook an.
 
-    Add-MailboxPermission -Identity "" -User  -AccessRights Fullaccess -InheritanceType all -Automapping $true
+    Add-MailboxPermission -Identity <Funktionspostfach> -User <Benutzer> -AccessRights Fullaccess -InheritanceType all -Automapping $true
 
 ### Senden Als
 
