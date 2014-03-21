@@ -1,27 +1,22 @@
 ---
 layout: post
-title: Verschiedene Leistungsdaten abfragen
-categories:
-- Exchange
-tags:
-- ActiveSync
-- get-counter
-- OWA
-- Powershell
-- RPC
-status: publish
-type: post
-published: true
-meta:
-  _publicize_pending: '1'
-  sharing_disabled: '1'
-  switch_like_status: '1'
-  _elasticsearch_indexed_on: '2013-05-27 12:34:38'
----
-[code language="powershell" light="true"]#Gibt die Anzahl der aktiven RPC Benutzer aus
+title: Exchange: Performance Counter
+categories:['Exchange']
+tags: ['PerformaceCounter','Exchange','PowerShell']
+Author: StehSa
 
-$RPCS = Get-Counter &quot;MSExchange RpcClientAccessAnzahl Benutzer&quot; -ComputerName cas01.stiki.de
-$RPCS.CounterSamples[0].CookedValue[/code]
+---
+## Was sind Performance Counter
+
+## Performance Counter auslesen
+    Get-Counter -ComputerName steh.github.io -ListSet *
+
+
+
+#Gibt die Anzahl der aktiven RPC Benutzer aus
+
+  $RPCS = Get-Counter &quot;MSExchange RpcClientAccessAnzahl Benutzer&quot; -ComputerName cas01.stiki.de
+  $RPCS.CounterSamples[0].CookedValue[/code]
 <p style="text-align:center;"><span style="color:#ff0000;"><strong>DIE COUNTER WURDEN LOKALISIERT: "Anzahl Benuter" entspricht "User Count"</strong></span></p>
 
 <h1>Weitere Counter</h1>
