@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 title: "Exchange: Mit welchem ClientAccessServer bin ich verbunden?"
 categories:[Exchange]
 tags: [Exchange, PowerShell]
