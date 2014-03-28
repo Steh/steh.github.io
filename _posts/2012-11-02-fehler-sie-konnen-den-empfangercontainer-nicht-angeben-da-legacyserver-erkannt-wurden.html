@@ -1,25 +1,11 @@
 ---
 layout: post
-title: 'Fehler: Sie können den Empfängercontainer nicht angeben, da Legacyserver erkannt
-  wurden.'
-categories:
-- Exchange
-tags:
-- Adressliste
-- Exchange
-- LegacyServer
-- Powershell
-status: publish
-type: post
-published: true
-meta:
-  _publicize_pending: '1'
-  original_post_id: '39'
-  _wp_old_slug: '39'
-  geo_public: '0'
-  _elasticsearch_indexed_on: '2012-11-02 09:37:33'
+title: 'Fehler: Sie können den Empfängercontainer nicht angeben, da Legacyserver erkannt wurden.'
+categories: Exchange
+tags:[Adressliste,Exchange, LegacyServer,Powershell]
+autor: StehSa
 ---
 <strong>LegacyServer sind Exchange Server auf denen Exchange2003 oder früher installiert ist.</strong>
 
 Dieser Fehlermeldung z.B. kam auf beim Versuch eine Adressliste mit <em>RecipientContainer</em> zu erstellen. Leider gibt es diese Option beim Exchange 2003 noch nicht. Also einfach ohne RecipientContainer Filter Einstellung anlegen.
-[code language="powershell" light="true"]New-AddressList -Name 'Stiki' -IncludedRecipients 'MailboxUsers' -ConditionalCompany 'Stiki' -Container '' -DisplayName 'Stiki.de'[/code]
+    New-AddressList -Name 'Stiki' -IncludedRecipients 'MailboxUsers' -ConditionalCompany 'Stiki' -Container '' -DisplayName 'Stiki.de'
