@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exchange: Mailboxgröße aus Exchange 2003 exportieren"
+title: "Exchange: Mailboxgröße aus Exchange 2003 exportieren"
 categories: Exchange2003
 tags: ['Exchange', 'MailboxStatistics']
 autor: StehSa
