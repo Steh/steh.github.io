@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Exchange: Getrennte Mailboxen'
+title: "Exchange: Getrennte Mailboxen"
 tagline: 'Anzeigen und wieder einbinden'
 categories: Exchange2010
 tags:['GetrennteMailbox', 'Mailbox', 'Powershell']
