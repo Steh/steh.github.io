@@ -5,6 +5,8 @@ categories: Outlook
 tags: ["ActiveDirectory", "SID"]
 --- 
 
+{% include JB/setup %}
+
 ## Global Catalog Server herausfinden
 
     Get-ADForest | fl GlobalCatalogs

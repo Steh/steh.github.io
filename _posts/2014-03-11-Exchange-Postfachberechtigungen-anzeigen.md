@@ -5,6 +5,8 @@ categories: Exchange
 tags: ["Exchange", "PowerShell"]
 --- 
 
+{% include JB/setup %}
+
 ## Alle Benutzer mit Vollzugriff auf diese Mailbox anzeigen
     Get-Mailbox <Mailbox> | Get-MailboxPermission | ? {($_.IsInherited -eq $False) -and ($_.User -notlike "NT AUTHORITY\SELF")} | FT Identity,User,AccessRights -AutoSize
     

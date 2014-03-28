@@ -6,6 +6,9 @@ category: PowerShell
 tags: ["PowerShell"]
 autor: Steh Sa
 ---
+
+{% include JB/setup %}
+
 ## Befehle
     
     # Ausgeben wo Company nicht leer

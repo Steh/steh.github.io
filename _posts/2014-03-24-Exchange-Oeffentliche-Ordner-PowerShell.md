@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: "Exchange: Öffentliche Ordner
 category : Exchange
 tagline: "Exchange: Öffentliche Ordner mit der PowerShell administrieren"
 tags : [Exchange, Öffentliche-Ordner]
 ---
+
 {% include JB/setup %}
 
 ## PowerShell Befehle
