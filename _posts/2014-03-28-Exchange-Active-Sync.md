@@ -1,0 +1,13 @@
+﻿---
+layout: post
+title: "Exchange: nicht mehr gültig ActiveSync Geräte entfernen"
+category : Exchange
+tagline: "Geräte die älter länger als 90 Tage nicht Synchronisiert haben, entfernen."
+tags : [Exchange, ActiveSync]
+---
+{% include JB/setup %}
+
+## PowerShell Befehle
+    # Alle ActiveSync Geräte anzeigen die länger als 90 Tage nicht Synchronisiert wurden, löschen!
+    Get-ActiveSyncDevice -ResultSize unlimited | Get-ActiveSyncDeviceStatistics | where {$_.LastSyncAttemptTime -lt (get-date).adddays(-90)} | Remove-ActiveSyncDevice
+
