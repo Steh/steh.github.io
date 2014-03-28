@@ -1,10 +1,11 @@
 ---
 layout: post
-title: 'Exchange: Verteilerlsiten'
+title: "Exchange: Verteilerlisten"
 categories: Exchange
 tags:['Powershell', 'Verteilerliste','Verwaltungskonsole']
 autor: StehSa
 ---
+
 ## Listen extern vefügbar machen
 ### Exchange Verwaltungs Konsolen:
 
