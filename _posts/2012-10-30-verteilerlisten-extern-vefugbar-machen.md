@@ -9,10 +9,10 @@ autor: StehSa
 ## Listen extern vefügbar machen
 ### Exchange Verwaltungs Konsolen:
 
-1. Eigenschaften</li>
-2. Nachrichtenübermittlungseinstellungen</li>
-3. “Einstellungen für die Nachrichtenzustellung” </li>
-4. “Authentifizierung aller Absender anfordern” dort Haken entfernen</li>
+1. Eigenschaften
+2. Nachrichtenübermittlungseinstellungen
+3. “Einstellungen für die Nachrichtenzustellung”
+4. “Authentifizierung aller Absender anfordern” dort Haken entfernen
 
 ### PowerShell:
 
