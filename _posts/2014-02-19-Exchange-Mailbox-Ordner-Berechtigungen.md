@@ -1,4 +1,5 @@
 ---
+type: post
 layout: post
 title: "Exchange: Mailbox Ordner und Berechtigungen anzeigen"
 description: ""

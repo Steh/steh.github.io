@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Exchange 2010: Mailbox verschieben schlägt fehl [MapiExceptionNoSupport]'
-categories: Exchange
+title: 'Exchange 2010: Mailbox verschieben schlägt fehl'
+tagline: '[MapiExceptionNoSupport]'
+categories: Exchange2010
 tags: []
-type: post
-
+autor: StehSa
 ---
 Verschieben von Mailboxen innerhalb einer 2010 Umgebung schlägt fehl.
 

@@ -1,9 +1,10 @@
 ﻿---
 layout: post
-title: "Exchange: nicht mehr gültig ActiveSync Geräte entfernen"
-category: Exchange
-description: "Geräte die älter länger als 90 Tage nicht Synchronisiert haben, entfernen."
+title: "Exchange: nicht mehr gültige ActiveSync Geräte entfernen"
+category: Exchange2010
+tagline: "Geräte die älter länger als 90 Tage nicht Synchronisiert haben, entfernen."
 tags : [Exchange, ActiveSync]
+autor: StehSa
 ---
 
 {% include JB/setup %}

@@ -1,12 +1,10 @@
 ---
 layout: post
 title: 'Exchange: Mailbox Ordner und Berechtigungen'
-categories: Exchange
-tags: []
-type: post
+categories: Exchange2010
+tags: ['Mailbox-Ordner','Ordner-Berechtigungen']
+Autor: StehSa
 ---
-
-{% include JB/setup %}
 
 ##Ordner einer Mailbox anzeigen
 

@@ -1,4 +1,5 @@
 ---
+type: post
 layout: post
 title: "Exchange: Funktionspostfächer administrieren"
 description: "Erstellen und Administrieren von Funktionpostfächern mit der PowerShell"

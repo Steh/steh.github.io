@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Exchange: Funktionstests der Umgebung"
-Tagline: "Funktionstests und Fehlersuche in der Exchange Umgebung"
-category: Exchange
+title: 'Exchange: Funktionstests der Umgebung'
+tagline: "Funktionstests und Fehlersuche in der Exchange Umgebung"
+category: Exchange2010
 tags: ["Exchange", "Fehlersuche"]
-autor: Steh Sa
+autor: StehSa
 ---
 
 {% include JB/setup %}
