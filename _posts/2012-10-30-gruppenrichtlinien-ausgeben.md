@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GPO: gpresult"
+title: "GPO: gpresult /Z"
 categories: GPO
 tags:['GPO', 'Gruppenrichtlinien', 'Windows']
 autor: StehSa
