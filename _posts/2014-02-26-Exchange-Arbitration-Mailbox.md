@@ -6,6 +6,9 @@ category: Exchange
 tags: ["Arbitration","Move-Request"]
 autor: Steh Sa
 ---
+
+{% include JB/setup %}
+
 ## Was sind diese "Arbitration" Mailboxen
 
     Arbitration = Vermittlung

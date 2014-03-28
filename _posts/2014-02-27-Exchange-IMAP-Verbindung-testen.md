@@ -6,6 +6,9 @@ category: Exchange
 tags: ["IMAP","Telnet"]
 autor: Steh Sa
 ---
+
+{% include JB/setup %}
+
 ## IMAP Config ausgeben
 Exchange PowerShel öffnen
 

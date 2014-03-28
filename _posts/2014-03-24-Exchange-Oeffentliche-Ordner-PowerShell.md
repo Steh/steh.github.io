@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: "Exchange: Öffentliche Ordner
+title: "Exchange: Öffentliche Ordner PowerShell"
 category : Exchange
 tagline: "Exchange: Öffentliche Ordner mit der PowerShell administrieren"
 tags : [Exchange, Öffentliche-Ordner]

@@ -5,6 +5,9 @@ description: "Erstellen und Administrieren von Funktionpostfächern mit der Powe
 category: Exchange
 tags: ["Exchange", "PowerShell", "Funktionpostfächer", "Shared-Mailbox"]
 ---
+
+{% include JB/setup %}
+
 ## Erstellen von Funktionspostfächern
 
     #Neues Funktionspostfach

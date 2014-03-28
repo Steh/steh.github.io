@@ -6,6 +6,8 @@ category: Exchange
 tags: ["Exchange", "Get-MailboxFolderStatistics", "Ordnerberechtigungen"]
 ---
 
+{% include JB/setup %}
+
 Ordner einer Mailbox anzeigen
 
     Get-MailboxFolderStatistics <mailbox> | Select-Object FolderPath
