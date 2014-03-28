@@ -2,7 +2,7 @@
 layout: post
 title: "Exchange: Verteilerlisten"
 categories: Exchange
-tags:['Powershell', 'Verteilerliste','Verwaltungskonsole']
+tags:['Powershell', 'Verteilerliste', 'Verwaltungskonsole']
 autor: StehSa
 ---
 
