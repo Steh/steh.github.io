@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: 'Exchange: nicht mehr gültige ActiveSync Geräte entfernen'
 category: Exchange2010
