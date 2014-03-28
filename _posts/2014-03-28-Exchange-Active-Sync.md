@@ -1,11 +1,10 @@
 ﻿---
 layout: post
 title: "Exchange: nicht mehr gültig ActiveSync Geräte entfernen"
-category : Exchange
-tagline: "Geräte die älter länger als 90 Tage nicht Synchronisiert haben, entfernen."
+category: Exchange
+description: "Geräte die älter länger als 90 Tage nicht Synchronisiert haben, entfernen."
 tags : [Exchange, ActiveSync]
 ---
-{% include JB/setup %}
 
 ## PowerShell Befehle
     # Alle ActiveSync Geräte anzeigen die länger als 90 Tage nicht Synchronisiert wurden, löschen!

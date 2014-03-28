@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Exchange: Funktionstests der Umgebung"
-description: "Funktionstests und Fehlersuche in der Exchange Umgebung"
+Tagline: "Funktionstests und Fehlersuche in der Exchange Umgebung"
 category: Exchange
 tags: ["Exchange", "Fehlersuche"]
 autor: Steh Sa
