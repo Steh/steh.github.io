@@ -3,8 +3,8 @@ layout: post
 title: "Exchange: Oeffentliche Ordner PowerShell"
 category : Exchange2010
 tagline: "Exchange: Oeffentliche Ordner mit der PowerShell administrieren"
-tags : [Exchange, Öffentliche-Ordner]
-Autor: StehSa
+tags : [Exchange, Oeffentliche-Ordner]
+autor: StehSa
 ---
 {% include JB/setup %}
 
