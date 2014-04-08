@@ -6,6 +6,8 @@ categories: 'PowerShell'
 tags:['PowerShell', 'Remote']
 autor: 'StehSa'
 ---
+{% include JB/setup %}
+
 ## PowerShell Befehl
 
 	Invoke-Command -ComputerName <Server1>,<Server2>
