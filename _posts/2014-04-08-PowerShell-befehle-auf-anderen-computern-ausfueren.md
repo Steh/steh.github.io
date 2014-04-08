@@ -3,7 +3,7 @@ layout: post
 categories: PowerShell
 title: 'PowerShell: Befehle auf anderen Computern ausführen'
 tagline: 'Anzeigen und wieder einbinden'
-tags:['PowerShell', 'Remote']
+tags:[PowerShell, Remote]
 autor: StehSa
 ---
 {% include JB/setup %}
