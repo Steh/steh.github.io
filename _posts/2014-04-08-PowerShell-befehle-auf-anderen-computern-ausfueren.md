@@ -6,7 +6,6 @@ categories: 'PowerShell'
 tags:['PowerShell', 'Remote']
 autor: 'StehSa'
 ---
-
 ## PowerShell Befehl
 
 	Invoke-Command -ComputerName <Server1>,<Server2>
