@@ -1,11 +1,10 @@
-
 ---
 layout: post
 title: 'PowerShell: Befehle auf anderen Computern ausführen'
 tagline: 'Anzeigen und wieder einbinden'
-categories: PowerShell
+categories: 'PowerShell'
 tags:['PowerShell', 'Remote']
-autor: StehSa
+autor: 'StehSa'
 ---
 
 ## PowerShell Befehl
