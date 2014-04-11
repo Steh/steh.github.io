@@ -5,11 +5,14 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
+
+markdown: kramdown
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 
-title : Steh-Blog.de
+title : steh.github.io
 tagline: PowerShell und was mir sonst noch so in die Quere kommt
 author : 
   name : Steh Sa
