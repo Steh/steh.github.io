@@ -3,7 +3,7 @@ layout: post
 title: "Wissenschaftliche Projektarbeit: Elevator Pitch"
 tagline: "Aufzugspräsentation"
 categories: Studium
-tags: ['Einführung in wissenschaftliche Projektarbeit']
+tags: ['Einführung in wissenschaftliche Projektarbeit', Marketing]
 autor: StehSa
 ---
 
