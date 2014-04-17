@@ -13,11 +13,14 @@ autor: StehSa
 
 ## Folgendes durchführen
 1. Folgende Datei Löschen
+
     C:\Users\<User>\AppData\Roaming\Microsoft\MMC\Exchange Management Console
+
 2. Folgenden Registry Schlüssel entfernen
+
     [HKEY_CURRENT_USER\Software\Microsoft\ExchangeServer\v14\AdminTools] NodeStructureSettings
+
 3. Exchange Management Konsole ausführen
-{{ site.url }}
 
 ## Quelle
 [windowsitpro.com: Creating Remote Sessions...](http://windowsitpro.com/scripting/creating-remote-sessions-powershell-20)
