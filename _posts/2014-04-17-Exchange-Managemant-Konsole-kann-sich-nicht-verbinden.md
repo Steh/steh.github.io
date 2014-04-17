@@ -18,7 +18,11 @@ autor: StehSa
 
 2. Folgenden Registry Schlüssel entfernen
 
+    # Mit Regedit entfernen
     *[HKEY_CURRENT_USER\Software\Microsoft\ExchangeServer\v14\AdminTools] NodeStructureSettings*
+    
+    # Per PowerSehell
+    Remove-ItemProperty -Path HKCU:\Software\Microsoft\ExchangeServer\v14\AdminTools\ -Name NodeStructureSettings
 
 3. Exchange Management Konsole ausführen
 
