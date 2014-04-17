@@ -11,5 +11,7 @@ Autor: StehSa
     Get-MailboxFolderStatistics <mailbox> | Select-Object FolderPath
 
 ## Ordnerberechtigungen anzeigen
-
-    Get-MailboxFolderPermission <MailboxAlias/OrdnerName> 
+    
+    # Im FolderPath muss '/' durch '\' ersetzt werden
+    # zB. "stehsa:\Posteingang"
+    Get-MailboxFolderPermission <MailboxAlias>:<FolderPath> 
