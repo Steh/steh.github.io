@@ -3,6 +3,7 @@ layout: post
 title: "Exchange: Postfachberechtigungen anzeigen"
 categories: Exchange
 tags: ["Exchange", "PowerShell"]
+autor: StehSa
 --- 
 
 {% include JB/setup %}
