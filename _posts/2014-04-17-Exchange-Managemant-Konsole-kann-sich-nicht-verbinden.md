@@ -12,11 +12,11 @@ autor: StehSa
 ![Fehlermeldung](http://steh.github.io/resources/2014-04-17-Exchange-Managemant-Konsole-kann-sich-nicht-verbinden_1.png)
 
 ## Folgendes durchführen
-1. Folgende Datei Löschen
+** Folgende Datei löschen **
 
     *C:\Users\<User>\AppData\Roaming\Microsoft\MMC\Exchange Management Console*
 
-2. Folgenden Registry Schlüssel entfernen
+** Folgenden Registry Schlüssel entfernen **
 
     # Mit Regedit entfernen
     *[HKEY_CURRENT_USER\Software\Microsoft\ExchangeServer\v14\AdminTools] NodeStructureSettings*
@@ -24,7 +24,7 @@ autor: StehSa
     # Per PowerSehell
     Remove-ItemProperty -Path HKCU:\Software\Microsoft\ExchangeServer\v14\AdminTools\ -Name NodeStructureSettings
 
-3. Exchange Management Konsole ausführen
+** Exchange Management Konsole ausführen **
 
 ## Quelle
 
