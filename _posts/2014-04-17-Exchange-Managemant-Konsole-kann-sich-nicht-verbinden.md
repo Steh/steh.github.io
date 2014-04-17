@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 categories: Exchange
 title: 'Exchange: Exchange Management Konsole kann sich nicht verbinden'
