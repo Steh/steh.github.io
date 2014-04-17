@@ -11,10 +11,13 @@ tags: ["Exchange", "PowerShell", "Funktionpostfächer", "Shared-Mailbox"]
 
 ## Erstellen von Funktionspostfächern
 
+    # benötigte Werte ausgeben
+    Get-Mailbox <mailbox> | Select UserPrincipalName,OrganizationalUnit,Name,Database
+    
     #Neues Funktionspostfach
     New-Mailbox -UserPrincipalName <alias>@<domain> -Alias <alias> -Name <Name> -Database <Database> -OrganizationalUnit <OrganisationalUnit> -Shared
 
-	# User-Mailbox -> Funktionspostfach
+    # User-Mailbox -> Funktionspostfach
     Get-Mailbox  | Set-Mailbox -type Shared
     
     # Funktionspostfach -> User-Mailbox
