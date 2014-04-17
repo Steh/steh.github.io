@@ -3,7 +3,7 @@ layout: post
 categories: Exchange
 title: 'Exchange: Exchange Management Konsole kann sich nicht verbinden'
 tagline: 'Server wurde gelöscht oder ist nicht mehr aktiv'
-tags: [Exchange, Regedit, ManagementKosole]
+tags: [Exchange, Regedit, ManagementKonsole]
 autor: StehSa
 ---
 {% include JB/setup %}
