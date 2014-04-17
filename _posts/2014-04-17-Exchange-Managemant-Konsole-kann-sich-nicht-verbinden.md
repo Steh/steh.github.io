@@ -9,7 +9,7 @@ autor: StehSa
 {% include JB/setup %}
 
 ## Fehlermeldung
-![Fehlermeldung]({% site.url %}\resources\2014-04-17-Exchange-Managemant-Konsole-kann-sich-nicht-verbinden_1.png)
+![Fehlermeldung](\resources\2014-04-17-Exchange-Managemant-Konsole-kann-sich-nicht-verbinden_1.png)
 
 ## Folgendes durchführen
 1. Folgende Datei Löschen
