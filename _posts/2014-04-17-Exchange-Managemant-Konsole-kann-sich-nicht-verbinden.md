@@ -23,5 +23,7 @@ autor: StehSa
 3. Exchange Management Konsole ausführen
 
 ## Quelle
+
 [Technet](http://social.technet.microsoft.com/Forums/en-US/7eb73a50-a5db-4393-a9af-10cff4d670ff/emc-onpremises-is-trying-to-connect-to-old-server?forum=exchange2010)
+
 [KB2019500: XADM/Exch2010/ Exchange EMC cannot access the AD configuration data ](http://support.microsoft.com/kb/2019500)
