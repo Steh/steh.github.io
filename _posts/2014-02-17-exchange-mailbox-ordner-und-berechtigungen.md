@@ -12,6 +12,6 @@ Autor: StehSa
 
 ## Ordnerberechtigungen anzeigen
 Im FolderPath muss '/' durch '\' ersetzt werden
-zB. *"stehsa:\Posteingang"*
+z.B. **stehsa:\Posteingang**
     
     Get-MailboxFolderPermission <MailboxAlias>:<FolderPath> 
