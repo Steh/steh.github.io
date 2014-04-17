@@ -13,12 +13,13 @@ autor: StehSa
 
 ## Fehlerbehebung
 Folgende Datei löschen
-
+    
+    # Datei löschen
     C:\Users\<User>\AppData\Roaming\Microsoft\MMC\Exchange Management Console
 
 Folgenden Registry Schlüssel entfernen
 
-    # Mit Regedit entfernen
+    # mit Regedit entfernen
     [HKEY_CURRENT_USER\Software\Microsoft\ExchangeServer\v14\AdminTools] NodeStructureSettings
     
     # per PowerSehell
