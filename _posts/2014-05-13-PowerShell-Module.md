@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: PowerShell
-title: 'PowerShell: Verfügbare Module anzeigen'
+title:
 tagline: 'Verfügbare Module'
 tags: [PowerShell,]
 autor: StehSa
