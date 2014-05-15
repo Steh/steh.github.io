@@ -10,4 +10,4 @@ autor: StehSa
     Install-PswaWebapplication
 
 ## Berechtigungsgruppen aktiveren
-   Add-PswaAuthorizationRule –UserName <BenutzerName> -ComputerName <ZielComputername> -ConfigurationName microsoft.powershell
+    Add-PswaAuthorizationRule –UserName <BenutzerName> -ComputerName <ZielComputername> -ConfigurationName microsoft.powershell
