@@ -8,6 +8,6 @@ autor: StehSa
 {% include JB/setup %}
 
 # Session Spiegeln
-   mstsc /v:<ZIEL-IP> /shadow:<Session-ID> /noconsentprompt
+    mstsc /v:<ZIEL-IP> /shadow:<Session-ID> /noconsentprompt
 # Session-ID Anzeigen
-   quser
+    quser
