@@ -7,5 +7,6 @@ autor: StehSa
 ---
 {% include JB/setup %}
 
-## PowerShell Befehl
+## PowerShell Module/Snapins
     Get-Command -module * | group ModuleName | Sort-Object Name | select Name
+    Get-Command -pssnapin * | group ModuleName | Sort-Object Name | select Name
