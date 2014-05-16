@@ -19,3 +19,9 @@ autor: StehSa
     
     # Bindungen
     Get-WebBinding
+    
+    # Web Konfigurations Datei
+    Get-WebConfigFile
+    
+    # Web Zertifikat Server (2012)
+    Get-WebCentralCertProvider
