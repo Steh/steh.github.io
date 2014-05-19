@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: PowerShell
-title: 'IIS: Powershell Befehle'
+title: 'PowerShell: IIS Befehle'
 tags: [PowerShell, IIS]
 autor: StehSa
 ---
