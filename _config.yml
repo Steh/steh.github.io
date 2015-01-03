@@ -7,7 +7,7 @@ pygments: true
 
 
 # maruko is outdated use kramdown or redcarpet
-markdown: redcarpet
+markdown: kramdown
 markdown_ext: markdown,mkdown,mkdn,mkd,md
 
 # Timezone
