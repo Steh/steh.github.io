@@ -7,16 +7,13 @@ autor: StehSa
 --- 
 
 # nmap: Cheat Sheet
-	
-	# Legacy Adressrichlinien ausgeben
-    Get-EmailAddressPolicy | where {$_.RecipientFilterType –eq “Legacy”}
-    Get-EmailAddressPolicy | Format-List Name, *RecipientFilter*, ExchangeVersion
+	nmap -sC -sV xx.xx.xx.xx
 
-	# Nach 2010 übertragen
-	Get-EmailAddressPolicy | Set-EmailAddressPolicy -RecipientFilter <FILTER>
-	
-	# Listen ausführen
-	Get-EmailAddressPolicy | Update-EmailAddressPolicy
+	-sC: Performs a script scan using the default set of scripts. It is equivalent to --
+	script=default. Some of the scripts in this category are considered intrusive and
+	should not be run against a target network without permission.
+	-sV: Enables version detection, which will detect what versions are running on what port.
 	
 
-[Microsoft Hilfeseite zur Migration in Exchange 2010](http://technet.microsoft.com/en-us/library/cc164375.aspx)
+[Kali.org: nmap Usage Example](https://www.kali.org/tools/nmap/)
+[linux.die.net: nmap(1) - Linux man page](https://linux.die.net/man/1/nmap)
