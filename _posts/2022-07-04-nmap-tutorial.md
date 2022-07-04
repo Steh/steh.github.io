@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "nmap cheat sheet"
+title: "nmap: cheat sheet"
 categories: [nmap, cheatsheet]
 tags: ['cheatsheet', 'nmap']
 autor: StehSa
