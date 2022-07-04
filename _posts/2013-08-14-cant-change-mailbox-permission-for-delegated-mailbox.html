@@ -1,0 +1,32 @@
+---
+layout: post
+title: can´t change mailbox permission for delegated mailbox
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+tags:
+- Delegate
+- Mailbox
+- Permission
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  sharing_disabled: '1'
+  _wpas_done_all: '1'
+  _sd_is_markdown: '1'
+---
+<ol>
+<li>Check if the Mailbox is mounted twice, if it is remove one 
+
+<ul>
+<li>Fullaccess from Exchange Server (ADMailboxPermission)</li>
+<li>Mount over Account Settings</li>
+</ul></li>
+<li>try to change delegate Permission for several users</li>
+<li>delete and add users if you can´t change permission</li>
+</ol>
+
+<p>Reference: <a title="Allow someone else to manage your mail and calendar" href="http://office.microsoft.com/en-us/outlook-help/allow-someone-else-to-manage-your-mail-and-calendar-HA010355554.aspx" target="_blank">Microsoft Technet</a></p>

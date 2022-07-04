@@ -1,0 +1,57 @@
+---
+layout: post
+title: Pygame Grundgerüst
+categories:
+- Pygame
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _elasticsearch_indexed_on: '2013-05-28 11:23:23'
+---
+[code language="python"]import pygame
+
+# als erstes Definieren wir einige Farben
+black = ( 0, 0, 0)
+white = ( 255, 255, 255)
+green = ( 0, 255, 0)
+red = ( 255, 0, 0)
+
+# Initialisiert das Pygame Modul
+pygame.init()
+
+# definiert die Fenstergröße und einen Titel
+screen_width=700
+screen_height=400
+screen = pygame.display.set_mode([screen_width,screen_height])
+pygame.display.set_caption(&quot;Rückkehr der Polygon&quot;)
+
+done = False
+
+# definiert wie schnell das Spiel laufen soll
+clock = pygame.time.Clock()
+
+# -------- Hauptprogramm Schleife -----------
+# Schleife läuft bis der Benutzer Beendet
+while done == False:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			done = True
+	#Füllt den Hintergrund weiß aus
+	screen.fill(white)
+	
+	# --- Zeichnen ab hier ---
+	
+
+	# --- Zeichenen bis hier ---
+	# aktualisiert den Fensterhinhalt
+	pygame.display.flip()
+	
+	#Wie oft Pro Sekunder soll die Schleife durchlaufen
+	clock.tick(10)
+
+
+pygame.quit()
+[/code]

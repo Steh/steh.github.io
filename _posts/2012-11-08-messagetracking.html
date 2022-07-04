@@ -1,0 +1,26 @@
+---
+layout: post
+title: 'Exchnage 2010: MessageTracking'
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+tags:
+- Exchange
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '47'
+  _wp_old_slug: '47'
+  _elasticsearch_indexed_on: '2012-11-08 11:00:26'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  sharing_disabled: '1'
+---
+[code lang="powershell"]# Show all Message with recipient steh between 03/26/2013 14:00:00 - 15:00:00
+Get-TransportServer  | Get-MessageTrackingLog -recipient steh@steh-blog.de -start &quot;03/26/2013 14:00:00&quot; -end &quot;03/26/2013 &quot;15:00:00&quot;[/code]
+
+<a href="http://technet.microsoft.com/en-us/library/cc539064.aspx" title="Technet: Description of Message Tracking Log Fields" target="_blank">Technet: Description of Message Tracking Log Fields</a>

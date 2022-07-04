@@ -1,0 +1,27 @@
+---
+layout: post
+title: 'Exchange: PSSession'
+categories:
+- Exchange
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  _wpas_done_all: '1'
+  sharing_disabled: '1'
+---
+[code lang="Powershell"]# Session in Variable
+$session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri  http://&lt;URI&gt;/powershell -Authentication kerberos
+
+#Import Session from Variable
+Import-PSSession $session
+
+#Show activ Sessions
+Get-PSSession
+
+#Remove Session by ID
+Remove-PSSession -Id 2[/code]

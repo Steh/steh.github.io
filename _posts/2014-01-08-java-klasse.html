@@ -1,0 +1,46 @@
+---
+layout: post
+title: 'Java: Klasse'
+categories:
+- Java
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  sharing_disabled: '1'
+  _wpas_done_all: '1'
+---
+<h1>Testklasse</h1>
+
+<pre><code>class PersonenTest(){
+    # Methode die ohne Aufruf ausgefuehrt wird
+    # oeffentlich, Klassenmethoden[1], ohne Rückgabe
+    public static void main( String[] args ) {
+        Person steh  = new Person();   //Ruft den Konstruktor ohne Paramer auf
+        Person steh2 = new Person(19); //Ruft den Konstruktor mit Paramer auf
+
+    }
+}
+</code></pre>
+
+<h1>Klasse</h1>
+
+<pre><code>class Personen(){
+    int alter;
+    # Konstruktor
+    public Personen() {
+        # Wird ausgeführt sobald neues Objekt erstellt wird
+        this.alter = 20;
+    }
+
+    public Personen(int alter) {
+        # Wird ausgeführt sobald neues Objekt erstellt wird
+        this.alter = alter;
+    }
+}
+</code></pre>
+
+<p>[1] Eine Statischen Methode hängt nicht an einem Objekt und kann daher immer ohne explizit erzeugtes Objekt aufgerufen werden</p>

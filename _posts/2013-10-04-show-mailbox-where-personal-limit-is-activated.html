@@ -1,0 +1,16 @@
+---
+layout: post
+title: Show Mailbox where personal limit is activated
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  sharing_disabled: '1'
+  _syntaxhighlighter_encoded: '1'
+  _wpas_done_all: '1'
+---
+Show Mailbox where the UseDatabaseQuotaDefaults Checkbox is disabled.
+[code lang="PowerShell"]Get-Mailbox -ResultSize unlimited | Where UseDatabaseQuotaDefaults -eq $false | FT PrimarySmtpAddress,ServerName,OrganizationalUnit,Database[/code]

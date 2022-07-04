@@ -1,0 +1,43 @@
+---
+layout: post
+title: Shared Mailbox
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  _wpas_done_all: '1'
+  sharing_disabled: '1'
+---
+<h2>create Shared-Mailbox</h2>
+
+<h3>create new</h3>
+
+<pre><code>New-Mailbox -UserPrincipalName &lt;alias&gt;@&lt;domain&gt; -Alias &lt;alias&gt; -Name &lt;Name&gt; -Database &lt;Database&gt; -OrganizationalUnit &lt;OrganisationalUnit&gt; -Shared[/code]
+</code></pre>
+
+<h3>convert existing Mailbox</h3>
+
+<pre><code>Get-Mailbox  | Set-Mailbox -type Shared[/code]
+</code></pre>
+
+<h2>change Rights</h2>
+
+<h3>Fullaccess</h3>
+
+<pre><code>Add-MailboxPermission -Identity "&lt;Mailbox&gt;" -User &lt;User&gt; -AccessRights Fullaccess -InheritanceType all -Automapping $true
+</code></pre>
+
+<h3>Send-As</h3>
+
+<pre><code>Add-MailboxPermission -Identity "" -User  -ExtendedRights 'Send-as'
+</code></pre>
+
+<h4>Set Manager</h4>
+
+<pre><code>Set-User -IgnoreDefaultScope -Manager "&lt;User" -Identity "&lt;Mailbox&gt;"
+</code></pre>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: Mehrere Mailboxen löschen
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '288'
+  _wp_old_slug: '288'
+  _elasticsearch_indexed_on: '2013-03-01 07:15:33'
+  geo_public: '0'
+---
+[code lang="powershell" light="true"]#Löscht alle Konten die in der .txt aufgelistet sind
+Get-Content c:mailboxe.txt | Disable-Mailbox[/code]

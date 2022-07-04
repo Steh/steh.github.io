@@ -1,0 +1,32 @@
+---
+layout: post
+title: 'Exchange 2010: ungültige SIDs mit zugriff auf eine Mailbox anzeigen'
+categories:
+- Exchange
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+  _wpas_done_all: '1'
+---
+<h2>Rechte anzeigen</h2>
+
+<pre>
+<code>Get-Mailbox &lt;mailbox&gt;| Get-MailboxPermission | where User -like "S-*"</code>
+</pre>
+
+<h2> Rechte entfernen </h2>
+
+<pre>
+<code>Get-Mailbox &lt;mailbox&gt;| Get-MailboxPermission | where User -like "S-*" | Remove-MailboxPermission</code>
+</pre>
+
+<h2>Quellen</h2>
+
+<a href="http://www.msxfaq.de/admin/mbrechte.htm" title="MSXFAQ: Rechte auf Postfächer" target="_blank">MSXFAQ: Rechte auf Postfächer</a>

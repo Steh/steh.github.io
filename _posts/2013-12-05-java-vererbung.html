@@ -1,0 +1,74 @@
+---
+layout: post
+title: 'Java: Vererbung Beispiel'
+categories:
+- Java
+tags:
+- Beispiel
+- Java
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+<p>Beispiel für die Vererbung einer Klasse in Java</p>
+
+<pre><code class="java">public class Person {
+    /**
+    * private bedeutet nur in dieser Klasse sichtbar
+    * protected ist auch in der Subklassse sichtbar
+    */
+    protected String vorname;
+    protected String nachname;
+    private int geburtsjahr;
+
+    /**
+    * Konstruktor
+    * wird beim aufrufen der Klasse ausgeführt
+    */
+    public Person(String vorname, String nachname, int geburtsjahr) {
+        this.vorname  = vorname;
+        this.nachname = nachname;
+        this.geburtsjahr = geburtsjahr;
+    }
+
+    /**
+    * auf Attribute die mit Private Deklariert wurden
+    * kann nur mit getter/setter Methoden zugegriffen werden
+    */
+    public int getGeburtsjahr() {
+        return this.geburtsjahr;
+    }
+
+    public String toString() {
+        return ("Kunde: " + this.vorname + ", " + this.nachname + ", Geburtsjahr: " + this.getGeburtsjahr());
+    }
+}
+</code></pre>
+
+<pre><code class="java">public class Kunde extends Person{
+    private int kundennummer;
+
+    /**
+    * Konstruktor
+    * ruft den Konstruktor der Superklasse auf
+    * und ergänzt diesen
+    */
+    public Kunde(String vorname, String nachname, int geburtsjahr, int kundennummer) {
+        super(vorname, nachname, geburtsjahr);
+        this.kundennummer = kundennummer;
+    }
+
+    /**
+    * Überschreibt die Methode der Superklasse
+    * und überschreibt diese
+    */
+
+    @Override
+    public String toString() {
+        return (super.toString() +  ", Kundennummer: " + this.kundennummer);
+}
+</code></pre>

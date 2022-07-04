@@ -1,0 +1,23 @@
+---
+layout: post
+title: Senden-Als
+categories:
+- Exchange
+- PowerShell
+- Verteilergruppe
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '248'
+  _wp_old_slug: '248'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-02-19 13:00:48'
+---
+<h1>Senden-Als vergeben</h1>
+[code lang="powershell" light="true"]Add-ADPermission &lt;em&gt;AD-Objekt&lt;/em&gt; -ExtendedRights Send-As -User &lt;em&gt;Benutzer&lt;/em&gt; -AccessRights ExtendedRight | fl[/code]
+<h1>Senden-Als anzeigen</h1>
+[code lang="powershell" light="true"]Get-ADPermission &lt;em&gt;AD-Object&lt;/em&gt; | Where-Object {$_.ExtendedRights -like &quot;*Send-as*&quot;}[/code]

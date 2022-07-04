@@ -1,0 +1,29 @@
+---
+layout: post
+title: Exchange Powershell - Mailbox
+categories:
+- Exchange
+tags:
+- Exchange
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '51'
+  _wp_old_slug: '51'
+  _elasticsearch_indexed_on: '2012-11-09 10:47:09'
+---
+<h1>Benutzer suchen</h1>
+<pre>Get-User &lt;Alias/Name&gt;</pre>
+<h1>Mailbox für Benutzer anlegen</h1>
+<pre>Get-User &lt;Alias/Name&gt; | Enable-Mailbox -database &lt;DATENBANK&gt;</pre>
+<h1>Mailbox anzeigen</h1>
+<pre>Get-Mailbox &lt;Alias/Name/E-Mail Adresse&gt;</pre>
+<h1>Mailboxstatistiken ausgeben</h1>
+<pre>Get-MailboxStatistics &lt;Alias/Name&gt;</pre>
+<h1>Mailbox löschen (ohne AD-User)</h1>
+<pre>Get-Mailbox &lt;Alias/Name&gt; | Disable-Mailbox</pre>
+<h1>Mailbox löschen (inklusive AD-User)</h1>
+<pre>Get-Mailbox &lt;Alias/Name&gt; | Remove-Mailbox</pre>

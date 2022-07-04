@@ -1,0 +1,60 @@
+---
+layout: post
+title: 'Powershell: CientFeatures installieren'
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '467'
+  _wp_old_slug: '467'
+  _format_link_url: ''
+  _format_url: ''
+  _format_quote_source_url: ''
+  _format_quote_source_name: ''
+  _format_image: ''
+  _format_gallery: ''
+  _format_audio_embed: ''
+  _format_video_embed: ''
+  _post_restored_from: a:3:{s:20:"restored_revision_id";i:606;s:16:"restored_by_user";i:41094722;s:13:"restored_time";i:1369309822;}
+  _elasticsearch_indexed_on: '2013-05-16 13:19:56'
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+  _wpcom_is_markdown: '1'
+  sharing_disabled: '1'
+---
+<h2>Voraussetungen</h2>
+
+<ul>
+<li>PSClientManager Modul für die Powershell (<a href="http://archive.msdn.microsoft.com/PSClientManager/Release/ProjectReleases.aspx?ReleaseId=4249">Microsoft Archiv Link</a>)</li>
+<li>min. Powershell 2.0</li>
+</ul>
+
+<h2>Ausführung</h2>
+
+<ol>
+<li>PSClientManager installieren</li>
+<li>Modul in der Powershell importieren:</p>
+
+<pre><code>Import-Module PSclientManager  
+</code></pre>
+
+<ul>
+<li>Überprüfen welche Features verfügbar sind</li>
+</ul>
+
+<pre><code>Get-ClientFeature –Name telnet | Format-Table -AutoSize  
+</code></pre>
+
+<ul>
+<li>Features installieren</li>
+</ul>
+<pre><code>Add-ClientFeature –Name TelnetClient</code></pre>
+</ol>
+
+<a href="http://archive.msdn.microsoft.com/PSClientManager">Quelle</a></li>
+</ul></li>
+</ol>

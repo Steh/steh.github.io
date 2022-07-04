@@ -1,0 +1,26 @@
+---
+layout: post
+title: Sekundäre E-Mail Adresse hinzufügen
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '177'
+  _wp_old_slug: '177'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-01-22 07:53:07'
+---
+<h2>Exchange 2010</h2>
+[code lang="powershell" light="true"]Set-Mailbox &lt;Alias&gt; -EmailAddresses @{add=&quot;&lt;SekundäreAdresse&gt;&quot;}[/code]
+<h2>Exchange 2007</h2>
+[code lang="powershell" light="true"]$Temp = Get-Mailbox &lt;Alias&gt;
+$Temp.EmailAddresses.Add(&quot;smtp:&lt;SekundäreAdresse&gt;&quot;)
+Set-Mailbox -Instance $Temp[/code]

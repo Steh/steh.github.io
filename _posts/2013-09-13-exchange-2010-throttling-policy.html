@@ -1,0 +1,27 @@
+---
+layout: post
+title: 'Exchange 2010: Throttling Policy'
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+---
+[code lang="Powershell"]Get-ThrottlingPolicy DefaultThrottlingPolicy*[/code]
+
+<a href="http://steh-blog.de/wp-content/uploads/2013/09/Throttling_Policy.png"><img class="alignnone size-full wp-image-1022" alt="Throttling_Policy" src="http://steh-blog.de/wp-content/uploads/2013/09/Throttling_Policy.png" width="991" height="624" /></a>
+<h2>MaxConcurrency</h2>
+The MaxConcurrency Parameter specifies how many concurrent connections an Client Access user can have against the Exchange 2010 server.
+<h2>PercentTimeInAD</h2>
+<h2>PercentTimeInCAS</h2>
+<h2>PercentTimeInMailboxRPC</h2>
+<h1>Reference:</h1>
+<strong>Very good Blog entry</strong>
+<a href="http://blogs.msdn.com/b/pepeedu/archive/2010/01/13/exchange-2010-client-access-throttling.aspx" target="_blank">http://blogs.msdn.com/b/pepeedu/archive/2010/01/13/exchange-2010-client-access-throttling.aspx</a>
+<strong>New-ThrottlingPolicy</strong>
+<a href="http://technet.microsoft.com/en-us/library/dd351045.aspx" target="_blank">http://technet.microsoft.com/en-us/library/dd351045.aspx</a>
+<strong>Set-ThrottlingPolicy</strong>
+<a href="http://technet.microsoft.com/en-us/library/dd298094.aspx" target="_blank">http://technet.microsoft.com/en-us/library/dd298094.aspx</a>

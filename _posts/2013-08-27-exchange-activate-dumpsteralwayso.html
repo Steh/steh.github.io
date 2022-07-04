@@ -1,0 +1,24 @@
+---
+layout: post
+title: 'Exchange: Activate "DumpsterAlwaysO"'
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  sharing_disabled: '1'
+---
+If this is activated all deleted Messages are throw in the dumpster. Also such messages that are hard deleted ([SHIFT]+delete).
+<h1>to do</h1>
+This Regkey had to be placed on the clients computer.
+<ol>
+	<li>open regedit and navigate to: <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Exchange\Client\Options</code></li>
+	<li>new DWORD key, that you name "<code>DumpsterAlwaysOn</code>"</li>
+	<li>set the numeric value to: 1</li>
+	<li>restart Outlook</li>
+	<li>ready</li>
+</ol>
+Now you can recover every mail from <strong><span class="ui">recover deleted messages</strong> menu item

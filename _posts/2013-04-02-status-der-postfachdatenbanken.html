@@ -1,0 +1,24 @@
+---
+layout: post
+title: Status der Postfachdatenbanken
+categories:
+- Exchange
+- Exchange 2010
+- PowerShell
+- Status
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '296'
+  _wp_old_slug: '296'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-04-02 06:54:05'
+---
+Praktisch um schnell eine übersicht der Datenbanken zu bekommen.
+ 
+[code lang="powershell" light="true"]#Kurze Übersicht aller Datenbanken
+Get-DatabaseAvailabilityGroup &quot;DAG-NAME&quot; | %{ $_.Servers | %{ Get-MailboxDatabaseCopyStatus -Server $_ } }[/code]

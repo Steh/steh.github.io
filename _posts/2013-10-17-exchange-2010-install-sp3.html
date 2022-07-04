@@ -1,0 +1,54 @@
+---
+layout: post
+title: 'Exchange 2010: install SP3'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _syntaxhighlighter_encoded: '1'
+  _edit_last: '1'
+  sharing_disabled: '1'
+  _wpas_done_all: '1'
+---
+<h2>Preparation</h2>
+1. Download Exchange 2010 SP3
+2. Extract the Service Pack on your Exchange Server
+<pre>If you are in an Multi-Domain-Environment, you shout make the Schema Update from your Schema Master.</pre>
+How to find your Schema Master:
+
+[code lang="powershell"]Get-ADForest | Select-Object SchemaMaster[/code]
+<h2>Schema Master</h2>
+1. Copy Exchange Setup to the Schema Master
+2. Open CMD or PowerShell with Administrator Rights
+2.1. setup.com /PrepareSchema
+2.2. setup.com /PrepareAD
+2.3. setup.com /PrepareAllDomains
+3. Wait for the Replication in your Environment
+<h2>Preparing Exchange Server</h2>
+Look if you have the Right to execute PoswerShell Scripts, exchange doesn´t check this.
+
+[code lang="powershell"]Get-ExecutionPolicy -list[/code]
+
+
+<a href="http://steh-blog.de/wp-content/uploads/2013/09/execution_policy.png"><img class="alignnone size-full wp-image-1051" alt="execution_policy" src="http://steh-blog.de/wp-content/uploads/2013/09/execution_policy.png" width="677" height="227" /></a>
+
+In a DAG check if you have installed the Hotfix for Windows Clustering.
+<a title="Windows Server 2008 R2 failover cluster Hotfix" href="http://support.microsoft.com/kb/2550886/en-us" target="_blank">kb2550886</a>
+<h2>Installation</h2>
+<h3>Client-Access-Server/Transport-Server</h3>
+<ol>
+	<li>Stop Services like <strong>Office Scan</strong> and <strong>System Center Management</strong></li>
+	<li>Start installation, User must be member of "exchange ... group"</li>
+</ol>
+<ul>
+	<li><a href="http://support.microsoft.com/kb/556086/en-us" target="_blank">Technet: How to determine the current Active Directory or Exchange Server schema version</a></li>
+	<li><a href="http://support.microsoft.com/kb/2810617/en-us" target="_blank">Technet: Windows PowerShell script execution policy is defined in Group Policy</a></li>
+	<li><a href="http://support.microsoft.com/kb/2550886/en-us" target="_blank">Technet: A transient communication failure causes a Windows Server 2008 R2 failover cluster to stop working</a></li>
+	<li><a href="http://www.bibble-it.com/2013/02/13/quick-step-by-step-exchange-2010-sp3-install-guide" target="_blank">quick-step-by-step-exchange-2010-sp3-install-guide</a></li>
+	<li><a href="http://jerridwills.com/2013/02/13/installing-exchange-2010-sp3/" target="_blank">Installing Exchange 2010 SP3</a></li>
+	<li><a href="http://exchangeserverpro.com/installing-exchange-server-2010-service-pack-3/" target="_blank">installing-exchange-server-2010-service-pack-3</a></li>
+	<li><a href="http://www.chrismartin.it/exchange-2010-sp2-cscript-process-has-open-files/" target="_blank">CSript Process has open Files @ chrismartin.it</a></li>
+</ul>

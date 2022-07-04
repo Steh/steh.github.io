@@ -1,0 +1,33 @@
+---
+layout: post
+title: 'Outlook: activate log'
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '128'
+  _wp_old_slug: '128'
+  _elasticsearch_indexed_on: '2013-01-14 09:02:32'
+  sharing_disabled: '1'
+  _edit_last: '1'
+---
+<h1>Activate logging</h1>
+<ol dir="ltr">
+	<li>
+<div>On the <strong>File </strong>tab, select <strong>Options</strong>.</div></li>
+	<li>
+<div>In the <strong>Outlook Options </strong>dialog box, select <strong>Advanced</strong>.</div></li>
+	<li>
+<div>Scroll down the list of settings and then select the <strong>Enable troubleshooting logging (requires restarting Outlook)</strong> option.</div></li>
+</ol>
+<a href="http://steh-blog.de/wp-content/uploads/2013/01/outlook_log_21.png"><img class="alignnone size-medium wp-image-891" alt="outlook_log_2" src="http://steh-blog.de/wp-content/uploads/2013/01/outlook_log_21-300x210.png" width="300" height="210" /></a>
+<h1>Logfile location</h1>
+<pre>AutoDiscover log		%TEMP%\olkdisc.log
+Outlook advanced ETW log 	%TEMP%\Outlook-########.etl 
+Outlook RPC log 		%TEMP%\OLKRPCLOG_date-time.etl
+Outlook calendar log files 	%TEMP%\OlkCalLogs\OlkCalLog_ date_time .etl  
+Transport log file 		%TEMP%\Outlook Logging\opmlog.log</pre>
+Referenz: <a title="Microsoft Support" href="http://support.microsoft.com/kb/2260527/en-us" target="_blank">Microsoft Support</a>
