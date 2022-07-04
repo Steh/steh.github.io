@@ -6,7 +6,7 @@ tags: ['cheatsheet', 'nmap']
 autor: StehSa
 --- 
 
-# nmap cheat sheet
+# nmap: Cheat Sheet
 	
 	# Legacy Adressrichlinien ausgeben
     Get-EmailAddressPolicy | where {$_.RecipientFilterType –eq “Legacy”}
