@@ -10,3 +10,4 @@ permalink: /link-list/
 
 ## Tools
 * [CISA: Free Cybersecurity Services and Tools](https://www.cisa.gov/free-cybersecurity-services-and-tools)
+* [shellshark: Infosec tools](https://shellsharks.com/infosec-tools)
