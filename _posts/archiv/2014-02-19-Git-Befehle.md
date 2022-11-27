@@ -7,8 +7,6 @@ tags: ["Git"]
 autor: Steh Sa
 ---
 
-{% include JB/setup %}
-
 ## Grundsätzliche Bash Kommandos für Git
 	# Konfiguration ausgeben
 	git config --list
