@@ -5,9 +5,8 @@ date:   2022-11-27
 categories: informationsecurity frameworks
 ---
 
-- TOC
+1. TOC
 {:toc}
-
 
 # Overview of the attack phases [^1]
 
