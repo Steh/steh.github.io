@@ -1,9 +1,7 @@
 ---
-layout: post
 title: "nmap: cheat sheet"
-categories: [nmap, cheatsheet]
+categories: cheatsheet
 tags: ['cheatsheet', 'nmap']
-autor: StehSa
 --- 
 
 {%highlight bash%}
