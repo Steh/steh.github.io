@@ -29,7 +29,10 @@ categories: informationsecurity frameworks
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
 
 # in
-# througt
+![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png) [^1]
+# throug
+![Cyber Kill Chain through]({{ site.url }}/assets/images/cyber-kill-chain-through.png) [^1]
 # out
+![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png) [^1]
 
 [^1]: https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf
