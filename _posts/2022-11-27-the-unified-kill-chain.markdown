@@ -5,7 +5,7 @@ date:   2022-11-27
 categories: informationsecurity frameworks
 ---
 
-The Unified Kill Chain [^1]
+# Overview of the attack phases [^1]
 
 |  Attack |  Phase | Description |
 |  ----------- |  ----------- | ----------- |
@@ -27,5 +27,9 @@ The Unified Kill Chain [^1]
 | 16  | Exfiltration |Techniques that result or aid in an attacker removing data from a target network.|
 | 17  | Impact| Techniques aimed at manipulating, interrupting or destroying the target system or data.|
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
+
+# in
+# througt
+# out
 
 [^1]: https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf
