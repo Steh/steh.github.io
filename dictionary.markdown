@@ -3,6 +3,9 @@ layout: page
 title: Dictionary
 permalink: /dictionary/
 ---
+**APT**
+: *Advanced Persistent Threat Groups*
+: sophisticated actors or nation-sponsored
 
 **DFIR**
 : *Digital Forensics and Incident Response*
