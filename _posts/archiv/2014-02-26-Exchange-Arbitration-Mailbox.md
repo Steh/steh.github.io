@@ -4,10 +4,7 @@ title: "Exchange: Arbitration Mailbox verschieben"
 description: "Was sind Arbitration Mailboxen und wie werden diese Behandelt"
 category: Exchange
 tags: ["Arbitration","Move-Request"]
-autor: Steh Sa
 ---
-
-{% include JB/setup %}
 
 ## Was sind diese "Arbitration" Mailboxen
 
