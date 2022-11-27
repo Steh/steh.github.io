@@ -22,4 +22,4 @@ categories: informationsecurity frameworks
 
 * https://tryhackme.com/room/intronetworksecurity
 * https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
-[^1]* https://www.varonis.com/blog/what-is-osint
+[^1]: https://www.varonis.com/blog/what-is-osint
