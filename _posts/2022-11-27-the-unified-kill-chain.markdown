@@ -32,11 +32,11 @@ categories: informationsecurity frameworks
 | 17  | Impact| Techniques aimed at manipulating, interrupting or destroying the target system or data.|
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
 
-# in
+## in
 ![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png) [^1]
-# throug
+## throug
 ![Cyber Kill Chain through]({{ site.url }}/assets/images/cyber-kill-chain-through.png) [^1]
-# out
+## out
 ![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png) [^1]
 
 [^1]: https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf
