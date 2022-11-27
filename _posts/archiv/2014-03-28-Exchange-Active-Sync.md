@@ -7,7 +7,6 @@ tags : [Exchange, ActiveSync]
 autor: StehSa
 ---
 
-{% include JB/setup %}
 
 ## PowerShell Befehle
     # Alle ActiveSync Geräte anzeigen die länger als 90 Tage nicht Synchronisiert wurden, löschen!

@@ -7,8 +7,6 @@ tags: ["Exchange", "Fehlersuche"]
 autor: StehSa
 ---
 
-{% include JB/setup %}
-
 ## Test Cmdlets 
     # User
 	Test-ArchiveConnectivity -UserSmtp <USER-E-MAIL>

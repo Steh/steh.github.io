@@ -6,8 +6,6 @@ tagline: 'Anzeigen und wieder einbinden'
 tags: [PowerShell, Remote]
 autor: StehSa
 ---
-{% include JB/setup %}
-
 ## PowerShell Befehl
 
 	Invoke-Command -ComputerName <Server1>,<Server2>

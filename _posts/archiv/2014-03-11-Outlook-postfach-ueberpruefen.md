@@ -6,8 +6,6 @@ tags: ["Exchange", "Outlook"]
 autor: Steh Sa
 --- 
 
-{% include JB/setup %}
-
 ## Postfach Datendatei reparieren
 ### 1. Herrausfinden wo die Outlook-Datendatei liegt
 

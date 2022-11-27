@@ -6,7 +6,6 @@ tagline: 'Server wurde gelöscht oder ist nicht mehr aktiv'
 tags: [Exchange, Regedit, ManagementKonsole]
 autor: StehSa
 ---
-{% include JB/setup %}
 
 ## Fehlermeldung
 ![Fehlermeldung](http://steh.github.io/resources/2014-04-17-Exchange-Managemant-Konsole-kann-sich-nicht-verbinden_1.png)

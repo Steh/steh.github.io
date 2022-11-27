@@ -6,7 +6,6 @@ tagline: "Exchange: Oeffentliche Ordner mit der PowerShell administrieren"
 tags : [Exchange, Oeffentliche-Ordner]
 autor: StehSa
 ---
-{% include JB/setup %}
 
 ## PowerShell Befehle
 	# Alle Ordner Unterhalb des Hauptordners anzeigen

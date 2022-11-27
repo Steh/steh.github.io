@@ -5,7 +5,6 @@ title: 'PowerShell: IIS Befehle'
 tags: [PowerShell, IIS]
 autor: StehSa
 ---
-{% include JB/setup %}
 
 ## Verfügbare Befehle
     Get-Command -PSSnapin WebAdministration
