@@ -4,19 +4,26 @@ title: Dictionary
 permalink: /dictionary/
 ---
 
-*DFIR*
+**DFIR**
 : Digital Forensics and Incident Response
 
-*IDS*
+**IDS**
 : Intrusion Detection System
 : Detects system an network intrusions and intrusion attemps
 
-*IPS*
+**IPS**
 : Intrusion Prevention System
 : Blocks detected intrusions and intrusion attemps
 
-*SOC*
+**SIEM**
+: Security Information and Event Management
+
+**SOC**
 : Security Operatins Center
 
-*TTP*
+**TAO**
+: Office of Tailored Access Operations
+: NSA hacking unit
+
+**TTP**
 : Tactics, Techniques, and Procedures
