@@ -34,6 +34,18 @@ syntax_highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-archives
+  
+jekyll-archives:
+  enabled:
+	  - 2014
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
