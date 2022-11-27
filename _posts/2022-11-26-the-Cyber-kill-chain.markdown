@@ -13,15 +13,25 @@ categories: informationsecurity frameworks
         * [theHarvester](https://github.com/laramies/theHarvester) - commandline tool to get data from multiple public data sources
         * [Hunter.io](https://hunter.io/try/search/) - email hunting tool 
         * [OSINT Framework](https://osintframework.com/) - collection of OSINT tools
-3. Weaponization
+2. Weaponization
     * preparing a file with a malicious component
-5. Delivery: Delivery means delivering the “weaponized” file to the target via any feasible method, such as email or USB flash memory.
-6. Exploitation: When the user opens the malicious file, their system executes the malicious component.
-7. Installation: The previous step should install the malware on the target system.
-8. Command & Control (C2): The successful installation of the malware provides the attacker with a command and control ability over the target system.
-9. Actions on Objectives: After gaining control over one target system, the attacker has achieved their objectives. One example objective is Data Exfiltration (stealing target’s data).
-
-* https://tryhackme.com/room/intronetworksecurity
-* https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+3. Delivery
+    * delivering the “weaponized” file to the target
+    * examples: Phishing or infected USB-Devices [^5]
+4. Exploitation
+   * execute the malicious component
+5. Installation: 
+   * install the malware on the target system
+   * including backdoor to gain persistance [^6]
+6. Command & Control (C2)
+   * the attacker has the ability to command and control the target system.
+   * most common communication channels: HTTP/s and DNS Tunneling
+7. Actions on Objectives
+   * achieve their objectives, like Data Exfiltration
 
 [^1]: https://www.varonis.com/blog/what-is-osint
+[^2]: https://tryhackme.com/room/intronetworksecurity
+[^3]: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+[^4]: https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/
+[^5]: https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html
+[^6]: https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/
