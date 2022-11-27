@@ -17,12 +17,12 @@ categories: informationsecurity frameworks
     * preparing a file with a malicious component
 3. Delivery
     * delivering the “weaponized” file to the target
-    * examples: Phishing or infected USB-Devices [^5]
+    * examples: Phishing or infected USB-Devices [^2]
 4. Exploitation
    * execute the malicious component
 5. Installation: 
    * install the malware on the target system
-   * including backdoor to gain persistance [^6]
+   * including backdoor to gain persistance [^3]
 6. Command & Control (C2)
    * the attacker has the ability to command and control the target system.
    * most common communication channels: HTTP/s and DNS Tunneling
@@ -30,8 +30,9 @@ categories: informationsecurity frameworks
    * achieve their objectives, like Data Exfiltration
 
 [^1]: https://www.varonis.com/blog/what-is-osint
-[^2]: https://tryhackme.com/room/intronetworksecurity
-[^3]: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
-[^4]: https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/
-[^5]: https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html
-[^6]: https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/
+[^2]: https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html
+[^3]: https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/
+
+- https://tryhackme.com/room/intronetworksecurity
+- https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+- https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/
