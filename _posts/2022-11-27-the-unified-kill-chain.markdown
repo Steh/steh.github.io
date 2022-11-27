@@ -2,8 +2,8 @@
 layout: post
 title:  "The Unified Kill Chain"
 date:   2022-11-27
-categories: informationsecurity frameworks
-tags: frameworks ukc security
+categories: informationsecurity
+tags: [frameworks, ukc security]
 ---
 
 1. TOC
@@ -39,4 +39,4 @@ tags: frameworks ukc security
 ## out
 ![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png) [^1]
 
-[^1]: https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf
+[^1]: [unifiedkillchain.com: The-Unified-Kill-Chain.pdf](https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf)
