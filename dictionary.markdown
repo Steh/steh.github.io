@@ -1,22 +1,22 @@
 ---
 layout: page
-title: Abbreviations
-permalink: /abbreviations/
+title: Dictionary
+permalink: /dictionary/
 ---
 
-DFIR
+*DFIR*
 : Digital Forensics and Incident Response
 
-IDS
+*IDS*
 : Intrusion Detection System
 : Detects system an network intrusions and intrusion attemps
 
-IPS
+*IPS*
 : Intrusion Prevention System
 : Blocks detected intrusions and intrusion attemps
 
-SOC
+*SOC*
 : Security Operatins Center
 
-TTP
+*TTP*
 : Tactics, Techniques, and Procedures
