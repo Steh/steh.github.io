@@ -31,7 +31,7 @@ syntax_highlighter: rouge
 #github_username:  Steh
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-archives
