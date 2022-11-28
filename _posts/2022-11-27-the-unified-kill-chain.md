@@ -1,9 +1,10 @@
 ---
 title:  "The Unified Kill Chain"
 date:   2022-11-27
-excerpt: "The Unified Kill Chain Model"
+excerpt: "A quick overview of The Unified Kill Chain Model"
 categories: informationsecurity
-tags: [frameworks, ukc, security]
+tags: [frameworks, ukc, security, informationsecurity]
+type: posts
 ---
 
 1. TOC
