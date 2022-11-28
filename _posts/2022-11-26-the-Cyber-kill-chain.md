@@ -2,6 +2,7 @@
 title:  "The Cyber Kill Chain"
 date:   2022-11-18
 categories: informationsecurity frameworks
+excerpt: "The lookheadmartin cyber kill chain"
 ---
 
 1. Recon - Reconnaissance
@@ -28,13 +29,13 @@ categories: informationsecurity frameworks
 7. Actions on Objectives
    * achieve their objectives, like Data Exfiltration
 
-The Cyber Kill Chain was created and last updated in 2011. More modern approaches are [MITRE ATT&CK](https://attack.mitre.org/) and [Unified Kill Chain](https://unifiedkillchain.com/).
+The Cyber Kill Chain was created and last updated in 2011. For a better view it can combined with more modern approaches like [MITRE ATT&CK](https://attack.mitre.org/) and [Unified Kill Chain](https://unifiedkillchain.com/).
 
 # References
-- https://tryhackme.com/room/intronetworksecurity
-- https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
-- https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/
+- [tryhackme: Network Security](https://tryhackme.com/room/intronetworksecurity)
+- [lockheedmartin: cyber kill chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+- [Intro to macros and vba for script kiddies](https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/)
 
-[^1]: https://www.varonis.com/blog/what-is-osint
-[^2]: https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html
-[^3]: https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/
+[^1]: (https://www.varonis.com/blog/what-is-osint)
+[^2]: (https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html)
+[^3]: (https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/)

@@ -13,7 +13,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 
-# Overview of the attack phases [^1]
+# Overview of the attack phases
 
 |  Attack |  Phase | Description |
 |  ----------- |  ----------- | ----------- |
@@ -35,12 +35,12 @@ toc_icon: "cog"
 | 16  | Exfiltration |Techniques that result or aid in an attacker removing data from a target network.|
 | 17  | Impact| Techniques aimed at manipulating, interrupting or destroying the target system or data.|
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
-
-# in the: first phase 
+[^1]
+# in: the first phase 
 ![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png){: height="80%" width="80%"} [^1]
-## throug: the second phase
-![Cyber Kill Chain through]({{ site.url }}/assets/images/cyber-kill-chain-through.png) [^1]
-## out: the third phase
-![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png) [^1]
+# throug: the second phase
+![Cyber Kill Chain through]({{ site.url }}/assets/images/cyber-kill-chain-through.png){: height="80%" width="80%"} [^1]
+# out: the third phase
+![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png){: height="80%" width="80%"} [^1]
 
 [^1]: [unifiedkillchain.com: The-Unified-Kill-Chain.pdf](https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf)
