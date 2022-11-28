@@ -287,8 +287,6 @@ defaults:
       comments: true
       share: false
       related: true
-
-defaults:
   # _pages
   - scope:
       path: ""

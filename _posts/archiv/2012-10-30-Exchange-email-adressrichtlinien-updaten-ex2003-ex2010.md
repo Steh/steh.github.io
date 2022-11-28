@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Exchange: Legacy E-Mail Adressrichtlinien"
 tagline: "Ausgeben und Updaten"
 categories: Exchange2010

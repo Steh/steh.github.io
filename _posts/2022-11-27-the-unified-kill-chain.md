@@ -4,7 +4,7 @@ date:   2022-11-27
 excerpt: "A quick overview of The Unified Kill Chain Model"
 categories: informationsecurity
 tags: [frameworks, ukc, security, informationsecurity]
-type: posts
+layout: single
 ---
 
 1. TOC
