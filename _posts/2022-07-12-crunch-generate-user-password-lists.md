@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "crunch: generate user/password lists"
 date:   2022-07-11
 categories: crunch kali

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Cyber Kill Chain"
 date:   2022-11-18
 categories: informationsecurity frameworks

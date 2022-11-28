@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Diamond Model of Intrusion Analysis"
 date:   2022-11-11
 categories: informationsecurity

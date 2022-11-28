@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "curl"
 date:   2022-07-11
 categories: curl

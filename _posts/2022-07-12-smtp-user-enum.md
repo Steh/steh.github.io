@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "smtp-user-enum"
 date:   2022-07-11
 categories: smtp-user-enum kali

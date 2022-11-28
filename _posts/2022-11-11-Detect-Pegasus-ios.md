@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Pegasus unter IOS untersuchen"
 date:   2022-11-11
 categories: pegasus

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Investigate Files"
 date:   2022-11-18
 categories: informationsecurity analysis

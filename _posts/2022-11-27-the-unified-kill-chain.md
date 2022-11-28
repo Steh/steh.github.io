@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Unified Kill Chain"
 date:   2022-11-27
 categories: informationsecurity
