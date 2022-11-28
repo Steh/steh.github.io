@@ -1,16 +1,26 @@
 ---
 title:  "Investigate Files"
 date:   2022-11-18
-categories: informationsecurity analysis
+categories: 
+- informationsecurity
+tags:
+- blue team
+- analysis
+- files
+- forensic
 ---
 # timestamp
   
 
 # PDF
+```bash
   pdfinfo somepdf.pdf
+```
 
 # Images
+```bash
   exiftool someimage.jpg
+```
 
 ## Tools
 * [Foreniscally](https://29a.ch/photo-forensics/#forensic-magnifier)

@@ -1,7 +1,10 @@
 ---
 title:  "Pegasus unter IOS untersuchen"
 date:   2022-11-11
-categories: pegasus
+categories: 
+- informationsecurity
+tags:
+- pegasus
 ---
 # Pegasus unter IOS untersuchen
 1. verschlüsseltes Backup über den Finder anlegen
