@@ -3,12 +3,15 @@ title:  "The Unified Kill Chain"
 date:   2022-11-27
 excerpt: "A quick overview of The Unified Kill Chain Model"
 categories: informationsecurity
-tags: [frameworks, ukc, security, informationsecurity]
-layout: single
+tags: 
+- frameworks
+- ukc
+- security
+- informationsecurity
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
-
-1. TOC
-{:toc}
 
 # Overview of the attack phases [^1]
 
@@ -33,11 +36,11 @@ layout: single
 | 17  | Impact| Techniques aimed at manipulating, interrupting or destroying the target system or data.|
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
 
-## in
-![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png) [^1]
-## throug
+# in the: first phase 
+![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png){: height="80%" width="80%"} [^1]
+## throug: the second phase
 ![Cyber Kill Chain through]({{ site.url }}/assets/images/cyber-kill-chain-through.png) [^1]
-## out
+## out: the third phase
 ![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png) [^1]
 
 [^1]: [unifiedkillchain.com: The-Unified-Kill-Chain.pdf](https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf)
