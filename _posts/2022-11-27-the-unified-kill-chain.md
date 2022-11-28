@@ -35,7 +35,8 @@ toc_icon: "cog"
 | 16  | Exfiltration |Techniques that result or aid in an attacker removing data from a target network.|
 | 17  | Impact| Techniques aimed at manipulating, interrupting or destroying the target system or data.|
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
-[^1]
+
+reference[^1]
 # in: the first phase 
 ![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png){: height="80%" width="80%"} [^1]
 # throug: the second phase

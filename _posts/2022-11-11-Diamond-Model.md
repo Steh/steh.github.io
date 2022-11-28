@@ -4,7 +4,7 @@ date:   2022-11-11
 categories: 
 - informationsecurity
 tags:
-- framework
+- frameworks
 excerpt: ''
 ---
 * Adversary - Attacker
