@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Link List
 permalink: /link-list/
 ---
