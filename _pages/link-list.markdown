@@ -22,4 +22,4 @@ toc: true
 * SSL Blacklist:  A resource for collecting and providing a blocklist for malicious SSL certificates and JA3/JA3s fingerprints.
 * URL Haus:  A resource for sharing malware distribution sites.
 * [Thread Fox](https://threatfox.abuse.ch)
-    * A resource for sharing indicators of compromise (IOCs)
+    * A resource for IOCs
