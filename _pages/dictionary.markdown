@@ -6,6 +6,10 @@ permalink: /dictionary/
 : *Advanced Persistent Threat Groups*
 : sophisticated actors or nation-sponsored
 
+CTI
+: Cyber Threat Intel
+: Is a framework vital for investigating and reporting against adversary attacks with organisational stakeholders and external communities. [^1]
+
 **DFIR**
 : *Digital Forensics and Incident Response*
 
@@ -32,3 +36,6 @@ permalink: /dictionary/
 
 **TTP**
 : *Tactics, Techniques, and Procedures*
+
+# References
+[^1]: [tryhackme: Intro to Cyber Threat Intel](https://tryhackme.com/room/cyberthreatintel)
