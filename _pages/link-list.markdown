@@ -13,3 +13,13 @@ toc: true
 # Tools
 * [CISA: Free Cybersecurity Services and Tools](https://www.cisa.gov/free-cybersecurity-services-and-tools)
 * [shellshark: Infosec tools](https://shellsharks.com/infosec-tools)
+
+## OSINT
+### domain informatin
+* [urlscan.io](https://urlscan.io)
+* Malware Bazaar:  A resource for sharing malware samples.
+* Feodo Tracker:  A resource used to track botnet command and control (C2) infrastructure linked with Emotet, Dridex and TrickBot.
+* SSL Blacklist:  A resource for collecting and providing a blocklist for malicious SSL certificates and JA3/JA3s fingerprints.
+* URL Haus:  A resource for sharing malware distribution sites.
+* [Thread Fox](https://threatfox.abuse.ch)
+    * A resource for sharing indicators of compromise (IOCs)
