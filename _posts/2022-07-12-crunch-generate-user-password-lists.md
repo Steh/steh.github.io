@@ -1,10 +1,16 @@
 ---
-title:  "crunch: generate user/password lists"
+title:  "Generate user/password lists with crunch"
 date:   2022-07-11
-categories: crunch kali
+categories: 
+- informationsecurity
+tags:
+- crunch 
+- kali
 classes: 
 - wide
 ---
+Generate Password or User Lists on Linux with crunch.
+
 ```bash
 # create wordlists
 ## 1 5          = Character count between 1 and 5
@@ -16,4 +22,5 @@ crunch 1 5 rstuvwxyz -o /root/users.txt
 crunch <min. password length> <max. password length> <character space> -o <saving_location>
 ```
 
+# References
 * [Kali: crunch](https://www.kali.org/tools/crunch/)

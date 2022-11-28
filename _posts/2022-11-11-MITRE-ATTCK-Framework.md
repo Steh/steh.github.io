@@ -1,6 +1,9 @@
 ---
 title:  "MITRE ATT&CK Framework"
 date:   2022-11-11
-categories: informationsecurity mitre
+categories: 
+- informationsecurity 
+tags:
+- mitre
 published: false
 ---

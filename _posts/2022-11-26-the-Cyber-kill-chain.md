@@ -1,7 +1,10 @@
 ---
 title:  "The Cyber Kill Chain"
 date:   2022-11-18
-categories: informationsecurity frameworks
+categories: 
+- informationsecurity
+tags:
+- frameworks
 excerpt: "The lookheadmartin cyber kill chain"
 ---
 
@@ -36,6 +39,6 @@ The Cyber Kill Chain was created and last updated in 2011. For a better view it 
 - [lockheedmartin: cyber kill chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 - [Intro to macros and vba for script kiddies](https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/)
 
-[^1]: (https://www.varonis.com/blog/what-is-osint)
-[^2]: (https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html)
-[^3]: (https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/)
+[^1]: [https://www.varonis.com/blog/what-is-osint](https://www.varonis.com/blog/what-is-osint)
+[^2]: [https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html](https://www.csoonline.com/article/3534693/cybercriminal-group-mails-malicious-usb-dongles-to-targeted-companies.html)
+[^3]: [https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/](https://www.offensive-security.com/metasploit-unleashed/meterpreter-backdoor/)

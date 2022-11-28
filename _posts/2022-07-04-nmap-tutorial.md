@@ -1,18 +1,21 @@
 ---
-title: "nmap: cheat sheet"
-categories: cheatsheet
-tags: ['cheatsheet', 'nmap']
+title: "nmap: cheatsheet"
+categories: 
+- informationsecurity
+tags: 
+- cheatsheet
+- nmap
+classes: 
+- wide
 --- 
 
-{%highlight bash%}
+```
 nmap -sC -sV xx.xx.xx.xx
 
--sC: Performs a script scan using the default set of scripts. It is equivalent to --
-script=default. Some of the scripts in this category are considered intrusive and
-should not be run against a target network without permission.
+-sC: Performs a script scan using the default set of scripts.
 -sV: Enables version detection, which will detect what versions are running on what port.
-{%endhighlight%}
+```
 
-
+# references
 - [Kali.org: nmap Usage Example](https://www.kali.org/tools/nmap/)
 - [linux.die.net: nmap(1) - Linux man page](https://linux.die.net/man/1/nmap)

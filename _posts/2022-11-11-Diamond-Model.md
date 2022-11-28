@@ -1,7 +1,11 @@
 ---
 title:  "The Diamond Model of Intrusion Analysis"
 date:   2022-11-11
-categories: informationsecurity
+categories: 
+- informationsecurity
+tags:
+- framework
+excerpt: ''
 ---
 * Adversary - Attacker
     * Adversary Operator

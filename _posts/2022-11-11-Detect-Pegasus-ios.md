@@ -1,10 +1,11 @@
 ---
-title:  "Pegasus unter IOS untersuchen"
+title:  "Check for Pegasus on iOS"
 date:   2022-11-11
 categories: 
 - informationsecurity
 tags:
 - pegasus
+excerpt: 'How to check for pegasus and other spayware on iOS' 
 ---
 # Pegasus unter IOS untersuchen
 1. verschlüsseltes Backup über den Finder anlegen

@@ -8,7 +8,7 @@ tags:
 - analysis
 - files
 - forensic
-except: 
+excerpt: 'Forensiv analytic for some filetypes'
 ---
 # timestamp
   
