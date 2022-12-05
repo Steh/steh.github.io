@@ -23,3 +23,7 @@ toc: true
 * URL Haus:  A resource for sharing malware distribution sites.
 * [Thread Fox](https://threatfox.abuse.ch)
     * A resource for IOCs
+
+## Podcast/Videos
+* https://www.youtube.com/@TheTWSChannel
+* https://darknetdiaries.com/episode/
