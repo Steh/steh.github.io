@@ -12,9 +12,14 @@ toc_icon: "cog"
 classes: wide
 ---
 
+## emlAnalyzer
+
 ```bash
+# Extract Informations
 emlAnalyzer -i mail.eml --header --html -u --text --extract-all
 
+# Attachments will be saved to:
+eml_attachments
 ```
 
 ## OSINT Tools for analysing
