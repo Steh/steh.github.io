@@ -48,5 +48,19 @@ check
 run
 ```
 
+## Usefull Commands
+```bash
+# Inside a module
+## check if target is vulnerable
+check rhost=10.10.228.247 HttpClientTimeout=20
+
+## show sessions
+session
+
+# Inside a session
+## session to background
+background
+```
+
 ## References
 [^1]: [tryhackme: Advent of Cyber Day 9]([https://tryhackme.com/room/cyberthreatintel](https://tryhackme.com/room/adventofcyber4))
