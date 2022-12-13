@@ -24,6 +24,9 @@ CTI
 **NSM**
 : *Network security monitoring*
 
+**Pivoting**
+: *Once an attacker gains initial entry into a system, the compromised machine can be used to send additional web traffic through - allowing previously inaccessible machines to be reached.*[^2]
+
 **SIEM**
 : *Security Information and Event Management*
 
@@ -39,3 +42,4 @@ CTI
 
 # References
 [^1]: [tryhackme: Intro to Cyber Threat Intel](https://tryhackme.com/room/cyberthreatintel)
+[^2]: [tryhackme: Advent of Cyber Day 9]([https://tryhackme.com/room/cyberthreatintel](https://tryhackme.com/room/adventofcyber4))
