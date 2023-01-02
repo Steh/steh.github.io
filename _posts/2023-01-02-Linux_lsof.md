@@ -26,10 +26,11 @@ lsof | wc -l
 # show open files per user
 lsof -u steh
 
-# show all
-lsof +D 
+# show all open files under a directory
+lsof +D /var/www
 ```
-## Networkports
+
+## Open Networkports
 ```bash
 # show all open ports
 lsof -i
@@ -46,3 +47,4 @@ lsof -i :8080
 * https://en.wikipedia.org/wiki/Lsof
 * https://linux.die.net/man/8/lsof
 * http://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+* https://github.com/lsof-org/lsof
