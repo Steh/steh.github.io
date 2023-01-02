@@ -1,0 +1,48 @@
+---
+title:  "Linux: lsof"
+date:   2023-01-02
+excerpt: "Linux command to 'List Open Files'"
+categories: informationsecurity
+tags: 
+- lsof
+- blue team
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
+classes: wide
+---
+
+## Files
+```bash
+# show all open Files
+lsof /var
+
+# suppress open files by kernel
+lsof -b
+
+# show the count of all open files
+lsof | wc -l
+
+# show open files per user
+lsof -u steh
+
+# show all
+lsof +D 
+```
+## Networkports
+```bash
+# show all open ports
+lsof -i
+
+# show all open TCP Ports
+lsof -i tcp
+
+# find which process is using a specific port
+lsof -i :8080
+```
+
+## References
+* https://linuxhandbook.com/lsof-command/
+* https://en.wikipedia.org/wiki/Lsof
+* https://linux.die.net/man/8/lsof
+* http://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
