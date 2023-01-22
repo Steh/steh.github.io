@@ -7,9 +7,8 @@ tags:
 - Linux
 classes: 
 - wide
-excerpt: "VI Improved guide"
+excerpt: "A little Guide to the open source text editor VIM (VI Improved)"
 --- 
-# basic concepts
 
 # Shortcuts
 ```bash
@@ -87,7 +86,8 @@ F1  -   open help
 CTRL+W  -   jump between windows
 :q      -   close help
 ```
-:r $VIMRUNTIME/vimrc_example.vim
+
+
 # Lesson summary vimtutor
 vimtutor is an integrated vim learning environment
 
