@@ -32,6 +32,15 @@ excerpt: "Overview about Information Security Concepts"
 # Threat Actor/Agent
 * anything that can possibly disrupt the system
 * this isn´t limited to hackers
+    * fire
+    * earthquake
+* RISK is combination of
+    * Probability
+    * Consequence
+* a risk can be
+    * mitigated
+    * transfered
+    * accepted
 
 # references
 * [wikipedia: AAA (Computer Security)](https://en.wikipedia.org/wiki/AAA_(computer_security))

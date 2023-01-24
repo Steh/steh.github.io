@@ -26,6 +26,13 @@ x   -   remove character
 u   -   undo
 r   -   redo
 
+# copy/past
+dd  -   cut the line
+3dd -   cut three lines
+yy  -   copy 3 lines
+3yy -   copy 3 lines
+p   -   past
+
 # search
 /   -   search for a phrase (after hitting enter)
 n   -   show next appearance
@@ -86,7 +93,6 @@ F1  -   open help
 CTRL+W  -   jump between windows
 :q      -   close help
 ```
-
 
 # Lesson summary vimtutor
 vimtutor is an integrated vim learning environment
@@ -240,5 +246,8 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      Press <TAB> to use one completion.
 ```
 # references
+* [linuxlinks.com: 8 Excellent Free Books to Learn Vim](https://www.linuxlinks.com/excellent-free-books-learn-vim/)
 * [VIM User Manual by Bram Moolenaar](http://www.eandem.co.uk/mrw/vim/usr_doc/index.html)
 * [vimtutor(1) - Linux man page](https://linux.die.net/man/1/vimtutor)
+* [How to Copy, Cut and Paste in Vim / Vi](https://linuxize.com/post/how-to-copy-cut-paste-in-vim/)
+* [neovim Teil 3 – Plugin Manager, umfangreiche Einstellungen und Erweiterungen](https://schimana.net/2021/neovim-teil-3-plugin-manager-umfangreiche-einstellungen-und-erweiterungen/)
