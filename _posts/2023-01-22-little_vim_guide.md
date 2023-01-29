@@ -10,6 +10,19 @@ classes:
 excerpt: "A little Guide to the open source text editor VIM (VI Improved)"
 --- 
 
+# Using tabs
+```bash
+#open tab
+:tabnew
+
+# switch tab
+:tabn   ## next
+:tabp   ## previuos
+
+gt      # switch forward
+gT      # switch backwards
+```
+
 # Shortcuts
 ```bash
 # navigation
