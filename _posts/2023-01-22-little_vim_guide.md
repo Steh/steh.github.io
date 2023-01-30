@@ -8,6 +8,8 @@ tags:
 classes: 
 - wide
 excerpt: "A little Guide to the open source text editor VIM (VI Improved)"
+toc: true
+toc_icon: "cog"
 --- 
 
 # Using tabs
@@ -18,9 +20,12 @@ excerpt: "A little Guide to the open source text editor VIM (VI Improved)"
 # switch tab
 :tabn   ## next
 :tabp   ## previuos
-
 gt      # switch forward
 gT      # switch backwards
+
+#open file 
+e: folder
+e: file
 ```
 
 # Shortcuts
