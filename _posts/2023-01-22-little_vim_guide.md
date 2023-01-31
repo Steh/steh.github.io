@@ -41,10 +41,10 @@ b   -   nove to the beginn of the word
 gg  -   move to the top of the file
 G   -   move to the bottom of the file
 502G    -   go to line 502
-```bash
+```
 
 # editing 
-```
+```bash
 i   -   insert ON the curser
 a   -   insert AFTER the curser
 A   -   append AFTER the line
