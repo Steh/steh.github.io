@@ -32,6 +32,8 @@ e: file
 ```bash
 h (left)       j (down)       k (up)       l (right)
 
+0   -   beginning of line
+$   -   end of line
 w   -   imove to the start of the next word
 e   -   move to the end of the word
 b   -   nove to the beginn of the word
