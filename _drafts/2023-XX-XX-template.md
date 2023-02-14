@@ -7,6 +7,7 @@ tags:
 classes: 
 - wide
 excerpt: "" 
+toc: true
 --- 
 
 # references
