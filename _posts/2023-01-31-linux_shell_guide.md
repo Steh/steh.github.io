@@ -1,5 +1,5 @@
 ---
-title: "little Linux guide"
+title: "Linux Shell Guide"
 categories: 
 - informationsecurity
 tags:
