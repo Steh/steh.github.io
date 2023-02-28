@@ -10,6 +10,7 @@ tags:
 classes:
 - wide
 excerpt: "How to work with splunk and auditd logs" 
+toc: true
 ---
 # combine the auditd log types
 What you have to do to see the executed commands:
