@@ -288,10 +288,10 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      Press <TAB> to use one completion.
 ```
 # references
-* [linuxlinks.com: 8 Excellent Free Books to Learn Vim](https://www.linuxlinks.com/excellent-free-books-learn-vim/)
-* [VIM User Manual by Bram Moolenaar](http://www.eandem.co.uk/mrw/vim/usr_doc/index.html)
-* [vimtutor(1) - Linux man page](https://linux.die.net/man/1/vimtutor)
-* [How to Copy, Cut and Paste in Vim / Vi](https://linuxize.com/post/how-to-copy-cut-paste-in-vim/)
-* [neovim Teil 3 – Plugin Manager, umfangreiche Einstellungen und Erweiterungen](https://schimana.net/2021/neovim-teil-3-plugin-manager-umfangreiche-einstellungen-und-erweiterungen/)
-* [Vim tips: Working with external commands](https://www.linux.com/training-tutorials/vim-tips-working-external-commands/)
-* [VIM Tutorial](https://www.openvim.com/tutorial.html)
+* ([linuxlinks.com: 8 Excellent Free Books to Learn Vim)[https://www.linuxlinks.com/excellent-free-books-learn-vim/]
+* (VIM User Manual by Bram Moolenaar)[http://www.eandem.co.uk/mrw/vim/usr_doc/index.html]
+* (vimtutor(1) - Linux man page)[https://linux.die.net/man/1/vimtutor]
+* (How to Copy, Cut and Paste in Vim / Vi)[https://linuxize.com/post/how-to-copy-cut-paste-in-vim]
+* (neovim Teil 3 – Plugin Manager, umfangreiche Einstellungen und Erweiterungen)[https://schimana.net/2021/neovim-teil-3-plugin-manager-umfangreiche-einstellungen-und-erweiterungen/]
+* (Vim tips: Working with external commands)[https://www.linux.com/training-tutorials/vim-tips-working-external-commands/]
+* (VIM Tutorial)[https://www.openvim.com/tutorial.html]

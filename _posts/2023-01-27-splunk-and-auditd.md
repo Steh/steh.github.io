@@ -12,10 +12,10 @@ classes:
 excerpt: "How to work with splunk and auditd logs" 
 ---
 # show the executet commandline
-Auditd decodes the commandline to hex, so you have to convert it.
-You can´t use the datamodel to do it, it doesn´t contains the information.
+Auditd decodes the commandline to hex as a security measurement, so you have to convert it back.
+You can´t use the datamodel to do it, it doesn´t contains the necessary information.
 
-What you have to do:
+What you have to do to see the executed commands:
 * switch auditd log_format to enriched
 * combine all needed Events
 * select only the fields you need to reduce workload
