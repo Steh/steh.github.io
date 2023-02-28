@@ -42,7 +42,7 @@ index=auditd_data type="EXECVE"
 
 
 # references
-* (redhat.com: Understanding Audit Log Files)[https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files]
-* (community.splunk.com: How to convert Hex to Ascii in Splunk?)[https://community.splunk.com/t5/Splunk-Search/How-to-convert-Hex-to-Ascii-in-Splunk/m-p/189267]
-* (Splunk docs: replace)[https://docs.splunk.com/Documentation/Splunk/9.0.4/SearchReference/TextFunctions#replace.28X.2CY.2CZ.29]
-* (Splunk docs: urldecode)[https://docs.splunk.com/Documentation/SCS/current/SearchReference/TextFunctions#urldecode.28.26lt.3Burl.26gt.3B.29]
+* [redhat.com: Understanding Audit Log Files](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files)
+* [community.splunk.com: How to convert Hex to Ascii in Splunk?](https://community.splunk.com/t5/Splunk-Search/How-to-convert-Hex-to-Ascii-in-Splunk/m-p/189267)
+* [Splunk docs: replace](https://docs.splunk.com/Documentation/Splunk/9.0.4/SearchReference/TextFunctions#replace.28X.2CY.2CZ.29)
+* [Splunk docs: urldecode](https://docs.splunk.com/Documentation/SCS/current/SearchReference/TextFunctions#urldecode.28.26lt.3Burl.26gt.3B.29)
