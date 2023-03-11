@@ -82,7 +82,7 @@ c$  -   deletes until line end and places you in Insert mode
 # copy/past
 dd  -   cut the line
 3dd -   cut three lines
-yy  -   copy 3 lines
+yy  -   copy 1 line
 3yy -   copy 3 lines
 p   -   paste
 
