@@ -7,6 +7,7 @@ tags:
 - nmap
 classes: 
 - wide
+toc: true
 --- 
 # scanning types
 * **passive scanning**: 
@@ -16,6 +17,7 @@ classes:
   * " is a scanning method whereby you scan individual endpoints in an IT network to retrieve more detailed information"
   * "active scan involves sending packets or queries directly to specific asshow to scann
 
+# nmap scanning types
 * TCP Connect Scans (-sT)
   * default setting when run **without** sudo permission 
   * "performing the three-way handshake with each target port"[^2]
@@ -34,8 +36,9 @@ classes:
   * when there is no response the port will be considerd as "open|filtered"
   * when there is a ICMP response with the message that the port is unreachable the port will be marked as closed
   * much slower than TCP Scans
+
 # scanning techniques
-```bash
+´´´bash
 #-sC: Performs a script scan using the default set of scripts.
 #-sV: Enables version detection, which will detect what versions are running on what port.
 nmap -sC -sV xx.xx.xx.xx
@@ -49,7 +52,7 @@ nmap -O xx.xx.xx.xx
 
 ## Detecting Services
 nmap -sV xx.xx.xx.xx
-```
+´´´
 
 # Paramter
 ```bash
