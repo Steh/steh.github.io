@@ -38,7 +38,7 @@ toc: true
   * much slower than TCP Scans
 
 # scanning techniques
-´´´bash
+```bash
 #-sC: Performs a script scan using the default set of scripts.
 #-sV: Enables version detection, which will detect what versions are running on what port.
 nmap -sC -sV xx.xx.xx.xx
@@ -52,7 +52,7 @@ nmap -O xx.xx.xx.xx
 
 ## Detecting Services
 nmap -sV xx.xx.xx.xx
-´´´
+```
 
 # Paramter
 ```bash
