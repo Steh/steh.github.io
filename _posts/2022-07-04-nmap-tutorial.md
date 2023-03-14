@@ -9,7 +9,7 @@ classes:
 - wide
 toc: true
 --- 
-# scanning types
+# active vs. passive scanning
 * **passive scanning**: 
   * "involves scanning a network without directly interacting with the target device"[^1]
   * "is usually carried out through packet capture and analysis tools like Wireshark"[^1]
@@ -17,12 +17,12 @@ toc: true
   * " is a scanning method whereby you scan individual endpoints in an IT network to retrieve more detailed information"
   * "active scan involves sending packets or queries directly to specific asshow to scann
 
-# nmap scanning types
-* TCP Connect Scans (-sT)
+# nmap scanning technics
+* TCP Connect Scans (*-sTi*)
   * default setting when run **without** sudo permission 
   * "performing the three-way handshake with each target port"[^2]
   * Nmap tries to connect to each specified TCP port, and determines whether the service is open by the response it receives
-* SYN Scans (-sS)
+* SYN Scans (*-sS*)
   * default setting when run **with** sudo permission 
   * sometimes referred to as "Half-open" scans, or "Stealth" scans.
   * after getting the SYN/ACK Package from the Target the Client send a RST (Reset) Package
@@ -31,7 +31,7 @@ toc: true
   * disadvantage:
     * unstable services are sometimes brought down by SYN scans
     * need sudo permissions
-* UDP Scans (-sU)
+* UDP Scans (*-sU*)
   * sends a UDP Packet to a Port
   * when there is no response the port will be considerd as "open|filtered"
   * when there is a ICMP response with the message that the port is unreachable the port will be marked as closed
@@ -44,7 +44,7 @@ toc: true
 nmap -sC -sV xx.xx.xx.xx
 
 ## ping scan to find active hosts
-* is to obtain a "map" of the network structure
+### is to obtain a "map" of the network structure
 nmap -sn 192.168.0.0/24
 
 ## OS Scan
