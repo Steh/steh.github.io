@@ -1,15 +1,40 @@
 ---
-title: "Splunk: Attack Range"
+title: "Attack Range by Splunk"
 categories: 
 - informationsecurity
 tags:
 - blue team
 classes: 
 - wide
-excerpt: "" 
+excerpt: "Attack Range is designed to simulate a real-world attack scenario, allowing security teams to test and improve their detection and response capabilities." 
 toc: true
---- 
-# Example attack_config.ym
+---
+# How to use this tool
+1. Install Attack Range
+2. Create an attack_config.yml
+3. build the environment
+4. start your tests
+5. stop the environment
+6. optional: destroy your environment
+
+```bash
+#Builds a new Attack Range based on your configuration in attack_range.yml
+python attack_range.py build
+
+#Destroys an Attack Range and deletes/deprovision all used ressources
+python attack_range.py destroy
+
+#Stops an Attack Range which will shutdown the instances but not deprovision it
+python attack_range.py stop
+
+# Resumes a stopped Attack Range
+python attack_range.py resume
+
+#Shows the ressources of an Attack Range
+python attack_range.py show
+```
+
+# Example attack_config.yml
 * [Attack Range Configuration](https://attack-range.readthedocs.io/en/latest/Attack_Range_Config.html)
 
 ```bash
@@ -19,7 +44,9 @@ general:
   use_prebuilt_images_with_packer: "0"
   ingest_bots3_data: "1"
 local:
+  # enables es
   install_es: "1"
+  # needs to be saved to the apps folder from attack range
   splunk_es_app: "splunk-enterprise-security_701.spl"
 kali_server:
   kali_server: "1"
@@ -59,20 +86,8 @@ poetry shell
 # configure attack_range or copy your default config
 python attack_range.py configure
 
-# build lab
+# buildng the lab
 python attack_range.py build
-
-```
-## install Enterprice Security
-* add the following to your config and copy the install file to the apps folder
-```bash
-splunk_server:
-  install_es: "1"
-  splunk_es_app: "splunk-enterprise-security_701.spl"
-```
-# Important Commands
-```bash
-
 ```
 
 # Start Attack
