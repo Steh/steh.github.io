@@ -9,7 +9,7 @@ classes:
 excerpt: "Attack Range is designed to simulate a real-world attack scenario, allowing security teams to test and improve their detection and response capabilities." 
 toc: true
 ---
-# How to use this tool
+# How to
 1. Install Attack Range
 2. Create an attack_config.yml
 3. build the environment
@@ -32,36 +32,6 @@ python attack_range.py resume
 
 #Shows the ressources of an Attack Range
 python attack_range.py show
-```
-
-# Example attack_config.yml
-* [Attack Range Configuration](https://attack-range.readthedocs.io/en/latest/Attack_Range_Config.html)
-
-```bash
-general:
-  attack_range_password: "changeme"
-  cloud_provider: local
-  use_prebuilt_images_with_packer: "0"
-  ingest_bots3_data: "1"
-local:
-  # enables es
-  install_es: "1"
-  # needs to be saved to the apps folder from attack range
-  splunk_es_app: "splunk-enterprise-security_701.spl"
-kali_server:
-  kali_server: "1"
-windows_servers:
-- hostname: ar-win-dc
-  windows_image: windows-2019-v3-0-0
-  create_domain: '1'
-  install_red_team_tools: '1'
-  bad_blood: '1'
-- hostname: ar-win-2
-  windows_image: windows-2016-v3-0-0
-  join_domain: '1'
-  install_red_team_tools: '1'
-linux_servers:
-- hostname: ar-linux
 ```
 
 # Installation
@@ -90,6 +60,35 @@ python attack_range.py configure
 python attack_range.py build
 ```
 
+## My attack_config.yml
+* [Attack Range Configuration](https://attack-range.readthedocs.io/en/latest/Attack_Range_Config.html)
+
+```bash
+general:
+  attack_range_password: "changeme"
+  cloud_provider: local
+  use_prebuilt_images_with_packer: "0"
+  ingest_bots3_data: "1"
+local:
+  # enables es
+  install_es: "1"
+  # needs to be saved to the apps folder from attack range
+  splunk_es_app: "splunk-enterprise-security_701.spl"
+kali_server:
+  kali_server: "1"
+windows_servers:
+- hostname: ar-win-dc
+  windows_image: windows-2019-v3-0-0
+  create_domain: '1'
+  install_red_team_tools: '1'
+  bad_blood: '1'
+- hostname: ar-win-2
+  windows_image: windows-2016-v3-0-0
+  join_domain: '1'
+  install_red_team_tools: '1'
+linux_servers:
+- hostname: ar-linux
+```
 # Start Attack
 * needs Atomic Read Team or PurpleSharp
   * Atomic Read Team Technics: [Atomics](https://atomicredteam.io/atomics/)
@@ -104,7 +103,10 @@ python attack_range.py show
 python attack_range.py simulate -e ART -te T1003.001 -t ar-win-ar-ar-0
 
 ## Purple Sharp with 
+### MITRE ATTACK Technique
 python attack_range.py simulate -e PurpleSharp -te T1003.001 -t ar-win-ar-ar-0
+
+### Playbook
 python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json  -t ar-win-ar-ar-0
 ```
 
@@ -118,13 +120,20 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 10.0.1.XX -> 192.168.56.XX
 ```
 
-# Used Applications
+# some of the applications used to build all of this
 * Vagrant
+  * allows you to create and configure lightweight, reproducible, and portable virtual development environments
 * Poetry
-  * "is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you."
+  * dependency management and packaging tool for Python
 * VirtualBox
+  * virtualization platform that allows you to create and run virtual machines on your computer
+* Ansible
+  * automate IT tasks such as configuration management, application deployment, and infrastructure provisioning
 * Atomic Red Team
+  * framework for testing endpoint detection and response (EDR) and other security controls
 * PurpleSharp
+  * tool created by Microsoft that simulates adversary techniques based on the MITRE ATT&CK framework in a Windows environment.
+
 # references
 * [Github Splunk Attack Range](https://github.com/splunk/attack_range)
 * [Attack Range Local](https://attack-range.readthedocs.io/en/latest/Attack_Range_Local.html)
