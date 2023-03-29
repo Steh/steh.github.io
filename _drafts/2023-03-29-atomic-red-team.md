@@ -10,7 +10,15 @@ classes:
 excerpt: "Atomic Red Team is an open-source project that provides a framework for performing security testing and threat emulation."
 toc: true
 --- 
+# installation
 
+```bash
+# PowerShell
+Import-Module "invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="AtomicRedTeam\atomics"}
+```
+
+# How to use
 ```bash
 # get requirements
 Invoke-AtomicTest T1127 -GetPrereqs
