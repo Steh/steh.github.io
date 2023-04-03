@@ -14,9 +14,9 @@ excerpt: "A Few Tipps to build better notables in Splunk ES"
 * Add as much data as needed to the notable
 * to add data to a notable you need to extract the data from the search and add it to the notable
 * extract the field:
-  * correlation search -> notable -> Asset Extraction
+  * `correlation search -> notable -> Asset Extraction`
 * add the field to "Incident Review"
-  * Enterprise Security -> Configure -> Incident Management -> Incident Review Settings
+  * `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
   * add your values to "Incident Review - Event Attributes"
 
 # Contributing Events
@@ -34,7 +34,7 @@ excerpt: "A Few Tipps to build better notables in Splunk ES"
 # Convert your searches to Correlation Searches
 * Correlation Searches have more possiblitys to investigate events
 * add the following to your search and Reload all endpoints
-  * https://<splunk-ip>:<port>/en-GB/debug/refresh
+  * `https://<splunk-ip>:<port>/en-GB/debug/refresh`
 
 ```bash
 # add the following lines to "savedsearches.conf" search
@@ -44,4 +44,4 @@ action.correlationsearch.label = "Lable"
 ```
 
 # references
-* (Configure correlation searches)[https://docs.splunk.com/Documentation/PCI/5.1.0/Install/Correlationsearches]
+* [Configure correlation searches](https://docs.splunk.com/Documentation/PCI/5.1.0/Install/Correlationsearches)
