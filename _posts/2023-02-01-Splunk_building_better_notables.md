@@ -14,7 +14,7 @@ excerpt: "A Few Tipps to build better notables in Splunk ES"
 * add a search that will show you the search results that lead to the notables
 * By adding the search to the notable field "Drill-down Search" you cant see the events
 
-# add Next Steps describtions 
+# Add "Next Steps" descriptions 
 * add Instructions to the notable so that everybody knows what to do
 * "Next Steps" in the notable
 
@@ -29,18 +29,18 @@ action.correlationsearch = 0
 action.correlationsearch.enabled = 1
 action.correlationsearch.label = "Label"
 ```
-# customise your "Incident Review" Dashboard
+# Customise your "Incident Review" Dashboard
 
-## change Table Attributes 
+## Change Table Attributes 
 * change the "table Attributes" to "Incident Review"
   * `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
   * add your values to "Incident Review - Table Attributes"
 
-## use saved filters for faster filtering
+## Use saved filters for faster filtering
 * Change the default filter view to your needs
 * Set your filters and hit "Save new filters"
 
-## add more data to event details
+## Add more data to event details
 * to add data to a notable you need to extract the data from the search and add it to the notable
 * extract the field:
   * `correlation search -> notable -> Asset Extraction`
