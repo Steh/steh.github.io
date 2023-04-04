@@ -7,29 +7,16 @@ tags:
 - splunk
 classes: 
 - wide
+toc: true
 excerpt: "A Few Tipps to build better notables in Splunk ES"
 --- 
-
-# add fields to event details
-* Add as much data as needed to the notable
-* to add data to a notable you need to extract the data from the search and add it to the notable
-* extract the field:
-  * `correlation search -> notable -> Asset Extraction`
-* add the field to "Incident Review"
-  * `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
-  * add your values to "Incident Review - Event Attributes"
-
 # Contributing Events
 * add a search that will show you the search results that lead to the notables
 * By adding the search to the notable field "Drill-down Search" you cant see the events
 
-# Next Steps
+# add Next Steps describtions 
 * add Instructions to the notable so that everybody knows what to do
 * "Next Steps" in the notable
-
-# Saved Filters
-* Change the default filter view to your needs
-* Set your filters and hit "Save new filters"
 
 # Convert your searches to Correlation Searches
 * Correlation Searches have more possiblitys to investigate events
@@ -40,8 +27,27 @@ excerpt: "A Few Tipps to build better notables in Splunk ES"
 # add the following lines to "savedsearches.conf" search
 action.correlationsearch = 0
 action.correlationsearch.enabled = 1
-action.correlationsearch.label = "Lable"
+action.correlationsearch.label = "Label"
 ```
+# customise your "Incident Review" Dashboard
+
+## change Table Attributes 
+* change the "table Attributes" to "Incident Review"
+  * `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
+  * add your values to "Incident Review - Table Attributes"
+
+## use saved filters for faster filtering
+* Change the default filter view to your needs
+* Set your filters and hit "Save new filters"
+
+## add more data to event details
+* to add data to a notable you need to extract the data from the search and add it to the notable
+* extract the field:
+  * `correlation search -> notable -> Asset Extraction`
+* add the field to "Incident Review"
+  * `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
+  * add your values to "Incident Review - Event Attributes"
+
 
 # references
 * [Configure correlation searches](https://docs.splunk.com/Documentation/PCI/5.1.0/Install/Correlationsearches)
