@@ -4,6 +4,8 @@ categories:
 - informationsecurity
 tags:
 - blue team
+- splunk
+- atomic red team
 classes: 
 - wide
 excerpt: "Attack Range is designed to simulate a real-world attack scenario, allowing security teams to test and improve their detection and response capabilities." 
@@ -17,6 +19,7 @@ toc: true
 5. stop the environment
 6. optional: destroy your environment
 
+# Basic commands
 ```bash
 #Builds a new Attack Range based on your configuration in attack_range.yml
 python attack_range.py build
@@ -32,6 +35,9 @@ python attack_range.py resume
 
 #Shows the ressources of an Attack Range
 python attack_range.py show
+
+# start attack
+python attack_range.py simulate -e ART -te T1003.001 -t ar-win-ar-ar-0
 ```
 
 # Installation
@@ -95,6 +101,9 @@ linux_servers:
   * PurpleSharp Technics: [PurpleSharp](https://www.purplesharp.com/en/latest/index.html)
 
 ```bash
+# start environment
+poetry shell
+
 # find the target Name
 python attack_range.py show
 
