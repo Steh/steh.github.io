@@ -121,13 +121,11 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 
 # Debuging
 * If you get an error while building, destroy the build and start over
-    * ```python attack_range.py destroy```
-* If you get an error about Network change the IPs used
-```bash
-# On ERROR change IP from the machines
-## vim attack_range/vagrant/<system>_server/Vagrantfile
-10.0.1.XX -> 192.168.56.XX
-```
+  * ```python attack_range.py destroy```
+* To allow the Adressrange from attack_range
+```# /etc/vbox/networks.conf
+* 0.0.0.0/0 ::/0```
+
 
 # some of the applications used to build all of this
 * Vagrant
@@ -154,3 +152,4 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 * [Youtube: AttackRange + PurpleSharp Integration](https://www.youtube.com/watch?v=XV_hnNv69gY&t=41s)
 * [Python Poetry](https://python-poetry.org/)
 * [Prelude Security](https://www.preludesecurity.com/)
+* [Virtualbox: 6.7. Host-Only Networking](https://www.virtualbox.org/manual/ch06.html)
