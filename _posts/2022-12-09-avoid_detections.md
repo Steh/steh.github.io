@@ -14,6 +14,7 @@ classes: wide
 ---
 
 ## red from raw disk
+
 Your useraccount still needes accessrights to this file
 
 ```bash
@@ -26,6 +27,7 @@ debugfs
   cd /etc
   cat shadow
 ```
+
 Reference[^1]
 
-[^1]https://twitter.com/0xm1rch/status/1600857731073654784
+[^1]<https://twitter.com/0xm1rch/status/1600857731073654784>
