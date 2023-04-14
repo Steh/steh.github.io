@@ -22,5 +22,6 @@ crunch 1 5 rstuvwxyz -o /root/users.txt
 crunch <min. password length> <max. password length> <character space> -o <saving_location>
 ```
 
-# References
+## References
+
 * [Kali: crunch](https://www.kali.org/tools/crunch/)

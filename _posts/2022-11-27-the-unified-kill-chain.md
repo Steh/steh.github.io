@@ -37,11 +37,17 @@ toc_icon: "cog"
 | 18  | Objectives| Socio-technical objectives of an attack that are intended to achieve a strategic goal.|
 
 reference[^1]
+
 ## the first phase in
+
 ![Cyber Kill Chain In]({{ site.url }}/assets/images/cyber-kill-chain-in.png){: height="80%" width="80%"} [^1]
+
 ## the second phase through
+
 ![Cyber Kill Chain through]({{ site.url }}/assets/images/cyber-kill-chain-through.png){: height="80%" width="80%"} [^1]
+
 ## the third phase out
+
 ![Cyber Kill Chain out]({{ site.url }}/assets/images/cyber-kill-chain-out.png){: height="80%" width="80%"} [^1]
 
 [^1]: [unifiedkillchain.com: The-Unified-Kill-Chain.pdf](https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf)

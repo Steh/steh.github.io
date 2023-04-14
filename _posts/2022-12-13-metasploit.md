@@ -12,11 +12,13 @@ toc_icon: "cog"
 classes: wide
 ---
 ## What is Metasploit/Meterpreter?
+
 Metasploit is a powerful penetration testing tool for gaining initial access to systems, performing post-exploitation, and pivoting to other applications and systems. Metasploit is free, open-source software owned by the US-based cybersecurity firm Rapid7.[^1]
 
 Meterpreter is an advanced payload that provides interactive access to a compromised system. Meterpreter supports running commands on a remote target, including uploading/downloading files and pivoting.
 
 ## Use Metasploit
+
 ```bash
 # start console
 msfconsole
@@ -49,6 +51,7 @@ run
 ```
 
 ## Usefull Commands
+
 ```bash
 # Inside a module
 ## check if target is vulnerable
@@ -63,4 +66,5 @@ background
 ```
 
 ## References
+
 [^1]: [tryhackme: Advent of Cyber Day 9]([https://tryhackme.com/room/cyberthreatintel](https://tryhackme.com/room/adventofcyber4))

@@ -101,7 +101,7 @@ p   -   paste the text (put)
 
 ## search
 
-```
+```bash
 ## search
 /   -   search for a phrase (after hitting enter)
 n   -   show next appearance

@@ -9,21 +9,23 @@ classes:
 - wide
 toc: true
 --- 
-# active vs. passive scanning
-* **passive scanning**: 
+## active vs. passive scanning
+
+* **passive scanning**:
   * "involves scanning a network without directly interacting with the target device"[^1]
   * "is usually carried out through packet capture and analysis tools like Wireshark"[^1]
 * **active scanning**:
   * " is a scanning method whereby you scan individual endpoints in an IT network to retrieve more detailed information"
   * "active scan involves sending packets or queries directly to specific asshow to scann
 
-# nmap scanning technics
+## nmap scanning technics
+
 * TCP Connect Scans (*-sTi*)
-  * default setting when run **without** sudo permission 
+  * default setting when run **without** sudo permission
   * "performing the three-way handshake with each target port"[^2]
   * Nmap tries to connect to each specified TCP port, and determines whether the service is open by the response it receives
 * SYN Scans (*-sS*)
-  * default setting when run **with** sudo permission 
+  * default setting when run **with** sudo permission
   * sometimes referred to as "Half-open" scans, or "Stealth" scans.
   * after getting the SYN/ACK Package from the Target the Client send a RST (Reset) Package
   * that resets the connection and for the target the connection is not fully established
@@ -37,7 +39,8 @@ toc: true
   * when there is a ICMP response with the message that the port is unreachable the port will be marked as closed
   * much slower than TCP Scans
 
-# scanning techniques
+## scanning techniques
+
 ```bash
 #-sC: Performs a script scan using the default set of scripts.
 #-sV: Enables version detection, which will detect what versions are running on what port.
@@ -54,7 +57,8 @@ nmap -O xx.xx.xx.xx
 nmap -sV xx.xx.xx.xx
 ```
 
-# Paramter
+## Paramter
+
 ```bash
 # basic scan types
 -sT     TCP Connect Scans
@@ -77,8 +81,9 @@ nmap -sV xx.xx.xx.xx
 -p-     scan all ports
 ```
 
-# Nmap Scripting Engine (NSE)
-* is writen in lua an can do powerfull things 
+## Nmap Scripting Engine (NSE)
+
+* is writen in lua an can do powerfull things
 * some useful catefories:
   * safe:- Won't affect the target
   * intrusive:- Not safe: likely to affect the target
@@ -90,7 +95,7 @@ nmap -sV xx.xx.xx.xx
 * [list of all categories](https://nmap.org/book/nse-usage.html)
 * [help for the scripts](https://nmap.org/nsedoc/)
 
-```
+```bash
 # examples for scripts
 --script=safe
 --script=vuln
@@ -103,28 +108,32 @@ nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-pu
 nmap --script-help <script-name>
 ```
 
-## finding scripts
-  * [nmap website](https://nmap.org/nsedoc/scripts/)
-  * Filesystem
-```
+### finding scripts
+
+* [nmap website](https://nmap.org/nsedoc/scripts/)
+* Filesystem
+
+```bash
 ls -l /usr/share/nmap/scripts/*ftp*
 grep "safe" /usr/share/nmap/scripts/script.db
 
-``` 
-
-## install/update scripts
 ```
+
+### install/update scripts
+
+```bash
 sudo apt update && sudo apt install nmap
 
 sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse
 nmap --script-updatedb
 ```
 
-# references
-- [Kali.org: nmap Usage Example](https://www.kali.org/tools/nmap/)
-- [linux.die.net: nmap(1) - Linux man page](https://linux.die.net/man/1/nmap)
-- [namp manpage](https://linux.die.net/man/1/nmap)
-- [tryhackme: further nmap](https://tryhackme.com/room/furthernmap)
+## references
+
+* [Kali.org: nmap Usage Example](https://www.kali.org/tools/nmap/)
+* [linux.die.net: nmap(1) - Linux man page](https://linux.die.net/man/1/nmap)
+* [namp manpage](https://linux.die.net/man/1/nmap)
+* [tryhackme: further nmap](https://tryhackme.com/room/furthernmap)
 
 [^1]: https://tryhackme.com/room/adventofcyber4
 [^2]: https://tryhackme.com/room/furthernmap

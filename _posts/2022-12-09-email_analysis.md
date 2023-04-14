@@ -23,6 +23,7 @@ eml_attachments
 ```
 
 ## OSINT Tools for analysing
+
 * [VirusTotal](https://www.virustotal.com/gui/home/search)
   * A service that provides a cloud-based detection toolset and sandbox environment.
 * [InQuest](https://labs.inquest.net/)
@@ -37,7 +38,8 @@ eml_attachments
   * A browser sandbox is used to test suspicious/malicious links.
 * [Wannabrowser]()
   * A browser sandbox is used to test suspicious/malicious links.
-* https://emailrep.io/
+* <https://emailrep.io/>
 
 ## Refrences
+
 * [TryHackme Advent of Cyber Day 6](https://tryhackme.com/room/adventofcyber4)
