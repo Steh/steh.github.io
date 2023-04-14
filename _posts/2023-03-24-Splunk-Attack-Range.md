@@ -126,7 +126,6 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 ```# /etc/vbox/networks.conf
 * 0.0.0.0/0 ::/0```
 
-
 # some of the applications used to build all of this
 * Vagrant
   * allows you to create and configure lightweight, reproducible, and portable virtual development environments
