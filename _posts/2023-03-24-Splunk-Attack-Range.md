@@ -11,7 +11,8 @@ classes:
 excerpt: "Attack Range is designed to simulate a real-world attack scenario, allowing security teams to test and improve their detection and response capabilities." 
 toc: true
 ---
-# How to
+## How to
+
 1. Install Attack Range
 2. Create an attack_config.yml
 3. build the environment
@@ -19,7 +20,8 @@ toc: true
 5. stop the environment
 6. optional: destroy your environment
 
-# Basic commands
+## Basic commands
+
 ```bash
 #Builds a new Attack Range based on your configuration in attack_range.yml
 python attack_range.py build
@@ -40,8 +42,10 @@ python attack_range.py show
 python attack_range.py simulate -e ART -te T1003.001 -t ar-win-ar-ar-0
 ```
 
-# Installation
-## Linux x64
+## Installation
+
+### Linux x64
+
 ```bash
 # download repo
 git clone https://github.com/splunk/attack_range.git
@@ -66,7 +70,8 @@ python attack_range.py configure
 python attack_range.py build
 ```
 
-## My attack_config.yml
+### My attack_config.yml
+
 * [Attack Range Configuration](https://attack-range.readthedocs.io/en/latest/Attack_Range_Config.html)
 
 ```bash
@@ -95,7 +100,9 @@ windows_servers:
 linux_servers:
 - hostname: ar-linux
 ```
-# Start Attack
+
+## Start Attack
+
 * needs Atomic Read Team or PurpleSharp
   * Atomic Read Team Technics: [Atomics](https://atomicredteam.io/atomics/)
   * PurpleSharp Technics: [PurpleSharp](https://www.purplesharp.com/en/latest/index.html)
@@ -119,14 +126,19 @@ python attack_range.py simulate -e PurpleSharp -te T1003.001 -t ar-win-ar-ar-0
 python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json  -t ar-win-ar-ar-0
 ```
 
-# Debuging
+## Debuging
+
 * If you get an error while building, destroy the build and start over
   * ```python attack_range.py destroy```
 * To allow the Adressrange from attack_range
-```# /etc/vbox/networks.conf
-* 0.0.0.0/0 ::/0```
 
-# some of the applications used to build all of this
+```bash
+# /etc/vbox/networks.conf
+* 0.0.0.0/0 ::/0
+```
+
+## some of the applications used to build all of this
+
 * Vagrant
   * allows you to create and configure lightweight, reproducible, and portable virtual development environments
 * Poetry
@@ -140,10 +152,11 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 * PurpleSharp
   * tool created by Microsoft that simulates adversary techniques based on the MITRE ATT&CK framework in a Windows environment.
 
-# references
+## references
+
 * [Github Splunk Attack Range](https://github.com/splunk/attack_range)
 * [Attack Range Local](https://attack-range.readthedocs.io/en/latest/Attack_Range_Local.html)
-* [Detecting CVE-2020-1472 (CISA ED 20-04) Using Splunk Attack Range ](https://www.splunk.com/en_us/blog/security/detecting-cve-2020-1472-using-splunk-attack-range.html)
+* [Detecting CVE-2020-1472 (CISA ED 20-04) Using Splunk Attack Range](https://www.splunk.com/en_us/blog/security/detecting-cve-2020-1472-using-splunk-attack-range.html)
 * [Atomic Red Team: Atomics](https://atomicredteam.io/atomics/)
 * [PurpleSharp](https://www.purplesharp.com/en/latest/)
 * [PurpleSharp GitHub](https://github.com/mvelazc0/PurpleSharp)

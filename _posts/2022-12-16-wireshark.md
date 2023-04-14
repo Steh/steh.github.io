@@ -12,6 +12,7 @@ toc_icon: "cog"
 classes: wide
 ---
 ## Checklist for Analysing
+
 * Checks to do
   * Packet statistics
   * Service identification
@@ -25,10 +26,12 @@ classes: wide
 Reference[^1]
 
 ## How Analyse Captured Traffic
+
 ### Preparation and Research
+
 * View the overall usage of the ports and services
   * *"Statistics --> Protocol Hierarchy"*
-* View the list of IP conversations, to find 
+* View the list of IP conversations, to find
   * *"Statistics --> Conversations"*
 * On the TCP/UDP Tap from *Conversations* you can see the Ports used
 * Now you have the following informations
@@ -38,6 +41,7 @@ Reference[^1]
   * Services
 
 ### Starting to Filter
+
 * Looking at the DNS Traffic is always a good way to start
   * ```dns```
 

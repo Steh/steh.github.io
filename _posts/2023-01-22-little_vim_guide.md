@@ -12,23 +12,25 @@ toc: true
 toc_icon: "cog"
 --- 
 
-# Using tabs
+### Using tabs
+
 ```bash
 #open tab
 :tabnew
 
-# switch tab
-:tabn   ## next
-:tabp   ## previuos
-gt      # switch forward
-gT      # switch backwards
+## switch tab
+:tabn   ### next
+:tabp   ### previuos
+gt      ## switch forward
+gT      ## switch backwards
 
 #open file 
 e: folder
 e: file
 ```
 
-# navigation
+### navigation
+
 ```bash
 h (left)       j (down)       k (up)       l (right)
 
@@ -45,7 +47,8 @@ G   -   move to the bottom of the file
 502G    -   go to line 502
 ```
 
-# editing 
+### editing
+
 ```bash
 i   -   insert ON the curser
 a   -   insert AFTER the curser
@@ -57,7 +60,7 @@ x   -   remove character
 u   -   undo
 r   -   redo
 
-# delete text
+## delete text
 dw  -   delete word
 de  -   delete until end of the word
 d$  -   delete until end of line
@@ -66,232 +69,86 @@ d2w -   delete the next two words
 dd  -   deltes line and stores it in register
 p   -   insert deleted line on curser
 
-# replace text
+## replace text
 r[char] -   replace the letter with the char
 R       -   replace the following chars 
 
-# change text
+## change text
 ce  -   deletes the word and places you in Insert mode
 cc  -   does the same for the whole line
 c2w -   deletes the next to words and places you in Insert mode
 c$  -   deletes until line end and places you in Insert mode
 ```
 
-# copy/paste
+## copy/paste
+
 ```bash
-# copy/past
+## copy/past
 dd  -   cut the line
 3dd -   cut three lines
 yy  -   copy 1 line
 3yy -   copy 3 lines
 p   -   paste
 
-# visual copy/paste
+## visual copy/paste
 v   -   mark the text
 y   -   copy text (yank)
 p   -   paste the text (put)
 
-# past from systemclipboard
+## past from systemclipboard
 "+p - paste from system
 ```
 
-# search
+## search
+
 ```
-# search
+## search
 /   -   search for a phrase (after hitting enter)
 n   -   show next appearance
 N   -   show previous appearance
 %   -   moves the cursor to the next matching bracket ( (,),[,],{ or } )
 
 *   -   find the next occurence of the word under the curser
-#   -   find the last occurence of the word under the curser
+##   -   find the last occurence of the word under the curser
 
-# search and replace
+## search and replace
 :s/old/new/g    -   replaces the first occourance of old with new in the line
-:#,#s/old/new/g    where #,# are the line numbers of the range of lines where the substitution is to be done.
+:#,#s/old/new/g    where #,## are the line numbers of the range of lines where the substitution is to be done.
 :%s/old/new/g      to change every occurrence in the whole file.
 :%s/old/new/gc     to find every occurrence in the whole file, with a prompt whether to substitute or not.
 ```
 
-# Execute commands 
+## Execute commands
+
 ```bash
-# execute external comands
+## execute external comands
 :!ls    -   list files
 :sh     -   starts a shell (exit gets you back)
 
-# Retrieving files
+## Retrieving files
 :r FILE -   writes the file content above the curser
 :r !ls  -   writes the output to the file
 
-# Selecting text to write
+## Selecting text to write
 :w TEXT -   writes that text to a file  
 ```
 
-# using vim help
+## using vim help
+
 ```bash
-# using the help windows
+## using the help windows
 F1  -   open help
 :help
 CTRL+W  -   jump between windows
 :q      -   close help
 ```
 
-# Lesson summary vimtutor
-vimtutor is an integrated vim learning environment
+## references
 
-```bash
-                           Lesson 1 SUMMARY
-            
-
-1. The cursor is moved using either the arrow keys or the hjkl keys.
-        h (left)       j (down)       k (up)       l (right)
-    
-2. To start Vim from the shell prompt type:  vim FILENAME <ENTER>
-
-3. To exit Vim type:     <ESC>   :q!   <ENTER>  to trash all changes.
-            OR type:      <ESC>   :wq   <ENTER>  to save the changes. 
-    
-4. To delete the character at the cursor type:  x
-
-5. To insert or append text type: 
-        i   type inserted text   <ESC>         insert before the cursor
-        A   type appended text   <ESC>         append after the line
-                        
-NOTE: Pressing <ESC> will place you in Normal mode or will cancel
-    an unwanted and partially completed command.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                Lesson 2 SUMMARY
-
-    1. To delete from the cursor up to the next word type:        dw
-    2. To delete from the cursor up to the end of the word type:  de
-    3. To delete from the cursor to the end of a line type:       d$
-    4. To delete a whole line type:                               dd
-
-    5. To repeat a motion prepend it with a number:   2w
-    6. The format for a change command is:
-                operator   [number]   motion
-        where:
-        operator - is what to do, such as  d  for delete
-        [number] - is an optional count to repeat the motion
-        motion   - moves over the text to operate on, such as  w (word),
-                    e (end of word),  $ (end of the line), etc.
-
-    7. To move to the start of the line use a zero:  0
-
-    8. To undo previous actions, type:           u  (lowercase u)
-        To undo all the changes on a line, type:  U  (capital U)
-        To undo the undo's, type:                 CTRL-R
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               Lesson 3 SUMMARY
-
-
-  1. To put back text that has just been deleted, type   p .  This puts the
-     deleted text AFTER the cursor (if a line was deleted it will go on the
-     line below the cursor).
-
-  2. To replace the character under the cursor, type   r   and then the
-     character you want to have there.
-
-  3. The change operator allows you to change from the cursor to where the
-     motion takes you.  eg. Type  ce  to change from the cursor to the end of
-     the word,  c$  to change to the end of a line.
-
-  4. The format for change is:
-
-         c   [number]   motion
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               Lesson 4 SUMMARY
-
-
-  1. CTRL-G  displays your location in the file and the file status.
-             G  moves to the end of the file.
-     number  G  moves to that line number.
-            gg  moves to the first line.
-
-  2. Typing  /  followed by a phrase searches FORWARD for the phrase.
-     Typing  ?  followed by a phrase searches BACKWARD for the phrase.
-     After a search type  n  to find the next occurrence in the same direction
-     or  N  to search in the opposite direction.
-     CTRL-O takes you back to older positions, CTRL-I to newer positions.
-
-  3. Typing  %  while the cursor is on a (,),[,],{, or } goes to its match.
-
-  4. To substitute new for the first old in a line type    :s/old/new
-     To substitute new for all 'old's on a line type       :s/old/new/g
-     To substitute phrases between two line #'s type       :#,#s/old/new/g
-     To substitute all occurrences in the file type        :%s/old/new/g
-     To ask for confirmation each time add 'c'             :%s/old/new/gc
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               Lesson 5 SUMMARY
-
-
-  1.  :!command  executes an external command.
-
-      Some useful examples are:
-         (Windows)        (Unix) 
-          :!dir            :!ls            -  shows a directory listing.
-          :!del FILENAME   :!rm FILENAME   -  removes file FILENAME.
-
-  2.  :w FILENAME  writes the current Vim file to disk with name FILENAME.
-
-  3.  v  motion  :w FILENAME  saves the Visually selected lines in file
-      FILENAME.
-
-  4.  :r FILENAME  retrieves disk file FILENAME and puts it below the
-      cursor position.
-
-  5.  :r !dir  reads the output of the dir command and puts it below the
-      cursor position.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               Lesson 6 SUMMARY
-
-  1. Type  o  to open a line BELOW the cursor and start Insert mode.
-     Type  O  to open a line ABOVE the cursor.
-
-  2. Type  a  to insert text AFTER the cursor.
-     Type  A  to insert text after the end of the line.
-
-  3. The  e  command moves to the end of a word.
-
-  4. The  y  operator yanks (copies) text,  p  puts (pastes) it.
-
-  5. Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
-
-  6. Typing ":set xxx" sets the option "xxx".  Some options are:
-        'ic' 'ignorecase'       ignore upper/lower case when searching
-        'is' 'incsearch'        show partial matches for a search phrase
-        'hls' 'hlsearch'        highlight all matching phrases
-     You can either use the long or the short option name.
-
-  7. Prepend "no" to switch an option off:   :set noic
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                               Lesson 7 SUMMARY
-
-
-  1. Type  :help  or press <F1> or <HELP>  to open a help window.
-
-  2. Type  :help cmd  to find help on  cmd .
-
-  3. Type  CTRL-W CTRL-W  to jump to another window.
-
-  4. Type  :q  to close the help window.
-
-  5. Create a vimrc startup script to keep your preferred settings.
-
-  6. When typing a  :  command, press CTRL-D to see possible completions.
-     Press <TAB> to use one completion.
-```
-# references
-* ([linuxlinks.com: 8 Excellent Free Books to Learn Vim)[https://www.linuxlinks.com/excellent-free-books-learn-vim/]
-* (VIM User Manual by Bram Moolenaar)[http://www.eandem.co.uk/mrw/vim/usr_doc/index.html]
+* [linuxlinks.com: 8 Excellent Free Books to Learn Vim](https://www.linuxlinks.com/excellent-free-books-learn-vim/)
+* [VIM User Manual by Bram Moolenaar](http://www.eandem.co.uk/mrw/vim/usr_doc/index.html)
 * (vimtutor(1) - Linux man page)[https://linux.die.net/man/1/vimtutor]
-* (How to Copy, Cut and Paste in Vim / Vi)[https://linuxize.com/post/how-to-copy-cut-paste-in-vim]
-* (neovim Teil 3 – Plugin Manager, umfangreiche Einstellungen und Erweiterungen)[https://schimana.net/2021/neovim-teil-3-plugin-manager-umfangreiche-einstellungen-und-erweiterungen/]
-* (Vim tips: Working with external commands)[https://www.linux.com/training-tutorials/vim-tips-working-external-commands/]
-* (VIM Tutorial)[https://www.openvim.com/tutorial.html]
+* [How to Copy, Cut and Paste in Vim / Vi](https://linuxize.com/post/how-to-copy-cut-paste-in-vim)
+* [neovim Teil 3 – Plugin Manager, umfangreiche Einstellungen und Erweiterungen](https://schimana.net/2021/neovim-teil-3-plugin-manager-umfangreiche-einstellungen-und-erweiterungen/)
+* [Vim tips: Working with external commands](https://www.linux.com/training-tutorials/vim-tips-working-external-commands/)
+* [VIM Tutorial](https://www.openvim.com/tutorial.html)

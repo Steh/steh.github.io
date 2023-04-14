@@ -10,7 +10,8 @@ classes:
 excerpt: "Atomic Red Team is an open-source project that provides a framework for performing security testing and threat emulation."
 toc: true
 --- 
-# installation
+
+## installation
 
 ```bash
 # PowerShell
@@ -18,7 +19,8 @@ Import-Module "invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="AtomicRedTeam\atomics"}
 ```
 
-# How to use
+## How to use
+
 ```bash
 # get requirements
 Invoke-AtomicTest T1127 -GetPrereqs
@@ -36,7 +38,7 @@ Invoke-AtomicTest T1127 -TestNumbers 1,2
 Invoke-AtomicTest T1127 -TestNumbers 1,2 -cleanup
 ```
 
-# create rules via gui
+## create rules via gui
 
 ```bash
 # start gui
@@ -46,7 +48,7 @@ Start-AtomicGui
 http://localhost:8487/home
 ```
 
-# Emulating an Attack
+## Emulating an Attack
 
 ```bash
 # view if tests exist
@@ -59,9 +61,11 @@ ls C:\Tools\AtomicRedTeam\atomics | Where-Object Name -Match "T1566.001|T1203|T1
 'T1566.001','T1059.003','T1083','T1082','T1016','T1049','T1007','T1087.001' | ForEach-Object {echo "Enumerating $_"; Invoke-AtomicTest $_ -CheckPrereqs }
 ```
 
-# Searching for Technique on ATT&CK Navigator
-* (ATT&CK Navigator)[https://mitre-attack.github.io/attack-navigator/]
+## Searching for Technique on ATT&CK Navigator
 
-# references
-* (Atomics)[https://atomicredteam.io/atomics/#collection]
-* (TryHackMe: Atomic Red Team)[https://tryhackme.com/room/atomicredteam]
+* [ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)
+
+## references
+
+* [Atomics](https://atomicredteam.io/atomics/#collection)
+* [TryHackMe: Atomic Red Team](https://tryhackme.com/room/atomicredteam)
