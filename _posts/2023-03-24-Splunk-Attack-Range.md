@@ -123,9 +123,39 @@ python attack_range.py simulate -e ART -te T1003.001 -t ar-win-ar-ar-0
 ### MITRE ATTACK Technique
 python attack_range.py simulate -e PurpleSharp -te T1003.001 -t ar-win-ar-ar-0
 
+### MITRE ATTACK Technique
+python attack_range.py simulate -e PurpleSharp -te T1003.001, -t ar-win-ar-ar-0
+
 ### Playbook
 python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json  -t ar-win-ar-ar-0
+
+### Example Playbook
+{
+"type": "local",
+"sleep": 5,
+"playbooks": [
+   {
+      "name": "Process Injection Simulation Playbook",
+      "enabled": true,
+      "tasks": [
+      {
+         "technique_id": "T1055.002",
+         "variation": 1
+      },
+      {
+         "technique_id": "T1055.003",
+         "variation": 1
+      },
+      {
+         "technique_id": "T1055.004",
+         "variation": 1
+      }
+      ]
+   }
+]
+} 
 ```
+Other Examples for PurpleSharp: [mvelazc0@github: PurpleSharp PurpleTeamPlaybooks](https://github.com/mvelazc0/PurpleTeamPlaybook.git)
 
 ## Debuging
 
