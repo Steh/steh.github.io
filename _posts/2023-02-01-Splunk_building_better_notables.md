@@ -10,6 +10,9 @@ classes:
 toc: true
 excerpt: "A Few Tipps to build better notables in Splunk ES"
 --- 
+
+Notables in Splunk Enterprise Security (ES) are records of security-related events that require further investigation or action by security analysts. Notables are created by rules in Splunk ES that detect suspicious or anomalous behavior in the security data.
+
 ## Contributing Events
 
 * add a search that will show you the search results that lead to the notables
@@ -25,13 +28,24 @@ excerpt: "A Few Tipps to build better notables in Splunk ES"
 * Correlation Searches have more possiblitys to investigate events
 * add the following to your search and Reload all endpoints
   * `https://<splunk-ip>:<port>/en-GB/debug/refresh`
+* to transform a search you have to add the following parameters: [1]
 
 ```bash
 # add the following lines to "savedsearches.conf" search
 action.correlationsearch = 0
 action.correlationsearch.enabled = 1
-action.correlationsearch.label = "Label"
+action.correlationsearch.label = "rule_name"
+description = "description"
 ```
+
+[1]: https://docs.splunk.com/Documentation/PCI/5.1.1/Install/Correlationsearches#Changes_you_have_to_make_after_upgrade "correlationsearches.conf parameter translation to savedsearches.conf"
+
+## data enrichment with asset details
+
+* enrich your assets with additional informations like Hostnames or departments for user
+* this can be done with the Asset & Identity Framework[2]
+
+[2]: https://www.splunk.com/en_us/blog/security/asset-identity-for-splunk-enterprise-security-part-1-contextualizing-systems.html "Asset & Identity for Splunk Enterprise Security - Part 1: Contextualizing Systems"
 
 ## Customise your "Incident Review" Dashboard
 
@@ -46,7 +60,7 @@ action.correlationsearch.label = "Label"
 * Change the default filter view to your needs
 * Set your filters and hit "Save new filters"
 
-### Add more data to event details
+### Add more data to event details view
 
 * to add data to a notable you need to extract the data from the search and add it to the notable
 * extract the field:
