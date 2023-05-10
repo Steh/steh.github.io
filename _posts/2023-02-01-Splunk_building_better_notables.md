@@ -28,7 +28,7 @@ Notables in Splunk Enterprise Security (ES) are records of security-related even
 * Correlation Searches have more possiblitys to investigate events
 * add the following to your search and Reload all endpoints
   * `https://<splunk-ip>:<port>/en-GB/debug/refresh`
-* to transform a search you have to add the following parameters: [1]
+* to transform a search you have to add the following parameters: [^1]
 
 ```bash
 # add the following lines to "savedsearches.conf" search
@@ -41,7 +41,7 @@ description = "description"
 ## data enrichment with asset details
 
 * enrich your assets with additional informations like Hostnames or departments for user
-* this can be done with the Asset & Identity Framework[2]
+* this can be done with the Asset & Identity Framework[^2]
 
 ## Customise your "Incident Review" Dashboard
 
