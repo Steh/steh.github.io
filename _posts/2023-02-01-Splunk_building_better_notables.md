@@ -38,14 +38,10 @@ action.correlationsearch.label = "rule_name"
 description = "description"
 ```
 
-[1]: https://docs.splunk.com/Documentation/PCI/5.1.1/Install/Correlationsearches#Changes_you_have_to_make_after_upgrade "correlationsearches.conf parameter translation to savedsearches.conf"
-
 ## data enrichment with asset details
 
 * enrich your assets with additional informations like Hostnames or departments for user
 * this can be done with the Asset & Identity Framework[2]
-
-[2]: https://www.splunk.com/en_us/blog/security/asset-identity-for-splunk-enterprise-security-part-1-contextualizing-systems.html "Asset & Identity for Splunk Enterprise Security - Part 1: Contextualizing Systems"
 
 ## Customise your "Incident Review" Dashboard
 
@@ -72,3 +68,6 @@ description = "description"
 ## references
 
 * [Configure correlation searches](https://docs.splunk.com/Documentation/PCI/5.1.0/Install/Correlationsearches)
+
+[^1] [https://docs.splunk.com/Documentation/PCI/5.1.1/Install/Correlationsearches#Changes_you_have_to_make_after_upgrade](correlationsearches.conf parameter translation to savedsearches.conf)
+[^2] [https://www.splunk.com/en_us/blog/security/asset-identity-for-splunk-enterprise-security-part-1-contextualizing-systems.html](Asset & Identity for Splunk Enterprise Security - Part 1: Contextualizing Systems)
