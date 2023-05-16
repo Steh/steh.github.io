@@ -1,10 +1,10 @@
 ---
-title:  "fun with curl"
-date:   2022-07-11
-categories: 
-- informationsecurity
+title: "Fun with Curl"
+date: 2022-07-11
+categories:
+- Information Security
 tags:
-- curl
+- Curl
 classes:
 - wide
 toc: true
@@ -13,31 +13,31 @@ excerpt: "An overview of what you can do with curl."
 
 ## E-Mail
 
-Send an Mail through curl
+Send an email through curl:
 
 ```bash
-# mail template
+# Mail template
 From: from@steh.de
-To:   to@steh.de
+To: to@steh.de
 Subject: curl E-Mail
 
 Hey,
 
-dies ist eine Mail die mit curl verschickt wurde.
+this is an email sent using curl.
 
-# send mail
-curl  -vk smtp://mailserver.de --mail-from from@steh.de --mail-rcpt  to@steh.de  --ssl --upload-file mail.txt
+# Send mail
+curl -vk smtp://mailserver.de --mail-from from@steh.de --mail-rcpt to@steh.de --ssl --upload-file mail.txt
 ```
 
-## logon
+## Logon
 
-Send Post Request to a Logon Page.
+Send a POST Request to a logon page.
 
 ```bash
-# find values for request
+# Find values for request
 curl http://XX.XX.XX.XX/admin.php
 
-# send data
+# Send data
 curl -X POST -d "username=admin" -d "password=admin" http://XX.XX.XX.XX/admin.php
 ```
 

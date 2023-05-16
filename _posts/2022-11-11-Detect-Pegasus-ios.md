@@ -1,28 +1,35 @@
 ---
-title:  "Check for Pegasus on iOS"
-date:   2022-11-11
-categories: 
-- informationsecurity
+title: "Check for Pegasus on iOS"
+date: 2022-11-11
+categories:
+- Information Security
 tags:
-- pegasus
-excerpt: 'How to check for pegasus and other spayware on iOS' 
+- Pegasus
+excerpt: 'How to check for Pegasus and other spyware on iOS'
 ---
 
-## Pegasus unter IOS untersuchen
+## Investigating Pegasus on iOS
 
-1. verschlüsseltes Backup über den Finder anlegen
-2. MVT installieren ``pip3 install mvt``
-3. verschlüsseltes Backup entschlüsseln:
-    ``cd /Users/Steh/Library/Application Support/MobileSync
-    mvt-ios decrypt-backup Backup --destination Backup-dec``
-4. Erkennungsfile Downloaden: <https://github.com/AmnestyTech/investigations>
-5. Backup überprüfen
-``mvt-ios check-backup Backup-dec -o ioc_output -i pegasus.stix2 cytrox.stix2``
+1. Create an encrypted backup using Finder.
+2. Install MVT by running `pip3 install mvt`.
+3. Decrypt the encrypted backup:
 
-## reference
+```bash
+cd /Users/Steh/Library/Application Support/MobileSync
+mvt-ios decrypt-backup Backup --destination Backup-dec`
+```
 
-* <https://docs.mvt.re/en/latest/iocs/>
-* <https://docs.mvt.re/en/latest/ios/backup/check/>
-* <https://medium.com/@henry-kehler/mvt-quick-start-guide-87224a904189>
-* <https://www.heise.de/hintergrund/iPhones-selbst-auf-Pegasus-und-andere-Spyware-pruefen-6143960.html>
-* <https://github.com/AmnestyTech/investigations>
+4. Download the detection file from: [AmnestyTech Investigations Repository](https://github.com/AmnestyTech/investigations)
+5. Verify the backup:
+
+```bash
+mvt-ios check-backup Backup-dec -o ioc_output -i pegasus.stix2 cytrox.stix2
+```
+
+## References
+
+- [MVT IOCs Documentation](https://docs.mvt.re/en/latest/iocs/)
+- [Checking iOS Backups with MVT](https://docs.mvt.re/en/latest/ios/backup/check/)
+- [MVT Quick Start Guide](https://medium.com/@henry-kehler/mvt-quick-start-guide-87224a904189)
+- [Heise.de: iPhones selbst auf Pegasus und andere Spyware prüfen](https://www.heise.de/hintergrund/iPhones-selbst-auf-Pegasus-und-andere-Spyware-pruefen-6143960.html)
+- [AmnestyTech Investigations Repository](https://github.com/AmnestyTech/investigations)

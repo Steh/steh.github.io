@@ -1,17 +1,19 @@
 ---
-title:  "smtp-user-enum"
-date:   2022-07-11
-categories: 
-- informationsecurity
+title: "smtp-user-enum"
+date: 2022-07-11
+categories:
+- Information Security
 tags:
 - smtp-user-enum
-- kali
+- Kali
+classes: 
+- wide
 ---
 
-{% highlight bash %}
+```bash
 smtp-user-enum -M VRFY -U users.txt -t 10.10.10.1
 smtp-user-enum -M VRFY -u tom -t 10.10.10.1
-{% endhighlight %}
+```
 
 ## References
 
