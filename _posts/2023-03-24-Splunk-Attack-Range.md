@@ -6,6 +6,7 @@ tags:
 - blue team
 - splunk
 - atomic red team
+- attack range  
 classes: 
 - wide
 excerpt: "Attack Range is designed to simulate a real-world attack scenario, allowing security teams to test and improve their detection and response capabilities." 
@@ -132,7 +133,7 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
   * ```python attack_range.py destroy```
 * To allow the Adressrange from attack_range
 
-```bash
+```conf
 # /etc/vbox/networks.conf
 * 0.0.0.0/0 ::/0
 ```
@@ -152,7 +153,7 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 * PurpleSharp
   * tool created by Microsoft that simulates adversary techniques based on the MITRE ATT&CK framework in a Windows environment.
 
-## references
+## sources
 
 * [Github Splunk Attack Range](https://github.com/splunk/attack_range)
 * [Attack Range Local](https://attack-range.readthedocs.io/en/latest/Attack_Range_Local.html)
@@ -165,3 +166,5 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 * [Python Poetry](https://python-poetry.org/)
 * [Prelude Security](https://www.preludesecurity.com/)
 * [Virtualbox: 6.7. Host-Only Networking](https://www.virtualbox.org/manual/ch06.html)
+* [Vagrant: Getting Started](https://www.vagrantup.com/intro/getting-started)
+* [Vagrant: Networking](https://www.vagrantup.com/docs/networking)

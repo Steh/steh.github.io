@@ -9,7 +9,8 @@ classes:
 excerpt: "Burp Suite is a framework that aims to provide a one-stop-shop for web application penetration testing" 
 toc: true
 --- 
-# Features
+## Features
+
 * Proxy
   * allows to intercept and modify requests/response
 * Repeater
@@ -23,7 +24,8 @@ toc: true
 * Sequencer
   * allows to analyzing session randomness
 
-# proxy
+## proxy
+
 * allows us to capture requests and responses between ourselves and our target. These can then be manipulated or sent to other tools for further processing before being allowed to continue to their destination.
 * request will be captured and won't be allowed to continue to the TryHackMe servers until we explicitly allow it through
 * Proxy 127.0.0.1:8080 eintragen
@@ -31,8 +33,6 @@ toc: true
   * Forward Request
   * Drop Request
 * to intercept SSL
-  * http://burp/cert
+  * <http://burp/cert>
   * Trust this CA import into Browser
-
-# references
-* (Text)[https://steh.github.io]
+  

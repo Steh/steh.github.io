@@ -10,5 +10,8 @@ excerpt: ""
 toc: true
 --- 
 
-# references
-* (Text)[https://steh.github.io]
+## source
+
+* [Text][def]
+
+[def]: https://steh.github.io

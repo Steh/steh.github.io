@@ -3,33 +3,37 @@ title: Link List
 permalink: /link-list/
 toc: true
 ---
-# Newspages
-* https://www.heise.de/newsticker/
-* https://thehackernews.com/
-* https://news.ycombinator.com/
-* https://www.bleepingcomputer.com/
-* https://allinfosecnews.com/
+## Newspages
 
-# Blogs
-* https://www.malwarebytes.com/blog
-* https://www.reddit.com/r/cybersecurity/
-* https://isc.sans.edu/
-* https://www.cisa.gov/news-events/cybersecurity-advisories
+* <https://www.heise.de/newsticker/>
+* <https://thehackernews.com/>
+* <https://news.ycombinator.com/>
+* <https://www.bleepingcomputer.com/>
+* <https://allinfosecnews.com/>
 
-# Social Media
-## Twitter
-* https://twitter.com/vxunderground
-* https://twitter.com/TheHackersNews
-* https://twitter.com/a_greenberg
-* https://twitter.com/_JohnHammond
-* https://twitter.com/Threatlabz
+## Blogs
 
+* <https://www.malwarebytes.com/blog>
+* <https://www.reddit.com/r/cybersecurity/>
+* <https://isc.sans.edu/>
+* <https://www.cisa.gov/news-events/cybersecurity-advisories>
 
-## Mastodon
-* https://infosec.exchange/explore
+## Social Media
 
+### Twitter
 
-# CVE Pages
+* <https://twitter.com/vxunderground>
+* <https://twitter.com/TheHackersNews>
+* <https://twitter.com/a_greenberg>
+* <https://twitter.com/_JohnHammond>
+* <https://twitter.com/Threatlabz>
+
+### Mastodon
+
+* <https://infosec.exchange/explore>
+
+## CVE Pages
+
 * [National Vulnerability Database](https://nvd.nist.gov/products/cpe/search)
 * [Mitre CVE](https://cve.mitre.org/)
 * [OpenCVE](https://www.opencve.io/cve)
@@ -39,40 +43,51 @@ toc: true
 * [CVE Twitter Trends](https://cvetrends.com/)
 * [CVE search for Ubuntu](https://ubuntu.com/security/cves)
 
-# Exploits
-* https://inthewild.io/feed
-* https://www.exploit-db.com/
+## Exploits
 
-# Sources for Analytics
+* <https://inthewild.io/feed>
+* <https://www.exploit-db.com/>
+
+## Sources for Analytics
+
 * [https://car.mitre.org/analytics](https://car.mitre.org/analytics/)
-    * "The MITRE Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by MITRE based on the MITRE ATT&CK® adversary model. CAR defines a data model that is leveraged in its pseudocode representations but also includes implementations directly targeted at specific tools (e.g., Splunk, EQL) in its analytics. With respect to coverage, CAR is focused on providing a set of validated and well-explained analytics, in particular with regards to their operating theory and rationale."
+  * "The MITRE Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by MITRE based on the MITRE ATT&CK® adversary model. CAR defines a data model that is leveraged in its pseudocode representations but also includes implementations directly targeted at specific tools (e.g., Splunk, EQL) in its analytics. With respect to coverage, CAR is focused on providing a set of validated and well-explained analytics, in particular with regards to their operating theory and rationale."
 * [The DFIR Report - Real Intrusions by Real Attackers, The Truth Behind the Intrusion](https://thedfirreport.com/)
 * [Any.run: Malware Trends](https://any.run/malware-trends/)
 
-# Tools
+## Tools
+
 * [Cyberchef](https://github.com/gchq/CyberChef)
 * [CISA: Free Cybersecurity Services and Tools](https://www.cisa.gov/free-cybersecurity-services-and-tools)
 * [shellshark: Infosec tools](https://shellsharks.com/infosec-tools)
 
-# OSINT
-* 
-## domain informatin
+## OSINT
+
+*
+
+### domain informatin
+
 * [urlscan.io](https://urlscan.io)
 * Malware Bazaar:  A resource for sharing malware samples.
 * Feodo Tracker:  A resource used to track botnet command and control (C2) infrastructure linked with Emotet, Dridex and TrickBot.
 * SSL Blacklist:  A resource for collecting and providing a blocklist for malicious SSL certificates and JA3/JA3s fingerprints.
 * URL Haus:  A resource for sharing malware distribution sites.
 * [Thread Fox](https://threatfox.abuse.ch)
-    * A resource for IOCs
+  * A resource for IOCs
 * [osint.link](https://osint.link/)
-## Malware
-* https://bazaar.abuse.ch/browse/
 
-# Media
-## Podcasts
-* https://darknetdiaries.com/episode/
-* https://isc.sans.edu/podcast.html
+### Malware
 
-## Videos
-* https://www.youtube.com/@TheTWSChannel
-* https://www.youtube.com/@_JohnHammond
+* <https://bazaar.abuse.ch/browse/>
+
+## Media
+
+### Podcasts
+
+* <https://darknetdiaries.com/episode/>
+* <https://isc.sans.edu/podcast.html>
+
+### Videos
+
+* <https://www.youtube.com/@TheTWSChannel>
+* <https://www.youtube.com/@_JohnHammond>

@@ -5,6 +5,7 @@ categories:
 tags:
 - blue team
 - splunk
+- splunk enterprise security
 classes: 
 - wide
 toc: true

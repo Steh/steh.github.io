@@ -59,7 +59,7 @@ nmap -sV xx.xx.xx.xx
 
 ## Paramter
 
-```bash
+```conf
 # basic scan types
 -sT     TCP Connect Scans
 -sS     SYN "Half-open" Scans
@@ -95,7 +95,7 @@ nmap -sV xx.xx.xx.xx
 * [list of all categories](https://nmap.org/book/nse-usage.html)
 * [help for the scripts](https://nmap.org/nsedoc/)
 
-```bash
+```conf
 # examples for scripts
 --script=safe
 --script=vuln

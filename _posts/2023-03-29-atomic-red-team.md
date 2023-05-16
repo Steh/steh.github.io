@@ -5,6 +5,9 @@ categories:
 tags:
 - blue team
 - red team
+- windows
+- atomic red team
+- attack range
 classes: 
 - wide
 excerpt: "Atomic Red Team is an open-source project that provides a framework for performing security testing and threat emulation."
@@ -40,7 +43,7 @@ Invoke-AtomicTest T1127 -TestNumbers 1,2 -cleanup
 
 ## create rules via gui
 
-```bash
+```powershell
 # start gui
 Start-AtomicGui
 
@@ -50,7 +53,7 @@ http://localhost:8487/home
 
 ## Emulating an Attack
 
-```bash
+```powershell
 # view if tests exist
 ls C:\Tools\AtomicRedTeam\atomics | Where-Object Name -Match "T1566.001|T1203|T1059.003|T1083|T1082|T1016|T1049|T1007|T1087.001"
 
@@ -65,7 +68,10 @@ ls C:\Tools\AtomicRedTeam\atomics | Where-Object Name -Match "T1566.001|T1203|T1
 
 * [ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)
 
-## references
+## sources
 
-* [Atomics](https://atomicredteam.io/atomics/#collection)
-* [TryHackMe: Atomic Red Team](https://tryhackme.com/room/atomicredteam)
+* [List of Atomics to use][def]
+* [TryHackMe: Atomic Red Team][def2]
+
+[def]: https://atomicredteam.io/atomics/#collection
+[def2]: https://tryhackme.com/room/atomicredteam
