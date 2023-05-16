@@ -48,26 +48,26 @@ python attack_range.py simulate -e ART -te T1003.001 -t ar-win-ar-ar-0
 ### Linux x64
 
 ```bash
-# download repo
+# Download the Attack Range repository
 git clone https://github.com/splunk/attack_range.git
 cd attack_range
 
-# install virtualbox and vagrant
+# Install VirtualBox and Vagrant
 apt-get update
 apt-get install virtualbox
 wget https://releases.hashicorp.com/vagrant/2.2.19/vagrant_2.2.19_x86_64.deb
 apt install ./vagrant_2.2.19_x86_64.deb
 
-# install and run poetry
-## Installs all dependencys
+# Install and run Poetry
+## Install all dependencies
 curl -sSL https://install.python-poetry.org/ | python -
 poetry install
 poetry shell
 
-# configure attack_range or copy your default config
+# Configure Attack Range or copy your default config
 python attack_range.py configure
 
-# buildng the lab
+# Build the lab
 python attack_range.py build
 ```
 
@@ -75,16 +75,16 @@ python attack_range.py build
 
 * [Attack Range Configuration](https://attack-range.readthedocs.io/en/latest/Attack_Range_Config.html)
 
-```bash
+```conf
 general:
   attack_range_password: "changeme"
   cloud_provider: local
   use_prebuilt_images_with_packer: "0"
   ingest_bots3_data: "1"
 local:
-  # enables es
+  # Enable Enterprise Security
   install_es: "1"
-  # needs to be saved to the apps folder from attack range
+  # Save to the apps folder from Attack Range
   splunk_es_app: "splunk-enterprise-security_701.spl"
 kali_server:
   kali_server: "1"
@@ -138,20 +138,14 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 * 0.0.0.0/0 ::/0
 ```
 
-## some of the applications used to build all of this
+## Applications Used
 
-* Vagrant
-  * allows you to create and configure lightweight, reproducible, and portable virtual development environments
-* Poetry
-  * dependency management and packaging tool for Python
-* VirtualBox
-  * virtualization platform that allows you to create and run virtual machines on your computer
-* Ansible
-  * automate IT tasks such as configuration management, application deployment, and infrastructure provisioning
-* Atomic Red Team
-  * framework for testing endpoint detection and response (EDR) and other security controls
-* PurpleSharp
-  * tool created by Microsoft that simulates adversary techniques based on the MITRE ATT&CK framework in a Windows environment.
+* **Vagrant**: A lightweight, reproducible, and portable virtual development environment creation and configuration tool.
+* **Poetry**: A Python dependency management and packaging tool.
+* **VirtualBox**: A virtualization platform for creating and running virtual machines on your computer.
+* **Ansible**: An automation tool for configuration management, application deployment, and infrastructure provisioning.
+* **Atomic Red Team**: A framework designed for testing endpoint detection and response (EDR) and other security controls.
+* **PurpleSharp**: A Microsoft tool that simulates adversary techniques based on the MITRE ATT&CK framework in a Windows environment.
 
 ## sources
 

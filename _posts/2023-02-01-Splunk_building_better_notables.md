@@ -12,22 +12,24 @@ toc: true
 excerpt: "Tips for optimizing notables in Splunk Enterprise Security"
 --- 
 
-Notables in Splunk Enterprise Security (ES) are records of security-related events that require further investigation or action by security analysts. Notables are created by rules in Splunk ES that detect suspicious or anomalous behavior in the security data.
+## Notables in Splunk Enterprise Security (ES)
 
-## Contributing Events
+Notables in Splunk Enterprise Security (ES) are security-related events that require further investigation or action by security analysts. These notables are created by rules in Splunk ES that detect suspicious or anomalous behavior in the security data.
 
-- Add a search to show the search results leading to the notables.
-- Use the "Drill-down Search" field in the notable to view the events.
+### Contributing Events
 
-## Add "Next Steps" Descriptions
+- Add a search to display the search results leading to the notables.
+- Utilize the "Drill-down Search" field within the notables to view the events.
 
-- Include clear instructions in the notables to guide the next steps.
-- Utilize the "Next Steps" section within the notables.
+### Next Steps Instructions
 
-## Convert Searches to Correlation Searches
+- Include clear instructions within the notables to guide the next steps for analysts.
+- Make use of the "Next Steps" section within the notables.
 
-- Correlation Searches provide enhanced possibilities for investigating events.
-- To transform a search, add the following parameters: [^1]
+### Convert Searches to Correlation Searches
+
+- Correlation Searches provide advanced capabilities for investigating events.
+- To transform a search into a correlation search, add the following parameters: [^1]
 
 ```conf
 # savedsearches.conf
@@ -39,30 +41,30 @@ description = "description"
 
 ## Data Enrichment with Asset Details
 
-- Enrich your assets with additional information such as hostnames or departments for users.
-- This can be done with the Asset & Identity Framework. [^2]
+- Enhance your assets with additional information such as hostnames or departments for users.
+- Utilize the Asset & Identity Framework for data enrichment. [^2]
 
-## Customize your "Incident Review" Dashboard
+## Customizing the "Incident Review" Dashboard
 
-### Change Table Attributes
+### Changing Table Attributes
 
-- Change the "Table Attributes" to "Incident Review" in the settings:
-  - `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
-  - Add your values to the "Incident Review - Table Attributes" field.
+- Update the settings to change the "Table Attributes" to "Incident Review":
+  - Go to `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
+  - Enter your desired values in the "Incident Review - Table Attributes" field.
 
-### Use Saved Filters for Faster Filtering
+### Using Saved Filters for Faster Filtering
 
-- Customize the default filter view to match your needs.
+- Customize the default filter view according to your requirements.
 - Set your filters and save them as new filters for quick access.
 
-### Add More Data to Event Details View
+### Adding More Data to Event Details View
 
-- To add data to a notable, extract the data from the search and add it to the notable.
-- Extract the field:
-  - `correlation search -> notable -> Asset Extraction`
-- Add the field to "Incident Review" configuration:
-  - `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
-  - Add your values to the "Incident Review - Event Attributes" field.
+- To add data to a notable, extract the relevant information from the search results and include it in the notable.
+- Extract the field using the following steps:
+  - `Correlation Search -> Notable -> Asset Extraction`
+- Add the field to the "Incident Review" configuration:
+  - Go to `Enterprise Security -> Configure -> Incident Management -> Incident Review Settings`
+  - Enter your values in the "Incident Review - Event Attributes" field.
 
 ## References
 
