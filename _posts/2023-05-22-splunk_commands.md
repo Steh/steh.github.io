@@ -14,8 +14,8 @@ toc: true
 
 ## where
 
-* searchcommand to compare two fields
-* Possibility to use funtions
+* search command to compare two fields
+* Possibility to use functions
   * isnotnull()
   * isnull()
   * like()
@@ -37,5 +37,5 @@ index=perfmon counter=*
 ```
 
 ## references
-* (Splunk Search Command of the Week: Where Command)[https://kinneygroup.com/blog/splunk-where-command/]
-* (SPL2 Search Reference: where command usage)[https://docs.splunk.com/Documentation/SCS/current/SearchReference/WhereCommandUsage]
+* [Splunk Search Command of the Week: Where Command](https://kinneygroup.com/blog/splunk-where-command/)
+* [SPL2 Search Reference: where command usage](https://docs.splunk.com/Documentation/SCS/current/SearchReference/WhereCommandUsage)
