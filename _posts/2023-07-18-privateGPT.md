@@ -11,8 +11,36 @@ toc: true
 --- 
 
 ## Installation
-```bash
 
+```bash
+# clone Repo
+git clone https://github.com/imartinez/privateGPT.git
+
+# enter Repo
+cd privateGPT
+
+# virtuelle Umgebung erstellen
+python3 -m privateGPT venv
+
+# umgebung betretten
+source privateGPT/bin/active
+
+# Requirements installieren
+pip3 install -r requirements.txt
+
+# download model
+mkdir models
+cd models
+curl -O https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin
+
+# config 
+cp example.env .env
+
+# read documents
+python3 ingest.py
+
+# start gpt
+python3 privateGPT.py
 ```
 
 ## source
