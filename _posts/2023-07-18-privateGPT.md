@@ -46,5 +46,7 @@ python3 privateGPT.py
 ## source
 
 * [github: privateGPT][def]
+* [Training Your Own LLM using privateGPT][def1]
 
 [def]: https://github.com/imartinez/privateGPT
+[def1]: https://levelup.gitconnected.com/training-your-own-llm-using-privategpt-f36f0c4f01ec
