@@ -40,8 +40,39 @@ toc: true
   * combine all the methods previously mentioned
   * For example, utilizing the TTP-driven and entity-driven approaches to better understand a threat actor's motivations and most common targets, can help identify the organization's most vulnerable assets.
 
+## Identify almost identical files
+
+* Ref[def1]
+* ssdeep[def2]
+  * compares hash to hashes from other files
+  * works because: "inputs have sequences of identical bytes in the same order, although bytes in between these sequences may be different in both content and length"
+
+```bash
+# create hash
+ssdeep file
+
+# compare to other files
+ssdeep file.ext > hash_file.txt
+ssdeep -m hash_file.txt *
+
+# cluster similar files
+ssdeep -p *
+
+# Example output
+ssdeep file5 > hash.txt
+ssdeep -m hash.txt *
+  /home/steh/file9 matches hash.txt:/home/steh/file5 (65)
+  /home/steh/file3 matches hash.txt:/home/steh/file5 (66)
+  /home/steh/file5 matches hash.txt:/home/steh/file5 (100)
+  /home/steh/file7 matches hash.txt:/home/steh/file5 (57)
+```
+
 ## source
 
 * [ImmersiveLabs: Threat Hunting Theory - Types of Hunt](https://immersivelabs.online/v2/labs/threat-hunt-theory-types-of-hunt-bdb9f2af-b889-425f-a96c-9816ad3ae052/role/introduction-to-cyber-threat-intelligence/)
+* [github: ssdeep project][def2]
+* [Whitepaper: Identifying almost identical files using context triggered piecewise hashing][def1]
 
+[def1]: https://www.sciencedirect.com/science/article/pii/S1742287606000764
+[def2]: https://ssdeep-project.github.io/ssdeep/index.html
 [^1][ImmersiveLabs: Threat Hunting Theory](<https://immersivelabs.online/v2/labs/threat-hunt-theory-hypothesis-creation/role/introduction-to-cyber-threat-intelligence/series/threat-hunting-theory>)
