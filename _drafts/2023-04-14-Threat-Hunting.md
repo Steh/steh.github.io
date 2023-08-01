@@ -40,8 +40,15 @@ toc: true
   * combine all the methods previously mentioned
   * For example, utilizing the TTP-driven and entity-driven approaches to better understand a threat actor's motivations and most common targets, can help identify the organization's most vulnerable assets.
 
+## STIX
+
+* Structured Threat Information Expression [^1][def1]
+
 ## source
 
 * [ImmersiveLabs: Threat Hunting Theory - Types of Hunt](https://immersivelabs.online/v2/labs/threat-hunt-theory-types-of-hunt-bdb9f2af-b889-425f-a96c-9816ad3ae052/role/introduction-to-cyber-threat-intelligence/)
+* [github: stix cti documentation][def1]
 
 [^1][ImmersiveLabs: Threat Hunting Theory](<https://immersivelabs.online/v2/labs/threat-hunt-theory-hypothesis-creation/role/introduction-to-cyber-threat-intelligence/series/threat-hunting-theory>)
+
+[def1]: https://oasis-open.github.io/cti-documentation/stix/examples
