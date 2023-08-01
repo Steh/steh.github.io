@@ -44,4 +44,5 @@ toc: true
 
 * [ImmersiveLabs: Threat Hunting Theory - Types of Hunt](https://immersivelabs.online/v2/labs/threat-hunt-theory-types-of-hunt-bdb9f2af-b889-425f-a96c-9816ad3ae052/role/introduction-to-cyber-threat-intelligence/)
 
-[^1][ImmersiveLabs: Threat Hunting Theory](<https://immersivelabs.online/v2/labs/threat-hunt-theory-hypothesis-creation/role/introduction-to-cyber-threat-intelligence/series/threat-hunting-theory>)
+[^1][ImmersiveLabs: Threat Hunting Theory]
+[def1]: https://immersivelabs.online/v2/labs/threat-hunt-theory-hypothesis-creation/role/introduction-to-cyber-threat-intelligence/series/threat-hunting-theory
