@@ -57,4 +57,11 @@ Reference[^1]
   * Does the hash reputation marked as suspicious or malicious?
   * Which domain hosts the suspicious/malicious file?  
 
+## enable TLS encryption
+
+* Edit > Preferences > Protocols > SSL (or TLS if present) > (Pre)-Master-Secret log filename.
+
+
+## References
+
 [^1]: [tryhackme: Advent of Cyber Day 13]([https://tryhackme.com/room/adventofcyber4](https://tryhackme.com/room/adventofcyber4))
