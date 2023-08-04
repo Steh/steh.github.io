@@ -51,7 +51,7 @@ if you want to know when data were writen to an Index/sourcetype you can use met
 | fieldformat "First Event"=strftime('First Event', "%c") 
 | fieldformat "Last Event"=strftime('Last Event', "%c") 
 | fieldformat "Last Update"=strftime('Last Update', "%c")
-´´´
+```
 
 [Splunk Documentation][def3]
 
