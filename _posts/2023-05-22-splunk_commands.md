@@ -36,6 +36,28 @@ index=perfmon counter=*
 ... | where foo="bar"
 ```
 
+## Metadata
+
+if you want to know when data were into an Index you can use "| metadat"
+
+```bash
+# show the metadata lastTime, firstTime and recentTime für die sourcetypes
+| metadata type=sourcetypes index=_internal 
+
+# format the output
+| metadata type=sourcetypes index=_internal 
+| rename totalCount as Count firstTime as "First Event" lastTime as "Last Event" recentTime as "Last Update" 
+| fieldformat Count=tostring(Count, "commas") 
+| fieldformat "First Event"=strftime('First Event', "%c") 
+| fieldformat "Last Event"=strftime('Last Event', "%c") 
+| fieldformat "Last Update"=strftime('Last Update', "%c")
+´´´
+
+[Splunk Documentation][def3]
+
 ## references
 * [Splunk Search Command of the Week: Where Command](https://kinneygroup.com/blog/splunk-where-command/)
 * [SPL2 Search Reference: where command usage](https://docs.splunk.com/Documentation/SCS/current/SearchReference/WhereCommandUsage)
+* [Docs Splunk: | metadata][def3]
+
+[def3]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Metadata
