@@ -56,6 +56,7 @@ if you want to know when data were writen to an Index/sourcetype you can use met
 [Splunk Documentation][def3]
 
 ## references
+
 * [Splunk Search Command of the Week: Where Command](https://kinneygroup.com/blog/splunk-where-command/)
 * [SPL2 Search Reference: where command usage](https://docs.splunk.com/Documentation/SCS/current/SearchReference/WhereCommandUsage)
 * [Docs Splunk: | metadata][def3]
