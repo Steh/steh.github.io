@@ -38,7 +38,7 @@ index=perfmon counter=*
 
 ## Metadata
 
-if you want to know when data were into an Index you can use "| metadat"
+if you want to know when data were writen to an Index/sourcetype you can use metadat
 
 ```bash
 # show the metadata lastTime, firstTime and recentTime für die sourcetypes
