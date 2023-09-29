@@ -57,11 +57,35 @@ Reference[^1]
   * Does the hash reputation marked as suspicious or malicious?
   * Which domain hosts the suspicious/malicious file?  
 
-## enable TLS encryption
+## enable TLS decryption
 
 * Edit > Preferences > Protocols > SSL (or TLS if present) > (Pre)-Master-Secret log filename.
 
+## filter examples
+
+```bash
+## Filter by IP/MAC
+ip.addr == x.x.x.x 
+ip.src == x.x.x.x
+ip.dest == x.x.x.x && ip.src == x.x.x.x
+
+## Filter by mac
+eth.addr == x.x.x.x
+
+## filter by port
+dst port 135 and tcp port 135
+```
+
+* [wireshark-filter(4) Manual Page][def1]
+* [https://github.com/security-cheatsheet/wireshark-cheatsheet][def3]
+* [Wireshark filter reference][def4]
 
 ## References
 
-[^1]: [tryhackme: Advent of Cyber Day 13]([https://tryhackme.com/room/adventofcyber4](https://tryhackme.com/room/adventofcyber4))
+* [OWASP Wireshark presentation][def2]
+* [tryhackme: Advent of Cyber Day 13]([https://tryhackme.com/room/adventofcyber4](https://tryhackme.com/room/adventofcyber4))
+
+[def1]: https://www.wireshark.org/docs/man-pages/wireshark-filter.html
+[def2]: https://owasp.org/www-pdf-archive//Owasp_wireshark.pdf
+[def3]: https://github.com/security-cheatsheet/wireshark-cheatsheet
+[def4]: https://www.wireshark.org/docs/dfref/
