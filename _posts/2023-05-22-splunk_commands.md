@@ -38,13 +38,13 @@ index=perfmon counter=*
 
 ## Metadata
 
-if you want to know when data were writen to an Index/sourcetype you can use metadat
+When you want to know the time data were writen to an Index/sourcetype you can use metadata.
 
 ```bash
-# show the metadata lastTime, firstTime and recentTime für die sourcetypes
+# show the metadata lastTime, firstTime and recentTime for the sourcetype
 | metadata type=sourcetypes index=_internal 
 
-# format the output
+# format the output to human readable
 | metadata type=sourcetypes index=_internal 
 | rename totalCount as Count firstTime as "First Event" lastTime as "Last Event" recentTime as "Last Update" 
 | fieldformat Count=tostring(Count, "commas") 
