@@ -155,6 +155,7 @@ python attack_range.py simulate -e PurpleSharp -sp threat_actor_simulation.json 
 ]
 } 
 ```
+
 Other Examples for PurpleSharp: [mvelazc0@github: PurpleSharp PurpleTeamPlaybooks](https://github.com/mvelazc0/PurpleTeamPlaybook.git)
 
 ## Debuging

@@ -14,12 +14,11 @@ toc: true
 ---
 ## combine the auditd log types
 
-What you have to do to see the executed commands:
-
-* switch auditd log_format to enriched to get the Username
-* combine all needed Events
-* select only the fields you need to reduce workload
-* if you don´t get an result, you should try to filter the subsearches or reduce the timespan of the search
+* switch auditd log_format to 'enriched' to add username to logging
+  * "/etc/auditd/auditd.conf" -> log_format=ENRICHED
+* combine all events
+* select the fields you need to reduce workload
+* if you don´t get any results, you should try to filter the subsearches or reduce the timespan of the search
 
 ```bash
 index=auditd_data type="EXECVE"
@@ -34,7 +33,7 @@ index=auditd_data type="EXECVE"
 
 ## convert the proctile field to ascii
 
-Auditd decodes the command to hex as a security measurement, so you have to convert it back.
+Auditd decodes the output to hex as an security measurement, so you have to convert it back to ascii.
 
 ```bash
 # combine all eventypes to one Entry
@@ -42,8 +41,6 @@ index=auditd_data type="PROCTITLE"
 ``` convert hex to ascii ```
 | eval proctitle_ascii = urldecode(replace(replace(proctitle,"([0-9A-F]{2})","%\1"),"%00","%20"))
 ```
-
-### How the conversion to ascii is working
 
 1. add an % bevor every char pair to create an URL-encoded String  
 1. replace . (%00) with an space (%20)
