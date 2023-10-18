@@ -96,19 +96,23 @@ social:
 
 # Analytics
 analytics:
-  provider               : custom # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
   custom:                   # Add, if you want to track with Matomo (former Piwik Analytics)
     url: https://steh.matomo.cloud/ # Required - url to Matomo installation without trailing /
     siteId: "1"          # Required - replace with your Matomo site id (Write id as string)
 
+jekyll_analytics:
+  Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
+    url: steh.matomo.cloud # Required - url to Matomo installation without trailing /
+    siteId: "1"          # Required - replace with your Matomo site id (Write id as string)
 
 # Site Author
 author:
   name             : "Steh"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  #bio              : "I am an **amazing** person."
-  #location         : "Somewhere"
-  #email            :
+  #bio             : "I am an **amazing** person."
+  location         : "Somewhere"
+  #email           :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -232,6 +236,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-archives
+  - jekyll-analytics
 
 # mimic GitHub Pages with --safe
 whitelist:
