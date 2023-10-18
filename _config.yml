@@ -15,7 +15,7 @@ remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-GB"
 title                    : "Steh Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
@@ -96,10 +96,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+  provider               : custom # false (default), "google", "google-universal", "google-gtag", "custom"
+  Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
+    url: https://steh.matomo.cloud/ # Required - url to Matomo installation without trailing /
+    siteId: "1"          # Required - replace with your Matomo site id (Write id as string)
 
 
 # Site Author
