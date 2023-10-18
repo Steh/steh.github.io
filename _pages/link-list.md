@@ -57,13 +57,13 @@ toc: true
 
 ## Tools
 
-* [Cyberchef](https://github.com/gchq/CyberChef)
-* [CISA: Free Cybersecurity Services and Tools](https://www.cisa.gov/free-cybersecurity-services-and-tools)
-* [shellshark: Infosec tools](https://shellsharks.com/infosec-tools)
+* [Cyberchef][def]
+* [CISA: Free Cybersecurity Services and Tools][def2]
+* [shellshark: Infosec tools][def3]
 
 ## OSINT
 
-*
+* [exploit DB - Google Hacking Database (dork)][def1]
 
 ### domain informatin
 
@@ -91,3 +91,8 @@ toc: true
 
 * <https://www.youtube.com/@TheTWSChannel>
 * <https://www.youtube.com/@_JohnHammond>
+
+[def1]: https://www.exploit-db.com/google-hacking-database
+[def]: https://github.com/gchq/CyberChef
+[def2]: https://www.cisa.gov/free-cybersecurity-services-and-tools
+[def3]: https://shellsharks.com/infosec-tools

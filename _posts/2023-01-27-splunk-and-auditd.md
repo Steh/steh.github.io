@@ -2,6 +2,7 @@
 title: "Splunk and Auditd"
 categories: 
 - informationsecurity
+- splunk
 tags:
 - blue team
 - Splunk 
@@ -9,7 +10,7 @@ tags:
 - detection
 classes:
 - wide
-excerpt: "How to work with splunk and auditd logs" 
+excerpt: "How to read auditd logs in Splunk" 
 toc: true
 ---
 

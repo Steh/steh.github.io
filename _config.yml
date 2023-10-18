@@ -98,8 +98,8 @@ social:
 analytics:
   provider:   google # false (default), "google", "google-universal", "google-gtag", "custom"
   
-  google:     # Add, if you want to track with Matomo (former Piwik Analytics)
-    tracking_id: G-R4C6Q1TD95 # Required - url to Matomo installation without trailing /
+  google:    
+    tracking_id: G-R4C6Q1TD95 
     anonymize_ip: true          # true, false (default)
 
 # Site Author
