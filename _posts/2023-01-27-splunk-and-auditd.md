@@ -12,6 +12,11 @@ classes:
 excerpt: "How to work with splunk and auditd logs" 
 toc: true
 ---
+
+* requirements:
+  * []
+
+
 ## combine the auditd log types
 
 * switch auditd log_format to 'enriched' to add username to logging
@@ -52,6 +57,3 @@ index=auditd_data type="PROCTITLE"
 * [community.splunk.com: How to convert Hex to Ascii in Splunk?](https://community.splunk.com/t5/Splunk-Search/How-to-convert-Hex-to-Ascii-in-Splunk/m-p/189267)
 * [Splunk docs: replace](https://docs.splunk.com/Documentation/Splunk/9.0.4/SearchReference/TextFunctions#replace.28X.2CY.2CZ.29)
 * [Splunk docs: urldecode](https://docs.splunk.com/Documentation/SCS/current/SearchReference/TextFunctions#urldecode.28.26lt.3Burl.26gt.3B.29)
-* [Configure AuditD to send data to the Splunk Add-on for Linux][def1]
-
-[def1]: https://docs.splunk.com/Documentation/AddOns/released/Linux/Configure4
