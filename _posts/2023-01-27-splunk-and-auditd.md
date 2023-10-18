@@ -16,7 +16,6 @@ toc: true
 * requirements:
   * []
 
-
 ## combine the auditd log types
 
 * switch auditd log_format to 'enriched' to add username to logging
