@@ -5,4 +5,4 @@ gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jekyll-remote-theme"
 gem "jekyll-archives"
 gem 'jekyll-analytics'
-gem "jekyll-text-theme"
+#gem "jekyll-text-theme"
