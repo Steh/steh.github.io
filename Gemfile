@@ -1,4 +1,8 @@
 source "https://rubygems.org"
 
-# gem "github-pages", group: :jekyll_plugins
-gemspec
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+gem "jekyll-archives"
+gem 'jekyll-analytics'
+#gem "jekyll-text-theme"
