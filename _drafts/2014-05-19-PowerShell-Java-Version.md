@@ -7,4 +7,5 @@ autor: StehSa
 ---
 
 ## PowerShell Befehl
+
     Get-WmiObject -Class Win32_Product -Filter "Name like 'Java%'"
