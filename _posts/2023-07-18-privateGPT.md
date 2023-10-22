@@ -6,7 +6,7 @@ tags:
 - blue team
 classes: 
 - wide
-excerpt: "privateGPT is an offline GPT that is trained with you documents" 
+excerpt: "PrivateGPT is a powerful AI project designed for privacy-conscious users, enabling you to interact with your documents using Large Language Models (LLMs) without the need for an internet connection." 
 toc: true
 --- 
 
