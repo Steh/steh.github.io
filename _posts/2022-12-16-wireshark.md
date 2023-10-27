@@ -74,6 +74,9 @@ eth.addr == x.x.x.x
 
 ## filter by port
 dst port 135 and tcp port 135
+
+# find http packages with data
+http && (media || data-text-lines
 ```
 
 * [wireshark-filter(4) Manual Page][def1]
