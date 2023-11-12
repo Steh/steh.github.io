@@ -47,6 +47,8 @@ toc: true
 
 * <https://inthewild.io/feed>
 * <https://www.exploit-db.com/>
+* [GTFOBins is a curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems][def4]
+* [Living Off The Land Binaries, Scripts and Libraries][def5]
 
 ## Sources for Analytics
 
@@ -96,3 +98,5 @@ toc: true
 [def]: https://github.com/gchq/CyberChef
 [def2]: https://www.cisa.gov/free-cybersecurity-services-and-tools
 [def3]: https://shellsharks.com/infosec-tools
+[def4]: ttps://gtfobins.github.io
+[def5]: ttps://lolbas-project.github.io/
