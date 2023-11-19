@@ -36,3 +36,17 @@ toc: true
   * <http://burp/cert>
   * Trust this CA import into Browser
   
+## Intruder
+
+* automates and customizes various types of web application attacks
+* How to Bruteforce:
+  * make webrequest
+  * send it to intruder
+  * define payload
+  * define in settings "Grep Extract" the values you want to extract
+    * start and end value
+  * go
+
+## References
+
+[def]: https://portswigger.net/burp/documentation/desktop/testing-workflow/authentication-mechanisms/brute-forcing-logins
