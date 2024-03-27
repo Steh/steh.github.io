@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Analysing (Log) File content with Linux Tools"
 categories: 
 - informationsecurity
 tags:
@@ -10,7 +10,12 @@ excerpt: ""
 toc: true
 --- 
 
+´´´bash
 
+grep "string" file.txt
+
+
+´´´
 
 ## source
 
