@@ -143,6 +143,55 @@ CTRL+W  -   jump between windows
 :q      -   close help
 ```
 
+## set default config
+
+```bash
+# vim /etc/vim/vimrc
+
+" Set tabs to have 4 spaces
+ set tabstop=4
+ set shiftwidth=4
+ set expandtab
+ 
+ " Set line numbers
+ set number
+ 
+" Set incremental search
+set incsearch
+
+" Highlight search results
+set hlsearch
+
+" Enable command line completion
+set wildmenu
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Open new lines with the same indentation
+set autoindent
+
+" Show matching brackets and parentheses
+set showmatch
+
+" Faster keyword completion menu appearance
+set completeopt=menu,menuone,noselect
+
+" Wrap lines at convenient points
+set linebreak
+
+" Set encoding to UTF-8
+set encoding=utf-8
+
+" Disable visual bell (no flashing)
+set visualbell
+set t_vb=
+
+" Enable file type detection and plugins based on file type
+filetype plugin on
+filetype indent on
+```
+
 ## references
 
 * [linuxlinks.com: 8 Excellent Free Books to Learn Vim](https://www.linuxlinks.com/excellent-free-books-learn-vim/)
