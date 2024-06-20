@@ -71,8 +71,27 @@ Splunk Data Models are essential for organizing and accelerating searches, provi
 | tstats count FROM datamodel=Network WHERE ip=10.9.8.7 by <Fields>
 ```
 
+## Validate a Data Model
+
+```
+# get all datamodels
+| datamodelsimple
+
+# get all nodes of a datamodel
+| datamodelsimple type=objects datamodel=<datamodel>
+
+# get all datamodel attributes/fields
+| datamodelsimple type=attributes datamodel=<datamodel-name> nodename=<nodename>
+```
+
 ## source
 
 [Splunk How to use the CIM data model][def]
+[Splunk Use the CIM to validate your data][def1]
+[Splunk Common Information Model Add-on Manual][def2]
+[Splunk Use the CIM to normalize CPU performance metrics][def3]
 
 [def]: https://docs.splunk.com/Documentation/CIM/5.3.2/User/Howtousethesereferencetables
+[def1]: https://docs.splunk.com/Documentation/CIM/5.3.2/User/UsetheCIMtovalidateyourdata
+[def2]: https://docs.splunk.com/Documentation/CIM/latest/User/UsetheCIMtonormalizedataatsearchtime
+[def3]: https://docs.splunk.com/Documentation/CIM/5.3.2/User/UsetheCIMtonormalizeCPUperformancemetrics
