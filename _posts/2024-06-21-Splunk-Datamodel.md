@@ -10,7 +10,7 @@ excerpt: "Learn how to create, fill, maintain, validate, and request data from S
 toc: true
 --- 
 
-# A Technical Guide to Splunk Data Models
+## A Technical Guide to Splunk Data Models
 
 Splunk Data Models are essential for organizing and accelerating searches, providing structured data for Splunk's Pivot interface and creating efficient dashboards. This guide will walk you through the processes of creating, filling, maintaining, validating, and requesting data from Splunk Data Models.
 
@@ -31,7 +31,6 @@ Splunk Data Models are essential for organizing and accelerating searches, provi
    - Define the `Constraint` (base search).
        - ```(`cim_Vulnerabilities_indexes`) tag=vulnerability tag=report```
    - Add `Fields` (auto-extracted or manually defined).
-
 
 5. **Save the Data Model**: Click `Save` to store the Data Model.
 
@@ -56,32 +55,53 @@ Splunk Data Models are essential for organizing and accelerating searches, provi
 
 ## Validating a Splunk Data Model
 
-1. **Use the Data Model Editor**:
-   - Access the Data Model via `Settings > Data models`.
-   - Select the Data Model and click `Edit`.
-   - Verify each object, field, and constraint to ensure they are correctly configured.
+1. **Use the Datamodel "CIM Validation (S.o.S.)"**:
+
+Is only availiable for internal Datamodels
+
+    - Select Settings > Data models
+    - Locate the CIM Validation (S.o.S.) data model and in the Actions column, click Pivot.
+    - Click one of the following to create the Pivot:
+      - Top level dataset
+      - Missing extractions
+      - Untagged events
+
+2. **Use the datamodelsimple command**
+
+The `datamodelsimple` command in Splunk is designed to retrieve and explore the structure of data models, including listing available models, objects within a model, and attributes of a specific object.
+
+```bash
+# List All Data Models
+| datamodelsimple type=models
+
+# List all objects in a specific datamodel
+| datamodelsimple type=objects datamodel=Authentication
+
+# List Attributes for a Specific Object in a Data Model
+| datamodelsimple type=attributes datamodel=Authentication nodename=Authentication.Failed_Authentication
+```
+
+3. 
+
+- open the app "CIM Vladiator"
+  - Search Type: Datamodel
+  - Target datamodel: `<your Model>`
+  - Search:
+    - `| datamodel Vulnerabilites search`
+    - `index=vulnerabilities`
 
 ## Requesting Data from a Splunk Data Model
 
-```
+```bash
 # | datamodel
 | datamodel <DataModelName> <ObjectName> search
 
 # tstats
 | tstats count FROM datamodel=Network WHERE ip=10.9.8.7 by <Fields>
-```
-
-## Validate a Data Model
-
-```
-# get all datamodels
-| datamodelsimple
-
-# get all nodes of a datamodel
-| datamodelsimple type=objects datamodel=<datamodel>
-
-# get all datamodel attributes/fields
-| datamodelsimple type=attributes datamodel=<datamodel-name> nodename=<nodename>
+| tstats count 
+   FROM datamodel=Network.Network_Traffic 
+   WHERE src=10.9.8.7
+   BY Network_Traffic.src, Network_Traffic.dest, Network_Traffic.action
 ```
 
 ## source
@@ -90,8 +110,10 @@ Splunk Data Models are essential for organizing and accelerating searches, provi
 [Splunk Use the CIM to validate your data][def1]
 [Splunk Common Information Model Add-on Manual][def2]
 [Splunk Use the CIM to normalize CPU performance metrics][def3]
+[Splunk Base - SA-cim_vladiator][def4]
 
 [def]: https://docs.splunk.com/Documentation/CIM/5.3.2/User/Howtousethesereferencetables
 [def1]: https://docs.splunk.com/Documentation/CIM/5.3.2/User/UsetheCIMtovalidateyourdata
 [def2]: https://docs.splunk.com/Documentation/CIM/latest/User/UsetheCIMtonormalizedataatsearchtime
 [def3]: https://docs.splunk.com/Documentation/CIM/5.3.2/User/UsetheCIMtonormalizeCPUperformancemetrics
+[def4]: https://splunkbase.splunk.com/app/2968
