@@ -80,7 +80,7 @@ index=mydata
 ### 3. Defining Extractions in `transforms.conf`
 
 - Define the extraction in the `transforms.conf`
-- the following are equivalent for search-time field extractions
+- the following are equivalent for search-time field extractions:
   - Using FORMAT:
   
   ```bash
@@ -98,6 +98,11 @@ index=mydata
 # extraction on the _raw data
 [extract_user_action_status]
 REGEX = User=(?P<user>\S+) Action=(?P<action>\S+) Status=(?P<status>\S+)
+
+# extraction on specific field, doesn´t work if field contains an white space
+[extract_user_action_status]
+REGEX = User=(?P<user>\S+) Action=(?P<action>\S+) Status=(?P<status>\S+)
+SOURCE_KEY = field
 ```
 
 Test the extraction on your data. The extract command reloads the config from props and transforms configuration file.
@@ -129,8 +134,10 @@ TRANSFORMS-extract_user_action_status = extract_user_action_status
 
 ## references
 
-- [Splunk props.conf: Field extraction configuration][def]
-- [Splunk transforms.conf][def1]
+- [splunk.com props.conf: Field extraction configuration][def]
+- [splunk.com transforms.conf][def1]
+- [splunk.com Configure advanced extractions with field transforms][def2]
 
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf#Field_extraction_configuration
 [def1]: https://docs.splunk.com/Documentation/Splunk/9.2.2/Admin/Transformsconf
+[def2]: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Configureadvancedextractionswithfieldtransforms
