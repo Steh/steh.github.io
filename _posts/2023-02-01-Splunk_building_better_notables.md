@@ -79,6 +79,7 @@ After a correlation search has been triggered, you probably don’t want it to i
 
 - [Configure correlation searches][def]
 - [Optimizing correlation searches in Enterprise Security ][def1]
+- [Audit your correlation searches against your own Best Practices automatically][def2]
 
 [^1]: [correlationsearches.conf parameter translation to savedsearches.conf](https://docs.splunk.com/Documentation/PCI/5.1.1/Install/Correlationsearches#Changes_you_have_to_make_after_upgrade)
 [^2]: [Asset & Identity for Splunk Enterprise Security - Part 1: Contextualizing Systems](https://www.splunk.com/en_us/blog/security/asset-identity-for-splunk-enterprise-security-part-1-contextualizing-systems)
@@ -87,3 +88,4 @@ After a correlation search has been triggered, you probably don’t want it to i
 
 [def]: https://docs.splunk.com/Documentation/PCI/5.1.0/Install/Correlationsearches
 [def1]: https://lantern.splunk.com/Security/Product_Tips/Enterprise_Security/Optimizing_correlation_searches_in_Enterprise_Security
+[def2]: https://www.gabrielvasseur.com/post/audit-your-correlation-searches-against-your-own-best-practices-automatically
