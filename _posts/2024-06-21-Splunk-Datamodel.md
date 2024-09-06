@@ -90,6 +90,9 @@ The `datamodelsimple` command in Splunk is designed to retrieve and explore the 
     - `| datamodel Vulnerabilites search`
     - `index=vulnerabilities`
 
+4. Search for errors in Log
+`index=_internal sourcetype=splunkd "DataModelAccelerator" OR "DataModel"`
+
 ## Requesting Data from a Splunk Data Model
 
 ```bash
