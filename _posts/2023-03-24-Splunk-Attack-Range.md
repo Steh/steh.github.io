@@ -52,7 +52,12 @@ python attack_range.py simulate -e ART -te T1003.001 -t ar-win-ar-ar-0
 git clone https://github.com/splunk/attack_range.git
 cd attack_range
 
-# Install VirtualBox and Vagrant
+# Install VirtualBox (beta for arm) and Vagrant on MacOS ARM
+brew update
+brew install --cask virtualbox@beta
+brew install --cask vagrant
+
+# Install VirtualBox and Vagrant on linux
 apt-get update
 apt-get install virtualbox
 wget https://releases.hashicorp.com/vagrant/2.2.19/vagrant_2.2.19_x86_64.deb
@@ -60,7 +65,7 @@ apt install ./vagrant_2.2.19_x86_64.deb
 
 # Install and run Poetry
 ## Install all dependencies
-curl -sSL https://install.python-poetry.org/ | python -
+curl -sSL https://install.python-poetry.org/ | python3 -
 poetry install
 poetry shell
 
