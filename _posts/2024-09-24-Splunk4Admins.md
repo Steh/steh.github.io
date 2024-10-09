@@ -70,9 +70,9 @@ open Job under Search Bar
 ## Breakers and Segmentation
 
 * Events Split by major breakers
-  * Spaces, New Line, Brakets...
+  * spaces, brackets, tab and quotation mark
 * next break by minor breakers:
-  * `.`, `,`, `$`
+  * `.`, `,`, `$`,`=`
 
 ```bash
 Example:
@@ -84,12 +84,20 @@ index=web clientip=TERM(76.169.7.252)
   would search [AND 76.169.7.252 index::web]
 
 search can be viewd im _internal and search for LISPY
+
+## searching in tsidx files
+# search with tstats (only works if the term is not seperated by major breakers)
+| tstats count where index=you_data source=StuffYouDefine TERM(Computername=MyPC)
+
+# stats count by values
+| tstats count where index=you_data source=StuffYouDefine by PREFIX(Computername=)
 ```
 
 * wildcards in the middle of a string can be costly
 * lispy expression can seen in search.log in Job Inspector
 
-[Breakers & Segmentation][def2]
+* [Breakers & Segmentation][def2]
+* [Event segmentation and searching][def4]
 
 ## | fieldsummary
 
@@ -131,5 +139,6 @@ eval field1 = isnull()
 
 [def]: https://docs.splunk.com/Splexicon:Bloomfilter
 [def1]: https://docs.splunk.com/Documentation/SCS/current/SearchReference/FieldsummaryCommandOverview
-[def2]: https://docs.splunk.com/Documentation/Splunk/9.1.0/Data/Abouteventsegmentation
+[def2]: https://docs.splunk.com/Documentation/Splunk/latest/Data/Abouteventsegmentation
+[def4]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Eventsegmentationandsearching
 [def3]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Commandsbytype
