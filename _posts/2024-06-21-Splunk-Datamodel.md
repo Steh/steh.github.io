@@ -87,7 +87,7 @@ The `datamodelsimple` command in Splunk is designed to retrieve and explore the 
 # List all objects in a specific datamodel
 | datamodelsimple type=objects datamodel=Authentication
 
-# List Attributes for a Specific Object in a Data Model
+# List Attributes (Fields) for a Specific Object in a Data Model
 | datamodelsimple type=attributes datamodel=Authentication nodename=Authentication.Failed_Authentication
 ```
 

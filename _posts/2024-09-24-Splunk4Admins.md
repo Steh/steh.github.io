@@ -1,5 +1,5 @@
 ---
-title: "Splunk"
+title: "Splunk4Admins"
 categories: 
 - splunk
 tags:
