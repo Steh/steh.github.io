@@ -40,18 +40,28 @@ Splunk Data Models are essential for organizing and accelerating searches, provi
    - Check `Accelerate` and set the `Summary Range`.
    - Click `Save`.
 
-## Maintaining a Splunk Data Model
+### Dataset
 
-1. **Regular Updates**:
-   - Periodically review and update the Data Model to align with any changes in your data sources or organizational requirements.
+### Event
+**Explanation**: Event datasets focus on raw data, applying constraints to select specific events for analysis.
 
-2. **Manage Permissions**:
-   - Ensure appropriate access controls by updating permissions.
-   - Go to `Settings > Data models`, select the Data Model, and click `Edit Permissions`.
+- **Fields**: `username`, `timestamp`, `ip_address`
+- **Constraints**: `status="success"`
+- **Example**: You have a log source that records user login activities. An event dataset might filter these logs to include only successful login events.
 
-3. **Optimize Performance**:
-   - Monitor the performance of accelerated Data Models.
-   - Adjust the summary range or constraints as necessary.
+### Search
+**Explanation**: Search datasets use the results of saved searches, allowing for complex queries and aggregations.
+
+- **Search Query**: `index=web_logs | stats avg(response_time) as avg_response_time by endpoint`
+- **Fields**: `endpoint`, `avg_response_time`
+- **Example**: You want to track the average response time of a web application. You could create a search dataset based on a saved search that calculates this metric.
+
+### Transaction
+**Explanation**: Transaction datasets group related events, useful for analyzing multi-step processes or transactions.
+
+- **Transaction Definition**: Group events by `session_id` with a start event of `action="add_to_cart"` and an end event of `action="checkout"`.
+- **Fields**: `session_id`, `user_id`, `total_time`, `items_purchased`
+- **Example**: You need to analyze a user's journey through an e-commerce site, from adding items to the cart to checkout.
 
 ## Validating a Splunk Data Model
 
@@ -77,7 +87,7 @@ The `datamodelsimple` command in Splunk is designed to retrieve and explore the 
 # List all objects in a specific datamodel
 | datamodelsimple type=objects datamodel=Authentication
 
-# List Attributes for a Specific Object in a Data Model
+# List Attributes (Fields) for a Specific Object in a Data Model
 | datamodelsimple type=attributes datamodel=Authentication nodename=Authentication.Failed_Authentication
 ```
 
@@ -90,10 +100,18 @@ The `datamodelsimple` command in Splunk is designed to retrieve and explore the 
     - `| datamodel Vulnerabilites search`
     - `index=vulnerabilities`
 
+4. Search for errors in Log
+`index=_internal sourcetype=splunkd "DataModelAccelerator" OR "DataModel"`
+
 ## Requesting Data from a Splunk Data Model
 
 ```bash
+# | from
+## rely on accelerated Data
+| from datamodel:<datamodel>
+
 # | datamodel
+## rely on index data
 | datamodel <DataModelName> <ObjectName> search
 
 # tstats
