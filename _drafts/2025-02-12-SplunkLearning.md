@@ -148,6 +148,7 @@ yesterdayString = strftime(yesterday, "%F $H:%M")
 * [About Splunk regular expressions][def1]
 * [Youtube: Introduction to RegEx][def2]
 * [Statistical and charting functions][def6]
+* [The sequence of search-time operations][def7]
 
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Erex
 [def1]: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Aboutsplunkregularexpressions
@@ -156,3 +157,4 @@ yesterdayString = strftime(yesterday, "%F $H:%M")
 [def4]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Fieldformat
 [def5]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Timechart
 [def6]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/CommonStatsFunctions
+[def7]: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Searchtimeoperationssequence

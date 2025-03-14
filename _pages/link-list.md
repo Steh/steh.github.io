@@ -94,6 +94,13 @@ toc: true
 * <https://www.youtube.com/@TheTWSChannel>
 * <https://www.youtube.com/@_JohnHammond>
 
+### Detection Engineering
+
+* https://medium.com/starting-up-security/lessons-learned-in-detection-engineering-304aec709856
+* https://blog.palantir.com/alerting-and-detection-strategy-framework-52dc33722df2
+* https://summitroute.com/blog/2016/11/22/how_to_write_security_alerts/
+
+
 [def1]: https://www.exploit-db.com/google-hacking-database
 [def]: https://github.com/gchq/CyberChef
 [def2]: https://www.cisa.gov/free-cybersecurity-services-and-tools

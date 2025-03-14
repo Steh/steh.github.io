@@ -14,7 +14,8 @@ toc: true
 
 grep "string" file.txt
 
-
+# Mark of the web in windows
+Get-Content -Path 'C:\Path\to\your\file' -Stream zone.identifier
 ´´´
 
 ## source
