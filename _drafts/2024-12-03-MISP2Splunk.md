@@ -64,4 +64,4 @@ https://github.com/MISP/MISP/blob/2.4/INSTALL/INSTALL.sh
 
 * [Text][def]
 
-[def]: https://steh.github.io
+[def]: https://www.misp-project.org/best-practices-in-threat-intelligence.html

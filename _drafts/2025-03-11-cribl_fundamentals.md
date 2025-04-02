@@ -78,7 +78,33 @@ add metadata field:
 * SIEM/UEBA
     * great for incident correlation, response and user analytics
 
-## source
+# Stream Fundamentals 
+
+* sources:
+    * push-based: Sources that **send** data to Stream
+    * pull-based: Sources that Stream **fetches** data from
+    * collectors: Ability to **fetch** data from local or remote sources **on a schedule**
+* destinations
+    * **Streaming** accept event in real time/mini-batch
+    * **Non-Streaming** accept eventy in (larger) groups or batches
+
+## routing traffic
+
+* Routes
+    * direct data to pipelines
+    * evaluate incoming events against filters
+    * each route can be associated with only one pipeline and one output
+    * evaluated in order
+    * routes default with "Final flag" set to Yes
+* Quick Connect
+    * design for testing and simple usecases
+
+# parsing events
+
+* Field that starts with __ are internal fields
+    * like __InputId
+* these will not be passed down to Destinations
+* if ab event cannot be JSON-parsed, all of its content will be assigned to a field called **_raw**
 
 * [Text][def]
 
