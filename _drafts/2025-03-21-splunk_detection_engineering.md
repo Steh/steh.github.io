@@ -26,6 +26,7 @@ toc: true
 
 1. Research
     * This may include reviewing feedback from experts like threat researchers, analysts, or threat hunters to stay informed about the latest trends and vulnerabilities
+    * dive into the documentation
 2. Collect Data
     * use sample data sets or run attack simulations to generate meaningful data for analysis and use in building detections.
 3. Build Detections
@@ -40,9 +41,12 @@ toc: true
 1. Normalize your Data
     * convert non-standard field names into a uniform set of standardized fields
     * use Technologie Addons (TA-)
-2. baselining with ml toolkit
-    * https://docs.splunk.com/Documentation/MLApp/5.5.0/User/AboutMLTK
-    * https://github.com/splunk/security_content/blob/develop/baselines/baseline_of_dns_query_length___mltk.yml
+2. baselining:
+    * ML
+        * https://docs.splunk.com/Documentation/MLApp/5.5.0/User/AboutMLTK
+        * https://github.com/splunk/security_content/blob/develop/baselines/baseline_of_dns_query_length___mltk.yml
+    * stats
+        * 
 3. Test Detections:
     * https://attack-range.readthedocs.io/en/latest/
     * https://github.com/redcanaryco/atomic-red-team
@@ -52,6 +56,16 @@ toc: true
 
 ## source
 
-* [Text][def]
+* [Cybersec Cafe: My SIEM-Agnostic Creative Process to Detection Engineering][def]
+* [Cybersec Cafe: Engineering the SOC: Writing a Detection Rule][def1]
+* [youtube: Anomaly Detection So Easy Your Grandma Can Do It. No ML degree Required Splunk .conf 2024][def2]
+* [github: Anomaly Detection So Easy Your Grandma Can Do It. No ML degree Required Splunk .conf 2024][def3]
+* [cyberseccafe.com: My SIEM-Agnostic Creative Process to Detection Engineering][def4]
+* [cyberseccafe.com: Detection Engineering the SOC: Writing a Detection Rule][def5]
 
-[def]: https://steh.github.io
+[def]: https://osintteam.blog/my-siem-agnostic-creative-process-to-detection-engineering-4e401ac60b63
+[def1]: https://www.cyberseccafe.com/p/detection-engineering-the-soc-writing
+[def2]: https://www.youtube.com/watch?v=iFqz9aIfGAI
+[def3]: https://github.com/lameCreations/Splunk-Conf-2024-Material
+[def4]: https://www.cyberseccafe.com/p/my-siem-agnostic-creative-process
+[def5]; https://www.cyberseccafe.com/p/detection-engineering-the-soc-writing

@@ -106,6 +106,27 @@ add metadata field:
 * these will not be passed down to Destinations
 * if ab event cannot be JSON-parsed, all of its content will be assigned to a field called **_raw**
 
+# JavaScript in Cribl
+
+* is used in filters and Value Expressions in Stream and Edge
+* Filter:
+    * ```source.endsWith('.log') || type = 'vpcflow' ```
+* Value Expression:
+    * ```location = 'New York'````
+    * ```hour = Math.floor(_time/3600)```
+
+# Data Tools
+
+* Sample Data
+    * Processing -> Pipelines
+* Import Data
+    * Uplaod Samples
+* Edge Data
+    * Download Files from Edge
+* Capute Data
+    * Capture Data from live inputs
+    * Also Possible to use Datagens as Test datasets
+
 * [Text][def]
 
 [def]: https://steh.github.io
