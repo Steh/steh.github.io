@@ -1,7 +1,9 @@
 # Steh Blog
 
-This is my small blog to hold all of my technical documentations.
+Welcome to my technical blog, where I document and share various technical insights and guides.
 
-* [Minimal-Mistakes Template][def1]
+## Template
+
+This blog is built using the [Minimal-Mistakes Template][def1].
 
 [def1]: https://github.com/mmistakes/minimal-mistakes/tree/master

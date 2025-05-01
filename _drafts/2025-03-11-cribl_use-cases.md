@@ -1,14 +1,14 @@
 ---
-title: "cribl: use-cases"
+title: "Cribl: Use Cases"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
-excerpt: "" 
+  - wide
+excerpt: "A guide to integrating API data into Cribl with event breakers and REST inputs."
 toc: true
---- 
+---
 
 # Integrating API Data into Cribl
 

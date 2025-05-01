@@ -10,26 +10,27 @@ excerpt: ""
 toc: true
 --- 
 
-# Merge for Assets or Identities
+## Merge for Assets or Identities
 
-If you disable the merge only the first asset found  will be correlated.
+If you disable the merge, only the first asset found will be correlated.
 
 ```bash
-"For example, the asset_lookup_by_str lookup in transforms.conf has max_matches = 1, so the first host it matches in the assets_by_str collection is the only one you'll see in your search results."
+# For example, the asset_lookup_by_str lookup in transforms.conf has max_matches = 1.
+# So, the first host it matches in the assets_by_str collection is the only one you'll see in your search results.
 ```
 
-# show all assets
+## Show All Assets
 
-´´´bash
-# 1
-|`datamodel("Identity_Management", "All_Assets")`
+```bash
+# Option 1
+| `datamodel("Identity_Management", "All_Assets")`
 | rename All_Assets.* as *
 
-# 2
+# Option 2
 | `assets`
-´´´
+```
 
-# Troubleshooting
+## Troubleshooting
 
 ```bash
 index=_internal sourcetype="identity_correlation:merge" source=*entity_merge.log*
@@ -37,8 +38,14 @@ index=_internal sourcetype="identity_correlation:merge" source=*entity_merge.log
 
 ## source
 
-[def]: https://docs.splunk.com/Splexicon:Bloomfilter
-[def1]: https://docs.splunk.com/Documentation/SCS/current/SearchReference/FieldsummaryCommandOverview
-[def2]: https://docs.splunk.com/Documentation/Splunk/latest/Data/Abouteventsegmentation
-[def4]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Eventsegmentationandsearching
-[def3]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Commandsbytype
+[Splunk Bloom Filter][def]  
+[Field Summary Command Overview][def1]  
+[About Event Segmentation][def2]  
+[Event Segmentation and Searching][def4]  
+[Commands by Type][def3]  
+
+[def]: https://docs.splunk.com/Splexicon:Bloomfilter "Bloomfilter Documentation"
+[def1]: https://docs.splunk.com/Documentation/SCS/current/SearchReference/FieldsummaryCommandOverview "Fieldsummary Command Overview"
+[def2]: https://docs.splunk.com/Documentation/Splunk/latest/Data/Abouteventsegmentation "About Event Segmentation"
+[def3]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Commandsbytype "Commands by Type"
+[def4]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Eventsegmentationandsearching "Event Segmentation and Searching"
