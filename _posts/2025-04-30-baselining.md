@@ -136,7 +136,12 @@ This search calculates the mean and standard deviation of response times, define
 
 ## Baselining with Z-Score
 
-Baselining with Z-Score is a statistical method used to identify anomalies by measuring how far a data point is from the mean in terms of standard deviations. Here's how you can use it in Splunk:
+Baselining with Z-Score is a statistical method used to identify anomalies by measuring how far a data point is from the mean in terms of standard deviations. 
+
+> **The Empirical Rule [1][def1], [2][def5]**
+>  - 68% of data falls within ±1 standard deviation
+>  - 95% falls within ±2 standard deviations
+>  - 99.7% falls within ±3 standard deviations
 
 ### Steps to Baseline with Z-Score
 
@@ -175,9 +180,11 @@ Baselining with Z-Score is a statistical method used to identify anomalies by me
 Suppose you are monitoring the response time of a web application. You can use the following search to identify anomalies:
 
 ```bash
-index=web_logs sourcetype=access_combined
-| stats avg(response_time) as mean_response_time, stdev(response_time) as stddev_response_time
-| eval z_score = (response_time - mean_response_time) / stddev_response_time
+index=web_logs sourcetype=access_combined action=failed
+| bin _time span=1h
+| stats count as failed_logins by _time
+| stats avg(failed_logins) as mean_failed, stdev(failed_logins) as stddev_failed
+| eval z_score = (response_time - failed_logins) / stddev_failed
 | where abs(z_score) > 3
 ```
 
@@ -192,9 +199,11 @@ For further reading and practical examples, refer to the following resources:
 3. [Stop Chasing Ghosts: How Five-Number Summaries Reveal Real Anomalies][def2]
 4. [Unravel the Mysteries of Variance and Standard Deviation][def3]
 5. [Using Stats in Splunk Part 1: Basic Anomaly Detection][def4]
+6. [Statistics How To: Empirical Rule ( 68-95-99.7)][def5]
 
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Findingandremovingoutliers
 [def1]: https://dispatch.thorcollective.com/p/z-scoring-your-way-to-better-threat-detection
 [def2]: https://dispatch.thorcollective.com/p/stop-chasing-ghosts-how-five-number
 [def3]: https://medium.com/data-analytics-magazine/unravel-the-mysteries-of-variance-and-standard-deviation-your-ultimate-guide-fc29f9471270
 [def4]: https://hurricanelabs.com/splunk-tutorials/using-stats-in-splunk-part-1-basic-anomaly-detection/
+[def5]: https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/empirical-rule/
