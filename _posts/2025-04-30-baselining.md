@@ -120,7 +120,7 @@ Baselining with standard deviation is a statistical method used to identify norm
    | where response_time < lower_threshold OR response_time > upper_threshold
    ```
 
-### Example Use Case
+### Example Use Case: Standard Deviation
 
 Suppose you are monitoring the response time of a web application. You can use the following search to identify anomalies:
 
@@ -154,8 +154,7 @@ Baselining with Z-Score is a statistical method used to identify anomalies by me
 
 2. **Calculate the Z-Score**:
    Use the `eval` command to calculate the Z-Score for each event. The formula for Z-Score is:
-   
-   ```
+   ```bash
    Z-Score = (value - mean) / standard deviation
    ```
 
@@ -175,7 +174,7 @@ Baselining with Z-Score is a statistical method used to identify anomalies by me
    | where abs(z_score) > 3
    ```
 
-### Example Use Case
+### Example Use Case: Z-Score
 
 Suppose you are monitoring the response time of a web application. You can use the following search to identify anomalies:
 
@@ -201,9 +200,11 @@ For further reading and practical examples, refer to the following resources:
 5. [Using Stats in Splunk Part 1: Basic Anomaly Detection][def4]
 6. [Statistics How To: Empirical Rule ( 68-95-99.7)][def5]
 
+
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Findingandremovingoutliers
 [def1]: https://dispatch.thorcollective.com/p/z-scoring-your-way-to-better-threat-detection
 [def2]: https://dispatch.thorcollective.com/p/stop-chasing-ghosts-how-five-number
 [def3]: https://medium.com/data-analytics-magazine/unravel-the-mysteries-of-variance-and-standard-deviation-your-ultimate-guide-fc29f9471270
 [def4]: https://hurricanelabs.com/splunk-tutorials/using-stats-in-splunk-part-1-basic-anomaly-detection/
 [def5]: https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/empirical-rule/
+[def6]: https://medium.com/detect-fyi/powershell-threat-hunting-identifying-obfuscation-using-standard-deviation-9b2d9f53697f

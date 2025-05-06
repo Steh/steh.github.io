@@ -1,31 +1,32 @@
-
 ---
 title: "MacOS Forensics"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
-excerpt: "" 
+  - wide
+excerpt: ""
 toc: true
 --- 
 
 # macOS File Types and Their Locations
 
-## 1. **.plist Files (Property List Files)**
+## .plist Files (Property List Files)
+
 - **Purpose**: Store system and application configurations, similar to the Windows Registry.
 - **Formats**: XML or Binary (BLOB).
 - **Common Locations**:
-  - **System-wide settings**: `/Library/Preferences/`
-  - **User-specific settings**: `~/Library/Preferences/`
-  - **Application-specific settings**: Inside `.app` bundles or `~/Library/Application Support/`
-- **Forensic Importance**: These files often contain user settings, application preferences, and system configurations.
+  - System-wide settings: `/Library/Preferences/`
+  - User-specific settings: `~/Library/Preferences/`
+  - Application-specific settings: Inside `.app` bundles or `~/Library/Application Support/`
+- **Forensic Importance**: Contain user settings, application preferences, and system configurations.
 - **Tools for Analysis**:
   - macOS: Xcode, `plutil`, Plist Editor Pro.
   - Cross-platform: `plistutil`, Python libraries like `biplist` or `plistlib`.
 
-## 2. **.app Files**
+## .app Files
+
 - **Purpose**: Executable application bundles for macOS.
 - **Structure**: Bundles often contain the executable, resources, and metadata.
 - **Common Locations**:
@@ -35,7 +36,8 @@ toc: true
 - **Forensic Importance**: Application metadata and logs within the bundle may provide insights into user activity, timestamps, or potential malware behavior.
 - **How to Inspect**: Right-click the `.app` file and select **Show Package Contents**.
 
-## 3. **.dmg Files**
+## .dmg Files
+
 - **Purpose**: Disk image files used for software distribution or backups.
 - **File Systems**: APFS, HFS+, or FAT.
 - **Common Locations**:
@@ -48,7 +50,8 @@ toc: true
   - macOS: Disk Utility, `hdiutil`.
   - Cross-platform: `7-Zip`, forensic tools like Autopsy.
 
-## 4. **.kext Files (Kernel Extensions)**
+## .kext Files (Kernel Extensions)
+
 - **Purpose**: Kernel-level modules, akin to drivers in Windows.
 - **Current Status**: Deprecated in macOS Big Sur and later.
 - **Common Locations**:
@@ -59,7 +62,8 @@ toc: true
   - Newer macOS versions: Look for traces of attempts to bypass the stricter security model.
 - **Tools for Analysis**: Use `kextstat` to list loaded kernel extensions and inspect their origins.
 
-## 5. **.dylib Files (Dynamic Libraries)**
+## .dylib Files (Dynamic Libraries)
+
 - **Purpose**: Shared libraries, similar to `.dll` files in Windows or `.so` files in Linux.
 - **Common Locations**:
   - System libraries: `/usr/lib/`
@@ -71,7 +75,8 @@ toc: true
   - Use `otool` or `dyldinfo` on macOS to inspect dependencies.
   - Cross-reference with known good libraries to identify anomalies.
 
-## 6. **.xar Files (eXtensible ARchive)**
+## .xar Files (eXtensible ARchive)
+
 - **Purpose**: Archive format often used for macOS installers or browser extensions.
 - **Common Locations**:
   - Installer packages: `/private/var/tmp/` (temporary location during installation).
@@ -87,6 +92,7 @@ toc: true
 You can use `apfs-fuse` to mount APFS disk images for analysis or troubleshooting.
 
 ## Prerequisites
+
 - Install **apfs-fuse** and **FUSE** (required for user-space file systems).
 
 ```bash
@@ -113,22 +119,28 @@ apfs-fuse --help
 ```
 
 ## Steps
+
 1. **List Volumes in the APFS Container**  
-   Run the following command to inspect the disk image:
-   ```bash
-   apfsutil mac-disk.img
-   ```
 
-2. **Mount the Disk Image**  
-   Mount the image to a directory (e.g., `mac/`):
-   ```bash
+Run the following command to inspect the disk image:
 
-   apfs-fuse mac-disk.img mac/
-   
-   # mount the 4 volume
-   apfs-fuse -v 4 mac-disk.img mac
-   ```
+```bash
+apfsutil mac-disk.img
+```
+
+2. **Mount the Disk Image**
+
+Mount the image to a directory (e.g., `mac/`):
+```bash
+
+apfs-fuse mac-disk.img mac/
+
+# mount the 4 volume
+apfs-fuse -v 4 mac-disk.img mac
+```
+
 ## Resources
+
 - [apfs-fuse GitHub](https://github.com/sgan81/apfs-fuse)  
 - [FUSE Documentation](https://github.com/libfuse/libfuse)
 
@@ -138,12 +150,14 @@ macOS forensic artefacts can be categorized into a few key types, each requiring
 
 ---
 
-## **1. Plist Files**
+## **Plist Files**
+
 Plist (Property List) files are a common artefact type in macOS, storing configuration and application data. They can be in **XML** or **BLOB** format:
 - **XML**: Readable using built-in utilities like `cat`, `more`, or `head`.
 - **BLOB**: Requires specific utilities to parse.
 
 ### **Tools for Plist Files**
+
 - **macOS**: Use `plutil` to parse BLOB plist files:
   ```bash
   plutil -p <file>.plist
@@ -155,14 +169,17 @@ Plist (Property List) files are a common artefact type in macOS, storing configu
 
 ---
 
-## **2. Database Files**
+## **Database Files**
+
 macOS stores artefacts like chat history, browsing history, and app usage in SQLite databases.
 
 ### **Tools for Database Files**
+
 - **DB Browser for SQLite**: A cross-platform GUI tool for exploring SQLite databases.
 - **APOLLO**: A framework to extract and parse macOS databases, creating timelines and reports.
 
 ### **Example Commands**
+
 - Start **DB Browser** (on the attached VM):
   ```
   Applications > Accessories > DB Browser for SQLite
@@ -174,10 +191,12 @@ macOS stores artefacts like chat history, browsing history, and app usage in SQL
 
 ---
 
-## **3. Logs**
+## **Logs**
+
 macOS logs provide a wealth of forensic information. They are categorized into three main types:
 
-### **a. Apple System Logs (ASL)**
+### **Apple System Logs (ASL)**
+
 - **Location**: `/private/var/log/asl/`
 - **Tools**:
   - **macOS**: Use the Console app:
@@ -189,14 +208,16 @@ macOS logs provide a wealth of forensic information. They are categorized into t
     python3 mac_apt.py -o output_path input_type input_path ASL
     ```
 
-### **b. System Logs**
+### **System Logs**
+
 - **Location**: `/private/var/log/system.log`
 - **Notes**: Logs are rotated into `.gz` files. Use `zgrep` to search compressed logs:
   ```bash
   zgrep BOOT_TIME system.log*
   ```
 
-### **c. Unified Logs**
+### **Unified Logs**
+
 - **Location**: `/private/var/db/diagnostics/*.tracev3` and `/private/var/db/uuidtext`
 - **Tools**:
   - **macOS**: Use the `log` command:
@@ -211,6 +232,7 @@ macOS logs provide a wealth of forensic information. They are categorized into t
 ---
 
 ## **Key Tools Summary**
+
 | Artefact Type     | Tool                     | Platform       | Command/Usage Example                     |
 |-------------------|--------------------------|----------------|-------------------------------------------|
 | **Plist Files**   | `plutil` / `plistutil`   | macOS/Linux    | `plutil -p <file>.plist`                  |
@@ -222,19 +244,22 @@ macOS logs provide a wealth of forensic information. They are categorized into t
 ---
 
 This concise overview provides a quick reference for handling macOS forensic artefacts and the tools required for analysis. Let me know if you'd like further refinements!
+
 # Verifying System Information in macOS Forensics
 
 When performing forensics, verifying system information is essential to ensure we are analyzing the correct system. Below is an overview of key artefacts and methods to retrieve system-related data.
 
 ---
 
-## **1. OS Version**
+## **OS Version**
+
 The macOS version is stored in a plist file located at:
 ```
 /System/Library/CoreServices/SystemVersion.plist
 ```
 
 ### **Example Command**
+
 ```bash
 cat /System/Library/CoreServices/SystemVersion.plist
 ```
@@ -245,12 +270,14 @@ cat /System/Library/CoreServices/SystemVersion.plist
 
 ---
 
-## **2. Serial Number**
+## **Serial Number**
+
 The serial number is not stored directly on disk but can be retrieved from:
 - **Crash Reports**: `/System/Volumes/Data/Library/Logs/CrashReporter`
 - **Spotlight Metadata**: `/System/Volumes/Data/.Spotlight-V100`
 
 ### **Live System Commands**
+
 1. Using `system_profiler`:
    ```bash
    system_profiler SPHardwareDataType | awk '/Serial/ {print $4}'
@@ -262,46 +289,55 @@ The serial number is not stored directly on disk but can be retrieved from:
 
 ---
 
-## **3. OS Installation and Update Dates**
-### **Method 1: Using `.AppleSetupDone`**
+## **OS Installation and Update Dates**
+
+### **Method 1: Using `.AppleSetupDone**
+
 The file `/private/var/db/.AppleSetupDone` contains timestamps:
 - **Command**:
   ```bash
   stat -x /private/var/db/.AppleSetupDone
   ```
 
-### **Method 2: Using `journal.plist`**
+### **Method 2: Using `journal.plist`
+
 Detailed installation and update history can be found in:
 ```
 /private/var/db/softwareupdate/journal.plist
 ```
 
 ### **Example Command**
+
 ```bash
 cat /private/var/db/softwareupdate/journal.plist
 ```
 
 ---
 
-## **4. Time Zone**
+## **Time Zone**
+
 ### **Current Time Zone**
+
 The `/etc/localtime` file contains the current time zone:
 ```bash
 ls -la /etc/localtime
 ```
 
 ### **Time Zone History**
+
 Historical time zones are stored in:
 ```
 /Library/Preferences/.GlobalPreferences.plist
 ```
 
 ### **Example Command**
+
 ```bash
 plutil -p /Library/Preferences/.GlobalPreferences.plist
 ```
 
 ### **Auto Time Zone Configuration**
+
 Check if time zone auto-adjustment is active:
 ```bash
 plutil -p /Library/Preferences/com.apple.timezone.auto.plist
@@ -309,8 +345,10 @@ plutil -p /Library/Preferences/com.apple.timezone.auto.plist
 
 ---
 
-## **5. Boot, Reboot, and Shutdown Times**
+## **Boot, Reboot, and Shutdown Times**
+
 ### **System Logs**
+
 Boot and shutdown times can be found in:
 ```
 /private/var/log/system.log
@@ -322,6 +360,7 @@ Boot and shutdown times can be found in:
   ```
 
 ### **Unified Logs**
+
 Unified logs provide more details, including screen lock and unlock events:
 - **Command to Filter Shutdown Events**:
   ```bash
@@ -338,13 +377,15 @@ When performing macOS forensics, analyzing a machine's network configuration can
 
 ---
 
-## **1. Network Interfaces**
+## **Network Interfaces**
+
 The network interfaces of a macOS machine are stored in:
 ```
 /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
 ```
 
 ### **Example Command**
+
 ```bash
 cat /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
 ```
@@ -355,13 +396,15 @@ Each interface is enclosed in a `<dict>` tag. Key attributes include:
 
 ---
 
-## **2. DHCP Settings**
+## **DHCP Settings**
+
 DHCP settings for specific interfaces (e.g., `en0`) are stored in:
 ```
 /private/var/db/dhcpclient/leases/<interface>.plist
 ```
 
 ### **Example Command**
+
 ```bash
 sudo cat /private/var/db/dhcpclient/leases/en0.plist
 ```
@@ -375,13 +418,15 @@ Key attributes include:
 
 ---
 
-## **3. Wireless Connections**
+## **Wireless Connections**
+
 Historical wireless connections are stored in:
 ```
 /Library/Preferences/com.apple.wifi.known-networks.plist
 ```
 
 ### **Example Command**
+
 ```bash
 sudo plutil -p /Library/Preferences/com.apple.wifi.known-networks.plist
 ```
@@ -395,18 +440,21 @@ Key details include:
 
 ---
 
-## **4. Network Usage**
+## **Network Usage**
+
 Unified logs provide information about network connections and changes. On a live system, search for logs using:
 ```bash
 log show --info --predicate 'senderImagePath contains "IPConfiguration" and (eventMessage contains "SSID" or eventMessage contains "Lease" or eventMessage contains "network changed")'
 ```
 
 ### **Example Output**
+
 - **SSID**: Network name.
 - **NetworkID**: Unique identifier for the network.
 - **Security**: Encryption type (e.g., FT_PSK).
 
 ### **Offline Analysis**
+
 If the system is not live, convert unified logs to CSV for analysis:
 ```bash
 ./unifiedlog_parser -i system_logs.logarchive -o logs/output.csv
@@ -414,10 +462,9 @@ If the system is not live, convert unified logs to CSV for analysis:
 - Search for keywords like `IPConfiguration`, `SSID`, or `network changed` in the resulting CSV file.
 https://cloud.google.com/blog/topics/threat-intelligence/reviewing-macos-unified-logs/?hl=en
 
-## source
+## Sources
 
-* [Text][def]
-
-[def]: https://tryhackme.com/room/macosforensicsbasics
-[def1]: https://tryhackme.com/room/macosforensicsartefacts
-[def2]: https://github.com/pstirparo/mac4n6
+* [TryHackMe - macOS Forensics Basics](https://tryhackme.com/room/macosforensicsbasics)
+* [TryHackMe - macOS Forensics Artefacts](https://tryhackme.com/room/macosforensicsartefacts)
+* [GitHub - mac4n6](https://github.com/pstirparo/mac4n6)
+* [Cloud Google Blog - Reviewing macOS Unified Logs](https://cloud.google.com/blog/topics/threat-intelligence/reviewing-macos-unified-logs/?hl=en)
