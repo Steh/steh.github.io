@@ -1,18 +1,19 @@
 ---
 title: "Atomic Red Team"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
-- red team
-- windows
-- atomic red team
-- attack range
+  - blue team
+  - red team
+  - windows
+  - atomic red team
+  - attack range
 classes: 
-- wide
+  - wide
 excerpt: "Atomic Red Team is an open-source project that provides a framework for performing security testing and threat emulation."
 toc: true
---- 
+date: 2023-03-29
+---
 
 ## installation
 

@@ -1,14 +1,17 @@
 ---
 title: "Splunk: Asset and Identity Framework"
 categories: 
-- splunk
+  - splunk
+  - tools
+  - Information Security
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
-excerpt: ""
+  - wide
+excerpt: "Learn about Splunk's Asset and Identity Framework, including merging, troubleshooting, and useful commands."
 toc: true
---- 
+date: 2024-11-19
+---
 
 ## Merge for Assets or Identities
 
@@ -36,13 +39,13 @@ If you disable the merge, only the first asset found will be correlated.
 index=_internal sourcetype="identity_correlation:merge" source=*entity_merge.log*
 ```
 
-## source
+## References
 
-[Splunk Bloom Filter][def]  
-[Field Summary Command Overview][def1]  
-[About Event Segmentation][def2]  
-[Event Segmentation and Searching][def4]  
-[Commands by Type][def3]  
+- [Splunk Bloom Filter][def]  
+- [Field Summary Command Overview][def1]  
+- [About Event Segmentation][def2]  
+- [Event Segmentation and Searching][def4]  
+- [Commands by Type][def3]  
 
 [def]: https://docs.splunk.com/Splexicon:Bloomfilter "Bloomfilter Documentation"
 [def1]: https://docs.splunk.com/Documentation/SCS/current/SearchReference/FieldsummaryCommandOverview "Fieldsummary Command Overview"

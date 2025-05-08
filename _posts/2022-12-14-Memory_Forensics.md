@@ -1,15 +1,15 @@
 ---
-title:  "Memory Forensics"
-date:   2022-12-14
-excerpt: ""
-categories: informationsecurity
+title: "Memory Forensics"
+categories: 
+  - informationsecurity
 tags: 
-- memory forensics
-- blue team
+  - memory forensics
+  - blue team
+classes: 
+  - wide
+excerpt: ""
 toc: true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
-classes: wide
+date: 2022-12-14
 ---
 ## What is Memory Forensics
 

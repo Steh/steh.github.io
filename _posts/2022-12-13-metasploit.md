@@ -1,15 +1,15 @@
 ---
-title:  "Metasploit"
-date:   2022-12-13
-excerpt: ""
-categories: informationsecurity
+title: "Metasploit"
+categories: 
+  - informationsecurity
 tags: 
-- metasploit
-- red team
+  - metasploit
+  - red team
+classes: 
+  - wide
+excerpt: ""
 toc: true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
-classes: wide
+date: 2022-12-13
 ---
 ## What is Metasploit/Meterpreter?
 

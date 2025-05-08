@@ -1,14 +1,15 @@
 ---
 title: "Windows Foundation"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
+  - wide
 excerpt: "Some basics to better understand the how windows works"
 toc: true
---- 
+date: 2023-08-15
+---
 
 ## Processes
 

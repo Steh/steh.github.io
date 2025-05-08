@@ -1,15 +1,15 @@
 ---
-title:  "email analysis"
-date:   2022-12-09
-excerpt: ""
-categories: informationsecurity
+title: "Email Analysis"
+categories: 
+  - informationsecurity
 tags: 
-- email analysis
-- blue team
+  - email analysis
+  - blue team
+classes: 
+  - wide
+excerpt: ""
 toc: true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
-classes: wide
+date: 2022-12-09
 ---
 
 ## emlAnalyzer

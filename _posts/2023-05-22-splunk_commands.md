@@ -10,6 +10,7 @@ classes:
 - wide
 excerpt: "An overview of some Splunk commands"
 toc: true
+date: 2023-05-22
 --- 
 
 ## where

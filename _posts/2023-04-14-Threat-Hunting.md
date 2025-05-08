@@ -1,14 +1,15 @@
 ---
 title: "Threat Hunting"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
-excerpt: "Proactive search for hidden threats in computer networks, enabling early detection and prevention of potential security breaches." 
+  - wide
+excerpt: "Proactive search for hidden threats in computer networks, enabling early detection and prevention of potential security breaches."
 toc: true
---- 
+date: 2023-04-14
+---
 "A threat-hunting hypothesis, much like a scientific hypothesis, is a statement of an idea or explanation to test against data."[1]
 
 ## the three threat hunting hypotesis

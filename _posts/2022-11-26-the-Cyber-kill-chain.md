@@ -1,10 +1,14 @@
 ---
 title: "The Cyber Kill Chain"
-date: 2022-11-18
-categories:
-- Information Security
-tags:
-- Frameworks
+categories: 
+  - informationsecurity
+tags: 
+  - frameworks
+classes: 
+  - wide
+excerpt: ""
+toc: true
+date: 2022-11-26
 ---
 
 ## The Cyber Kill Chain

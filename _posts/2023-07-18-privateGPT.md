@@ -1,14 +1,15 @@
 ---
 title: "privateGPT"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
-excerpt: "PrivateGPT is a powerful AI project designed for privacy-conscious users, enabling you to interact with your documents using Large Language Models (LLMs) without the need for an internet connection." 
+  - wide
+excerpt: "PrivateGPT is a powerful AI project designed for privacy-conscious users, enabling you to interact with your documents using Large Language Models (LLMs) without the need for an internet connection."
 toc: true
---- 
+date: 2023-07-18
+---
 
 ## Installation
 

@@ -1,17 +1,18 @@
 ---
-title: "splunk and Auditd"
-categories:
-- splunk
+title: "Splunk and Auditd"
+categories: 
+  - splunk
 tags:
-- blue team
-- splunk 
-- auditd
-- detection
-- informationsecurity
-classes:
-- wide
-excerpt: "How to work with auditd and splunk" 
+  - blue team
+  - splunk
+  - auditd
+  - detection
+  - informationsecurity
+classes: 
+  - wide
+excerpt: "How to work with auditd and splunk"
 toc: true
+date: 2023-01-27
 ---
 
 * requirements:

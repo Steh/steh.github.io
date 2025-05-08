@@ -1,14 +1,15 @@
 ---
 title: "Burp Suite"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- red team
+  - red team
 classes: 
-- wide
-excerpt: "Burp Suite is a framework that aims to provide a one-stop-shop for web application penetration testing" 
+  - wide
+excerpt: "Burp Suite is a framework that aims to provide a one-stop-shop for web application penetration testing"
 toc: true
---- 
+date: 2023-03-15
+---
 ## Features
 
 * Proxy

@@ -6,8 +6,9 @@ tags:
   - blue team
 classes: 
   - wide
-excerpt: "" 
+excerpt: ""
 toc: true
+date: 2024-06-08
 ---
 
 ## Introduction

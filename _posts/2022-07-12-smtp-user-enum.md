@@ -1,13 +1,7 @@
 ---
 title: "smtp-user-enum"
-date: 2022-07-11
-categories:
+categories: 
 - Information Security
-tags:
-- smtp-user-enum
-- Kali
-classes: 
-- wide
 ---
 
 ```bash

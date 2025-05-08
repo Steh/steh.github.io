@@ -1,14 +1,15 @@
 ---
 title: "Splunk4Admins"
 categories: 
-- splunk
+  - splunk
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
+  - wide
 excerpt: "A guide for Splunk administrators covering search optimization, architecture, and commands."
 toc: true
---- 
+date: 2024-09-24
+---
 
 ## Search Under the Hood
 

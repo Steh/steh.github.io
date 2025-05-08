@@ -1,14 +1,15 @@
 ---
 title: "Splunk basics from Splunk4Champions"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
-excerpt: "" 
+  - wide
+excerpt: ""
 toc: true
---- 
+date: 2023-10-24
+---
 
 This page is based on the app [Splunk4Champions][def]
 

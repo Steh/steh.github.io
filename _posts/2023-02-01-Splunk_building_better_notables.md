@@ -1,16 +1,17 @@
 ---
-title: "Building meaningfull findings in Splunk Enterprise Security"
+title: "Building meaningful findings in Splunk Enterprise Security"
 categories: 
-- information security
+  - informationsecurity
 tags:
-- blue team
-- splunk
-- splunk enterprise security
+  - blue team
+  - splunk
+  - splunk enterprise security
 classes: 
-- wide
-toc: true
+  - wide
 excerpt: "Tips for optimizing detections and findings in Splunk Enterprise Security"
---- 
+toc: true
+date: 2023-02-01
+---
 
 ## Findings in Splunk Enterprise Security (ES)
 

@@ -1,10 +1,14 @@
 ---
 title: "The Diamond Model of Intrusion Analysis"
+categories: 
+  - informationsecurity
+tags: 
+  - frameworks
+classes: 
+  - wide
+excerpt: ""
+toc: true
 date: 2022-11-11
-categories:
-- Information Security
-tags:
-- Frameworks
 ---
 
 ## The Diamond Model of Intrusion Analysis

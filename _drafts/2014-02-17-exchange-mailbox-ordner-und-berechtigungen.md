@@ -1,9 +1,13 @@
 ---
 layout: post
-title: 'Exchange: Mailbox Ordner und Berechtigungen'
-categories: Exchange2010
-tags: ['Mailbox-Ordner','Ordner-Berechtigungen']
-Autor: StehSa
+title: "Exchange: Mailbox Ordner und Berechtigungen"
+categories: 
+  - Exchange
+tags: 
+  - Mailbox-Ordner
+  - Ordner-Berechtigungen
+author: StehSa
+excerpt: "How to view and manage mailbox folder permissions in Exchange."
 ---
 
 ##Ordner einer Mailbox anzeigen
@@ -15,4 +19,4 @@ Im FolderPath muss '/' durch '\' ersetzt werden
 
 z.B. **stehsa:\Posteingang**
     
-    Get-MailboxFolderPermission <MailboxAlias>:<FolderPath> 
+    Get-MailboxFolderPermission <MailboxAlias>:<FolderPath>

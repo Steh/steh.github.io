@@ -1,18 +1,18 @@
 ---
 title: "Network Forensics"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
-- thm
-- network forensics
-- networkminer
- 
+  - blue team
+  - thm
+  - network forensics
+  - networkminer
 classes: 
-- wide
-excerpt: "Network forensics analyzes network traffic to uncover evidence of security incidents, aiding in incident response and prevention." 
+  - wide
+excerpt: "Network forensics analyzes network traffic to uncover evidence of security incidents, aiding in incident response and prevention."
 toc: true
---- 
+date: 2023-04-11
+---
 * Questions an investogation tries to answer:
   * Who (Source IP and port)
   * What (Data/payload)

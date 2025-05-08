@@ -8,6 +8,7 @@ classes:
   - wide
 excerpt: "A guide to statistical measures in Splunk for baselining and anomaly detection."
 toc: true
+date: 2025-04-30
 ---
 
 ## Introduction

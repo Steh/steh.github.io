@@ -1,14 +1,15 @@
 ---
 title: "A Technical Guide to Splunk Data Models"
 categories: 
-- informationsecurity
+  - informationsecurity
 tags:
-- blue team
+  - blue team
 classes: 
-- wide
+  - wide
 excerpt: "Learn how to create, fill, maintain, validate, and request data from Splunk Data Models in this comprehensive guide."
 toc: true
---- 
+date: 2024-06-21
+---
 
 ## A Technical Guide to Splunk Data Models
 
