@@ -6,139 +6,146 @@ tags:
 - blue team
 classes: 
 - wide
-excerpt: ""
+excerpt: "A guide for Splunk administrators covering search optimization, architecture, and commands."
 toc: true
 --- 
 
-## Search under the hood
-based on splunk education course "Search Under the Hood (eLearning)"
+## Search Under the Hood
 
-### Seach Job Inspector
+Based on the Splunk education course "Search Under the Hood (eLearning)."
 
-open Job under Search Bar
+### Search Job Inspector
 
-* contains header with overall runtime
-  * return Results
-  * scanned Events
-  * execution Time
-* Execution Cost
-  * what component takes the longest
-  * if one takes signifitiant longer you should investigate into it
-    * `command.search.index` - Time to search the index for the location to read in rawdata files
-    * `command.search.filter` - Time to filter out events that do not match
-    * `command.search.rawdata` - Time to read events from rawdata files 
-* Search Job properties
-  * diskusage
-  * optimizedSearch
-    * Splunk will try to optimize your search
+Open the Job Inspector under the search bar to analyze search performance:
 
-## Comments
+* **Header**: Displays overall runtime details:
+  * Returned Results
+  * Scanned Events
+  * Execution Time
+* **Execution Cost**: Identifies which components take the longest:
+  * `command.search.index` - Time to search the index for rawdata file locations.
+  * `command.search.filter` - Time to filter out events that do not match.
+  * `command.search.rawdata` - Time to read events from rawdata files.
+* **Search Job Properties**:
+  * Disk usage
+  * Optimized Search: Splunk attempts to optimize your search automatically.
 
-* three ticks
-  * ` ``` `
+## Comments in Splunk
+
+Use triple backticks for comments in Splunk:
+
+```bash
+# Example:
+```
+```
 
 ## Splunk Architecture
 
-* index
-  * contains 
-    * journal.gz
-      * contains slices of rawdata, 128kb
-    * .tsidx - time series index file
-      * index fields to journal files
-      * contains lexicon of location for stored keywords
-    * Bloom Filter ([def][Splexicon: Bloom Filter])
-      * rules out buckets that dont contain data
-      * creates a bloomfilter (kind of a hash) and compares it to presaved filters in buckets
+Understand the components of an index:
+
+* **Index**:
+  * Contains:
+    * `journal.gz`: Slices of rawdata, 128 KB each.
+    * `.tsidx`: Time series index file.
+      * Indexes fields to journal files.
+      * Contains a lexicon of stored keyword locations.
+    * **Bloom Filter** ([Splexicon: Bloom Filter][def]):
+      * Rules out buckets that do not contain data.
+      * Creates a bloom filter (a type of hash) and compares it to pre-saved filters in buckets.
 
 ## Streaming vs. Non-Streaming Commands
 
-* Transforming Commands
-  * Commands that take events as input and output a transformed dataset, typically a summary or aggregation.
-  * Operate on an entire result set of data
-  * `stats`, `timechart`. `top` 
-* Streaming Commands
-  * Process each event independently and can start returning results before all data is read.
-  * Centralized
-    * processes data as it comes in
-    * `streamstats`, `transaction`
-  * Distributable
-    *  operates on each event individual
-    * `eval`, `rename`
+* **Transforming Commands**:
+  * Take events as input and output a transformed dataset (e.g., summary or aggregation).
+  * Operate on the entire result set.
+  * Examples: `stats`, `timechart`, `top`.
+* **Streaming Commands**:
+  * Process each event independently and can return results before all data is read.
+  * **Centralized**:
+    * Processes data as it comes in.
+    * Examples: `streamstats`, `transaction`.
+  * **Distributable**:
+    * Operates on each event individually.
+    * Examples: `eval`, `rename`.
 
 [Command Types][def3]
 
 ## Breakers and Segmentation
 
-* Events Split by major breakers
-  * spaces, brackets, tab and quotation mark
-* next break by minor breakers:
-  * `.`, `,`, `$`,`=`
+* Events are split by **major breakers**:
+  * Spaces, brackets, tabs, and quotation marks.
+* Further split by **minor breakers**:
+  * `.`, `,`, `$`, `=`.
 
 ```bash
-Example:
+# Example:
 index=web clientip=76.169.7.252
-  would search [AND 169 252 7 76 index::web]
+# Searches as: [AND 169 252 7 76 index::web]
 
-# term must be break by major breakers in raw data
+# To search for an exact term:
 index=web clientip=TERM(76.169.7.252)
-  would search [AND 76.169.7.252 index::web]
-
-search can be viewd im _internal and search for LISPY
-
-## searching in tsidx files
-# search with tstats (only works if the term is not seperated by major breakers)
-| tstats count where index=you_data source=StuffYouDefine TERM(Computername=MyPC)
-
-# stats count by values
-| tstats count where index=you_data source=StuffYouDefine by PREFIX(Computername=)
+# Searches as: [AND 76.169.7.252 index::web]
 ```
 
-* wildcards in the middle of a string can be costly
-* lispy expression can seen in search.log in Job Inspector
-
-* [Breakers & Segmentation][def2]
-* [Event segmentation and searching][def4]
-
-## | fieldsummary
+* Use `tstats` for efficient searches in `.tsidx` files:
 
 ```bash
-# command calculates summary statistics for one or more fields in your events. The summary information is displayed as a results table. 
-...
-| fieldsummary 
+# Search with tstats:
+| tstats count where index=your_data source=StuffYouDefine TERM(Computername=MyPC)
 
+# Stats count by values:
+| tstats count where index=your_data source=StuffYouDefine by PREFIX(Computername=)
 ```
+
+* Avoid wildcards in the middle of strings as they are costly.
+* Lispy expressions can be viewed in `search.log` via the Job Inspector.
+
+[Breakers & Segmentation][def2]  
+[Event Segmentation and Searching][def4]
+
+## `| fieldsummary` Command
+
+```bash
+# Calculates summary statistics for one or more fields in your events.
+| fieldsummary
+```
+
+[fieldsummary Command Overview][def1]
 
 ## Informational Functions
 
 ```bash
+# Example:
 eval field1 = isnull()
 ```
 
-[fieldsummary command overview][def1]
-
 ## Knowledge Objects
 
-`Settings` -> `All configuration`
+Access via `Settings` -> `All Configurations`:
 
-* Fields
-* Calculated Fields
-* Lookups
-* Event types
-  * categories events
-  * Save search as Even Type
-  * `eventtype=web_logs`
-*  Tags
-  * `tag=vuln`
-* Workflow Actions
-  * 
-* Reports and Alerts
-* Macros
-* Data Models
+* **Fields**
+* **Calculated Fields**
+* **Lookups**
+* **Event Types**:
+  * Categorize events.
+  * Save searches as event types (e.g., `eventtype=web_logs`).
+* **Tags**:
+  * Example: `tag=vuln`.
+* **Workflow Actions**
+* **Reports and Alerts**
+* **Macros**
+* **Data Models**
 
-## source
+## Sources
 
-[def]: https://docs.splunk.com/Splexicon:Bloomfilter
-[def1]: https://docs.splunk.com/Documentation/SCS/current/SearchReference/FieldsummaryCommandOverview
-[def2]: https://docs.splunk.com/Documentation/Splunk/latest/Data/Abouteventsegmentation
-[def4]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Eventsegmentationandsearching
+* [Splexicon: Bloom Filter][def]
+* [fieldsummary Command Overview][def1]
+* [Breakers & Segmentation][def2]
+* [Event Segmentation and Searching][def4]
+* [Command Types][def3]
+
+[def]: https://docs.splunk.com/Splexicon:Bloomfilter  
+[def1]: https://docs.splunk.com/Documentation/SCS/current/SearchReference/FieldsummaryCommandOverview  
+[def2]: https://docs.splunk.com/Documentation/Splunk/latest/Data/Abouteventsegmentation  
+[def4]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Eventsegmentationandsearching  
 [def3]: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Commandsbytype
