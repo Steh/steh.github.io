@@ -33,7 +33,7 @@ toc: true
   * Forward Request
   * Drop Request
 * to intercept SSL
-  * <http://burp/cert>
+  * <https://burp/cert>
   * Trust this CA import into Browser
   
 ## Intruder
