@@ -1,0 +1,29 @@
+---
+layout: post
+title: 'Exchange 2010: ActivSync'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '271'
+  _wp_old_slug: '271'
+  _elasticsearch_indexed_on: '2013-02-26 13:28:39'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+---
+[code lang="powershell"]#Shows all linked ActivSync Divices
+Get-ActiveSyncDevice -Mailbox stiki[/code]
+
+[code lang="powershell"]#ActivSyncDeviceStatistic: LastSyncAttemptTime,LastSuccessSync,...
+Get-ActiveSyncDeviceStatistics -mailbox stiki[/code]
+
+[code lang="powershell"]#Remove ActivSynDevice
+Get-ActiveSyncDevice -Mailbox stiki | Remove-ActivSynDevice[/code]
+
+[code lang="powershell"]#Remove all ActivSyncDevices which doesnt attempt to sync in the last 90 Days
+Get-ActiveSyncDevice -ResultSize unlimited | Get-ActiveSyncDeviceStatistics | where {$_.LastSyncAttemptTime -lt (get-date).adddays(-90)} | Remove-ActivSyncDevice[/code]

@@ -1,0 +1,86 @@
+---
+layout: post
+title: Wiederhergestellte Öffentliche Ordner Synchronisieren nicht mehr (Public Folder
+  Replication Problem [entwurf]
+categories:
+- Exchange
+tags:
+- ÖffentlicheOrdner
+- PublicFolder
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  sharing_disabled: '1'
+---
+<p>Nachdem wir unsere gelöschten Öffentlichen Ordner wiederhergestellt haben ( Aus dem Papierkorb + ExFolder + PFDAVAdmin ) wurde zwar die Ordner Struktur, nicht aber die Inhalte repliziert.</p>
+
+<p>Es werden nur "alte" Elemente nicht Synchronisiert, Elemente die in den Ordner kopiert werden oder alte Elemente die bearbeitet wurden, werden unmittelbar repliziert.</p>
+
+<h1>Überprüfen der Replikation</h1>
+
+<h2>2003 - Exchange System Manager</h2>
+
+<p>[<img src="http://steh-blog.de/wp-content/uploads/2013/12/PFR_2.png" alt="PFR_2" width="526" height="210" class="alignnone size-full wp-image-1172" />][1]</p>
+
+<p>Auf der Linken Seite den gewünschten Ordner auswählen, dann in dem Rechten Bereich den Reiter 'Status' auswählen.</p>
+
+<h2>2010 - PublicFolder Konsole</h2>
+
+<p>Diese Konsole ist zu finden unter:</p>
+
+<pre><code>Exchange Management Console -&gt; Toolbox -&gt; Public Folder Management Console  
+</code></pre>
+
+<p>[<img src="http://steh-blog.de/wp-content/uploads/2013/12/PFR_1.png" alt="PFR_1" width="521" height="419" class="alignnone size-full wp-image-1165" />][2]</p>
+
+<p>Dort einen Public Folder auswählen und im rechten Bildausschnitt mit rechtsklick die Eigenschaften eines Items anzeigen lassen. Man kann sich dann die Anzahl der Elemente und die Größe anzeigen lassen.</p>
+
+<p>Oder die PoerShell version:</p>
+
+<pre><code>Get-PublicFolder "\" -Recurse | Get-PublicFolderStatistics | Select-Object FolderPath,TotalItemSize,ItemCount
+</code></pre>
+
+<p><strong>WENN DIE REPLIKATION FUNKTIONIERT SOLLTEN DIESE WERTE AUF DEN ZUR REPLIKATION EINGETRAGENEN SYSTEMEN GLEICH SEIN.</strong></p>
+
+<h1>Problem lösen</h1>
+
+<p>Elemente müssen geändert werden damit sie Synchronisieren.</p>
+
+<p>Folgendes Script ausführen <a href="http://blogs.technet.com/b/bill_long/archive/2010/04/22/fixing-public-folder-replication-errors-from-exchange-2003-to-exchange-2007-or-2010.aspx#pi47623=2" title="Fixing Public Folder Replication Errors From Exchange 2003 to Exchange 2007 or 2010" target="_blank">Technet Blog</a></p>
+
+<h2>Hinweise</h2>
+
+<ol>
+<li>Das Script läuft im Read-Only Modus um das zu ändern muss die Variable <em>$commitChanges</em> auf <em>$true</em> geändert werden  </li>
+<li>Bei einem Deutschen Public Folder Store muss die Variable <em>$allPFs</em> angepasst werden</li>
+</ol>
+
+<pre><code># Deutsch  
+$allPFs = GetNamedFromCollection "Alle Öffentlichen Ordner" $pfRoot.Folders 
+
+[1]: http://steh-blog.de/wp-content/uploads/2013/12/PFR_2.png
+
+[2]: http://steh-blog.de/wp-content/uploads/2013/12/PFR_1.png
+
+# English  
+$allPFs = GetNamedFromCollection "All Public Folders" $pfRoot.Folders  
+</code></pre>
+
+<h2>Beispiel</h2>
+
+<pre><code># Anzeigen aller gefundenen Elemente  
+.Fix-PFItems.ps1 -folderPath "Stiki"
+
+# Bei Elemente ohne Kategorie, die Kategorie löschen  
+.Fix-PFItems.ps1 -folderPath "Stiki" -resetEmptyCategories $true  
+</code></pre>
+
+<h1>Quellen</h1>
+
+<p><a href="http://blogs.technet.com/b/exchange/archive/2006/01/19/417737.aspx" alt="Public Folder Replication Troubleshooting – Part 2: Troubleshooting the Replication of Existing Data">Public Folder Replication Troubleshooting – Part 2: Troubleshooting the Replication of Existing Data</a></p>
+
+<p><a href="http://blogs.technet.com/b/bill_long/archive/2010/04/22/fixing-public-folder-replication-errors-from-exchange-2003-to-exchange-2007-or-2010.aspx" alt="Fixing Public Folder Replication Errors From Exchange 2003 to Exchange 2007 or 2010"Fixing Public Folder Replication Errors From Exchange 2003 to Exchange 2007 or 2010">Fixing Public Folder Replication Errors From Exchange 2003 to Exchange 2007 or 2010"Fixing Public Folder Replication Errors From Exchange 2003 to Exchange 2007 or 2010</a></p>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: Empfangsconnector kopieren
+categories:
+- Exchange
+tags: []
+status: draft
+type: post
+published: false
+meta: {}
+---
+$i = Get-ReceiveConnector -Identity "Stiki-HUB01ausgang"
+New-ReceiveConnector -Server Stiki-HUB02 -Name "ausgang" -Bindings $i.Bindings -RemoteIPRanges $i.RemoteIPRanges -AuthMechanism $i.AuthMechanism -MaxMessageSize $i.MaxMessageSize

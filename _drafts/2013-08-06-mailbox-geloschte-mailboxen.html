@@ -1,0 +1,42 @@
+---
+layout: post
+title: Deleted mailbox
+categories:
+- Exchange
+tags:
+- disabled
+- Mailbox
+- soft-deleted
+status: draft
+type: post
+published: false
+meta:
+  geo_public: '0'
+  _publicize_pending: '1'
+  _elasticsearch_indexed_on: '2013-08-06 12:12:50'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+---
+There are two different kind of deleted mailboxes:
+<h2>Soft-deleted mailboxes</h2>
+Eine "Soft-deleted mailbox" wird erstellt wenn ein Benutzer verschoben wurde. 
+<h2>Disabled mailboxes</h2>
+Wird erstellt wenn eine Mailbox gelöscht wird z.B. durch Disable-Mailbox or Remove-Mailbox
+<h2>Ausgabe</h2>
+[code lang="powershell" light="true"]#Ausgabe aller &amp;quot;disabled mailboxes&amp;quot;
+Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -eq &amp;quot;Disabled&amp;quot; } | Select-Object DisplayName,Database,DisconnectDate
+
+#Ausgabe aller &amp;quot;soft-deleted mailboxes&amp;quot;
+Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -eq &amp;quot;SoftDeleted&amp;quot; } | Select-Object DisplayName,Database,DisconnectDate[/code]
+
+<h2>Aktionen</h2>
+[code lang="powershell" light="true"]##GILT FÜR BEIDE TYPEN
+#Mailbox entgültig löschen
+Remove-StoreMailbox -Database db-sticki -Identity &amp;quot;2ab32ce3-fae1-4402-9489-c67e3ae173d3&amp;quot; -MailboxState Disabled
+Remove-Mailbox -Identity sticki -Permanent $true
+[/code]
+<h2>Mailbox wiederverbinden</h2>
+[code lang="powershell" light="true"]
+[/code]
+Referenz:
+<a href="http://technet.microsoft.com/en-us/library/bb232039.aspx" title="Technet: Disconnected Mailboxes" target="_blank">Technet: Disconnected Mailboxes</a>

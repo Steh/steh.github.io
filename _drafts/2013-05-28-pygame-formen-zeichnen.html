@@ -1,0 +1,35 @@
+---
+layout: post
+title: 'PyGame: Formen Zeichnen'
+categories:
+- Pygame
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _publicize_pending: '1'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-05-28 13:11:29'
+---
+[code language="python"]#setzten sich aus diesen Werten zusammen:
+#Zeichenfläche, Farbe, (Koordinaten), Stärke
+
+#Linie
+#Anfangskoordinaten: X,Y + Zielkoordinaten: X,Y
+pygame.draw.line(screen,green,[0,0],[100,100],5)
+
+#Rechteck
+#X, Y, Breite, Höhe
+pygame.draw.rect(screen,red,[55,500,10,5],5)
+
+#Kreis
+# Wie bei Rechteck, dieses markiert dann die Ränder
+pygame.draw.ellipse(screen,black,[20,20,250,100],5)
+
+#Polygon
+# Markiert die drei Eckkoordinaten
+pygame.draw.polygon(screen,black,[[100,100],[0,200],[200,200]],5)
+[/code]

@@ -1,0 +1,25 @@
+---
+layout: post
+title: 'Exchange 2010: Abwesenheits Ping-Pong'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  geo_public: '0'
+  _publicize_pending: '1'
+  _elasticsearch_indexed_on: '2013-07-12 08:17:06'
+---
+Wir haben das Phänomen gehabt das sich im Postfach eines Nutzer, nach seinem Urlaub, ca 6500 Mails angehäuft haben.
+Nach kurzer Recherche stellte sich herraus das unser Fax-Server und der Abwenheitsassistent sich einen Mail-Schlagabtausch geliefert haben.
+Der Faxserver hat den Nutzer ein Fax geschickt, der Abwesenheitsassistent antwortet, der Faxserver antwortet das er nicht zustellen kann da es keine gültige Faxnummer ist usw.
+
+Es kann verhindert werden das Abwesenheitsbenachrichtigungen an eine bestimmte externe Domain geschickt werden. Dazu muss ein neue Remote-Domain eingerichtet werden und für diese die Abwesenheitsgenachrichtigungen deaktiviert.
+
+<strong>FUNKTIONIERT NUR WENN DIE DOMAINE NICHT VOM EXCHANGE VERWALTET WIRD</strong>
+
+<a href="http://steh-blog.de/wp-content/uploads/2013/07/fax-abwesenheit1.png"><img src="http://steh-blog.de/wp-content/uploads/2013/07/fax-abwesenheit1.png" alt="fax-abwesenheit1" width="628" height="172" class="alignnone size-full wp-image-759" /></a>
+
+<a href="http://steh-blog.de/wp-content/uploads/2013/07/fax-abwesenheit.png"><img src="http://steh-blog.de/wp-content/uploads/2013/07/fax-abwesenheit.png" alt="fax-abwesenheit" width="442" height="497" class="alignnone size-full wp-image-758" /></a>

@@ -1,0 +1,34 @@
+---
+layout: post
+title: 'Powershell: Active-Direcory Module installieren'
+categories:
+- Server 2008
+- Windows
+tags:
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  _syntaxhighlighter_encoded: '1'
+  original_post_id: '470'
+  _wp_old_slug: '470'
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _elasticsearch_indexed_on: '2013-05-17 12:05:30'
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+  _wpcom_is_markdown: '1'
+---
+<h2>ServerManager Module importieren und die AD Module Installieren</h2>
+
+<pre><code>Import-Module ServerManager  
+Add-WindowsFeature RSAT-AD-Tools -IncludeAllSubFeature
+</code></pre>
+
+<h2>ActivDirectory Module Importieren</h2>
+
+<pre><code>Import-Module ActiveDirectory  
+</code></pre>

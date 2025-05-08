@@ -1,0 +1,23 @@
+---
+layout: post
+title: 'Outlook: default folder language'
+categories:
+- Exchange
+- Outlook 2010
+- Windows
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '105'
+  _wp_old_slug: '105'
+  _elasticsearch_indexed_on: '2012-12-04 10:27:00'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+---
+[code lang="powershell" light="true"]Set-MailboxRegionalConfiguration -Language {de-DE} -LocalizeDefaultFolderName:$true -DateFormat &quot;dd.MM.yyyy&quot; -TimeFormat HH:mm -TimeZone &quot;W. Europe Standard Time&quot;
+
+Set-MailboxRegionalConfiguration -Language {en-EN} -LocalizeDefaultFolderName:$true -DateFormat &quot;MM.dd.yyyy&quot; -TimeFormat HH:mm
+[/code]

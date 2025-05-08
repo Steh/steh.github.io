@@ -1,0 +1,23 @@
+---
+layout: post
+title: 'Powershell: Dinge'
+categories:
+- Exchange
+tags:
+- PowerShellScript
+status: draft
+type: post
+published: false
+meta: {}
+---
+<h2>Listen</h2>
+[code lang="powershell"]
+#erstellen
+$liste = new-object Collections.Generic.List[string]
+
+#erweitern
+$liste.add(&quot;Wert&quot;)
+
+#zählen
+$liste.count
+[/code]

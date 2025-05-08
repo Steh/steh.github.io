@@ -1,0 +1,20 @@
+---
+layout: post
+title: 'Exchange 2010: Owa für einzelne Benutzer aktivieren/deaktivieren'
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '246'
+  _wp_old_slug: '246'
+  _elasticsearch_indexed_on: '2013-02-15 09:59:16'
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+  sharing_disabled: '1'
+---
+<pre><code>Get-CASMailbox &lt;Mailbox&gt; | Set-CASMailbox -OWAEnabled:$false
+</code></pre>

@@ -1,0 +1,41 @@
+---
+layout: post
+title: 'Exchange 2010: export mailbox'
+categories:
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags:
+- Get-MailboxFolderStatistics
+- Mailbox Export
+- New-MailboxExportRequest
+- pst
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  _sd_is_markdown: '1'
+---
+<h1>Export ONLY Mailbox:</h1>
+
+<pre><code>New-MailboxExportRequest -Mailbox stiki -FilePath '\steh-blog.dec$Exportstiki_mailbox.pst'  
+</code></pre>
+
+<h1>Export Mailbox Archive:</h1>
+
+<pre><code>New-MailboxExportRequest -Mailbox stiki -FilePath '\steh-blog.dec$Exportstiki_archive.pst' -IsArchive  
+</code></pre>
+
+<h1>Export Selected Folders:</h1>
+
+<h2>Show Foldernames for a Mailbox</h2>
+
+<pre><code>Get-MailboxFolderStatistics stiki | Select-Object Name  
+</code></pre>
+
+<h2>Create Export Request</h2>
+
+<pre><code>New-MailboxExportRequest -Mailbox stiki -IncludeFolders Calendar -FilePath -ExcludeDumpster -ExcludeFolders "Recoverable Items" '\steh-blog.dec$Exportstiki_calendar.pst'  
+</code></pre>

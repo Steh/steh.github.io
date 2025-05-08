@@ -1,0 +1,50 @@
+---
+layout: post
+title: 'Outlook 2010: Änderung von Stellvertretung nicht möglich'
+categories:
+- Exchange
+- Exchange 2010
+- Outlook 2010
+- Windows
+tags:
+- PowerShellScripte
+status: publish
+type: post
+published: true
+meta:
+  _syntaxhighlighter_encoded: '1'
+  _publicize_pending: '1'
+  _elasticsearch_indexed_on: '2013-07-11 11:07:14'
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+---
+<h2>Fehlermeldung</h2>
+
+<pre>“Die Einstellung auf der Registerkarte “Stellvertretungen” wurden nicht korrekt gespeichert. 
+Liste zum Senden im Auftrag von kann/können nicht aktiviert werden.
+Sie besitzen nicht die erforderlichen Berechtigungen, um diesen Vorgang mit diesem Objekt auszuführen.”</pre>
+
+<p><a href="http://steh-blog.de/wp-content/uploads/2013/07/stellvertretung.png"><img class="alignnone size-full wp-image-723" alt="stellvertretung" src="http://steh-blog.de/wp-content/uploads/2013/07/stellvertretung.png" width="307" height="129" /></a></p>
+
+<h2>Mögliche Ursache und Lösung</h2>
+
+<p>Dieser Fehler kann auftreten wenn ein Benutzer als Stellvertreter eingetragen ist der keine Mailbox mehr hat.<br />
+Dies kann passieren wenn die Mailbox des Benutzers gelöscht wurde, aber nicht das AD-Object.</p>
+
+<p>Um dieses Problem zu beheben muss diese/r Benutzer aus der "<em>GrantSendOnBehalfTo/Stellvertreter</em>" Liste entfernt werden.<br />
+Dies ist nur über die PowerShell möglich, da diese Benutzer <strong>nicht in der GUI angezeigt werden</strong>.</p>
+
+<h3>PowerShell</h3>
+
+<p>[code lang="powershell" light="true"]#Anzeigen der Eingetragenen Benutzer<br />
+Get-Mailbox stiki | Fl GrantSendOnBehalfTo</p>
+
+<h1>Löschen aller einträge in der Liste (nicht so elegant)</h1>
+
+<p>Get-Mailbox stiki | Set-Mailbox -GrantSendOnBehalfTo $NULL [/code]</p>
+
+<h2>PowerShell Script</h2>
+
+<p>Script das alle Benutzer ohne Mailbox aus der Liste entfernt</p>
+
+<p>https://gist.github.com/Steh/5974517</p>

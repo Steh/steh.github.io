@@ -1,0 +1,26 @@
+---
+layout: post
+title: Die Einstellungen auf der Registerkarte für “Stellvertretungen” wurde nicht
+  korrekt gespeichert.
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '215'
+  _wp_old_slug: '215'
+  _elasticsearch_indexed_on: '2013-01-29 08:06:52'
+---
+Fehler tritt auf wenn der Benutzer keine schreibrechte auf den derzeit verbundenen Globalen Katalog hat.
+
+Versuchen den <a href="http://support.microsoft.com/kb/946207" title="Hotfix" target="_blank">HotFix</a> zu installieren 
+
+Wenn das nicht funktiuoniert muss die registry angepasst werden:
+<pre>HKEY_CURRENT_USERSoftwareMicrosoftOffice12.0OutlookPreferences
+DWORD Value -&gt; IgnoreSOBError -&gt; Value data = 1</pre>
+
+
+<a href="http://support.microsoft.com/kb/946208/en-us" title="Technet" target="_blank">Technet</a>

@@ -1,0 +1,15 @@
+---
+layout: post
+title: Mailbox Reparieren
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '71'
+  _wp_old_slug: '71'
+  _elasticsearch_indexed_on: '2012-11-15 06:28:04'
+---
+<pre>Get-Mailbox &lt;Alias&gt; | New-MailboxRepairRequest -CorruptionType SearchFolder,AggregateCounts,ProvisionedFolder,FolderView -DetectOnly</pre>

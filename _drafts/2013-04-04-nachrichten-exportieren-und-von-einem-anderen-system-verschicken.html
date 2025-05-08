@@ -1,0 +1,34 @@
+---
+layout: post
+title: 'Exchange 2010: export messages and send from another server'
+categories: []
+tags:
+- english
+- Get-Message
+- queue
+- ReplayDirectory
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '321'
+  _wp_old_slug: '321'
+  _elasticsearch_indexed_on: '2013-04-04 12:30:39'
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+---
+<h2>export messages from queue</h2>
+All messages from queue "Stiki-Queue" were exportet to the specified path.
+[code lang="powershell" light="true"]Get-Message -Queue &quot;Stiki-Queue&quot; | Export-Message -Path D:\Export[/code]
+
+
+<h2>Nachrichten auf einem Transportserver Importieren</h2>
+Die Nachrichten in das Replay Verzeichnis kopieren. Dort werden diese Automatisch abgearbeitet und versendet.
+
+Pfad zum Replayverzeichnis auslesen
+[code lang="powershell" light="true"]Get-TransportServer HUB01.stiki.de | Select-Object ReplayDirectoryPath[/code]
+
+Quellen:
+<a href="http://technet.microsoft.com/de-de/library/bb124230%28v=exchg.141%29.aspx" title="Grundlegendes zu den PICKUP- und Wiedergabeverzeichnissen" target="_blank">Technet: Grundlegendes zu den PICKUP- und Wiedergabeverzeichnissen</a>

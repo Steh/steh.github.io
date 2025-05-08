@@ -1,0 +1,44 @@
+---
+layout: post
+title: ''
+categories: []
+tags: []
+status: trash
+type: post
+published: false
+meta:
+  _edit_last: '1'
+  _sd_is_markdown: '1'
+  _wpas_done_all: '1'
+  _wp_trash_meta_status: publish
+  _wp_trash_meta_time: '1390286620'
+---
+<pre class="prettyprint">function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+
+    // Check if the XMLHttpRequest object has a "withCredentials" property.
+    // "withCredentials" only exists on XMLHTTPRequest2 objects.
+    xhr.open(method, url, true);
+
+  } else if (typeof XDomainRequest != "undefined") {
+
+    // Otherwise, check if XDomainRequest.
+    // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+
+  } else {
+
+    // Otherwise, CORS is not supported by the browser.
+    xhr = null;
+
+  }
+  return xhr;
+}
+
+var xhr = createCORSRequest('GET', url);
+if (!xhr) {
+  throw new Error('CORS not supported');
+}
+</pre>

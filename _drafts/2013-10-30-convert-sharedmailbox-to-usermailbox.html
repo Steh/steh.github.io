@@ -1,0 +1,26 @@
+---
+layout: post
+title: Convert SharedMailbox to UserMailbox
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+- Funktionspostfächer
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  sharing_disabled: '1'
+  _wpas_done_all: '1'
+---
+<ol>
+<li>Set PWD in <em>Active Directory</em></li>
+<li>in Exchange Powershell:</li>
+</ol>
+
+<pre><code>Get-Mailbox &lt;MAILBOX&gt; | Set-Mailbox -Type:Regular
+</code></pre>

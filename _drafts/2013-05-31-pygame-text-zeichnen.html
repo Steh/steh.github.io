@@ -1,0 +1,24 @@
+---
+layout: post
+title: 'PyGame: Text Zeichnen'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-05-31 07:22:26'
+---
+[code language="python"]# Schriftart und Textgröße auswählen
+font = pygame.font.Font(None, 25)
+
+# Erstellt ein Bild mit dem Text
+# mit aktivierter Kantenglättung 
+# in Schwarz
+text = font.render(&quot;My text&quot;,True,black)
+
+# fügt den Text ein
+screen.blit(text, [250,250])[/code]

@@ -1,0 +1,23 @@
+---
+layout: post
+title: Eventlog Level erhöhen
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '89'
+  _wp_old_slug: '89'
+  _elasticsearch_indexed_on: '2012-11-26 07:44:42'
+---
+<ol>
+	<li>Gegebenenfalls den Speicher für die Logs erhöhen (ServerManager-&gt;Diagnostics-&gt;EventViewer-&gt;WindowsLogs-&gt;Application)<strong></strong></li>
+	<li>
+<pre><strong>Get-EventlogLevel -Identity "MSExchange Mailbox Replication*" | Set-EventlogLevel -Level Expert</strong></pre>
+</li>
+</ol>
+&nbsp;
+
+&nbsp;

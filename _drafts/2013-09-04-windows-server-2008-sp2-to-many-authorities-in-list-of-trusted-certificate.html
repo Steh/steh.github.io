@@ -1,0 +1,50 @@
+---
+layout: post
+title: 'Windows Server 2008 SP2: to many authorities in list of trusted certificate'
+categories:
+- Server 2003
+- Server 2008
+- Windows
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+<p><a href="http://steh-blog.de/wp-content/uploads/2013/09/exchange_error_36885.png"><img class="alignnone size-full wp-image-970" alt="exchange_error_36885" src="http://steh-blog.de/wp-content/uploads/2013/09/exchange_error_36885.png" width="624" height="600" /></a></p>
+<h2>Error</h2>
+<ul>
+<li>Language: English</li>
+<li>Source:     Schannel</li>
+<li>Event-ID:   36885</li>
+<li>When asking for client authentication, this server sends a list of trusted certificate authorities to the client. The client uses this list to choose a client certificate that is trusted by the server. Currently, this server trusts so many certificate authorities that the list has grown too long. This list has thus been truncated. The administrator of this machine should review the certificate authorities trusted for client authentication and remove those that do not really need to be trusted.</li>
+</ul>
+<ul>
+<li>Language: German</li>
+<li>Source:     Schannel</li>
+<li>Event-ID:   36885</li>
+<li>Bei der Nachfrage der Clientauthentifizierung sendet dieser Server eine Liste vertrauenswürdiger Zertifizierungsstellen an den Client. Der Client verwendet diese Liste, um ein Clientzertifikat auszuwählen, das für den Server vertrauenswürdig ist. Momentan vertraut dieser Server sehr vielen Zertifizierungsstellen, sodass die Liste zu lang ist. Die Liste wurde abgeschnitten. Der Administrator dieses Computer sollte die für Clientauthentifizierung vertrauenswürdigen Zertifizierungsstellen überprüfen und diejenigen entfernen, die nicht unbedingt als vertrauenswürdig eingestuft werden müssen.</li>
+</ul>
+<h2>Resolution</h2>
+<p>There are two things you can do.</p>
+<ol>
+<li>at first delete all authorities that are expired</li>
+<li>Configure Schannel to no longer send the list of trusted root certificate
+<ol>
+<li>open RegEdit</li>
+<li>navigate to: <strong>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL</strong></li>
+<li>add new <strong>DWORD Value </strong>and name it <strong>SendTrustedIssuerList</strong></li>
+<li>set the value to <strong>0</strong></li>
+<li>this should work without reboot</li>
+</ol>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p>Reference:</p>
+<ul>
+<li><a title="liste-der-vertrauenswuerdigen-stamm-zertifizierungsstellen-ist-zu-lang" href="http://blog.blackseals.net/2012/12/19/liste-der-vertrauenswuerdigen-stamm-zertifizierungsstellen-ist-zu-lang/" target="_blank">1. blog.blackseals.net</a></li>
+<li><a title="Max RootCA, oder wo Vertrauen schadet" href="http://www.msxfaq.de/signcrypt/maxrootca.htm" target="_blank">2. www.msxfaq.de/</a></li>
+<li><a title="Technet" href="http://support.microsoft.com/kb/933430/en-us">3. Technet (Method 3)</a></li>
+</ul>

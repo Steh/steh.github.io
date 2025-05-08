@@ -1,0 +1,27 @@
+---
+layout: post
+title: HTTP Requests mit Python
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  original_post_id: '419'
+  _wp_old_slug: '419'
+---
+<pre class="lang:python decode:true " title="HTTP Status Code">#Gibt den HTTP Status Code zurück
+import requests
+
+response = requests.get('http://placekitten.com/')
+print(response.status_code)
+
+#----------------------------------------------
+# Öffnet die URL und gibt ein Katzenbild zurück
+from urllib2 import urlopen
+
+website = urlopen("http://placekitten.com")
+kittens = website.read()
+
+print kittens[559:1000]	
+</pre> 

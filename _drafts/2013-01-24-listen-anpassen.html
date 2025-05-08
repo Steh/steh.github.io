@@ -1,0 +1,21 @@
+---
+layout: post
+title: Listen anpassen
+categories:
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '193'
+  _wp_old_slug: '193'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-01-24 12:32:58'
+---
+Mit Update-List können Listen angepasst werden
+[code lang="powershell" light="true"]Get-Mailbox stiki | Update-List -Property &quot;&lt;strong&gt;EmailAddresses&lt;/strong&gt;&quot; -Remove &quot;&lt;strong&gt;smtp:test@stiki.de&lt;/strong&gt;&quot; -Add &quot;&lt;strong&gt;smtp:test2@stiki.de&lt;/strong&gt;&quot;[/code]

@@ -1,0 +1,22 @@
+---
+layout: post
+title: AutoDiscoverSiteScope einstellen
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '152'
+  _wp_old_slug: '152'
+  _elasticsearch_indexed_on: '2013-01-16 13:16:56'
+---
+Definiert für welche sites die Cas-Server zuständig sind.
+<pre><code>Set-ClientAccessServer "<em>CAS-SERVER</em>" -AutoDiscoverSiteScope side1,side2,side3</code></pre>
+
+Site hinzufügen:
+<pre><code>Get-ClientAccessServer CAS-Stiki | Update-List -Property AutoDiscoverSiteScope -Add "STEHSON" | Set-ClientAccessServer<code></pre>
+
+Site hinzufügen:
+<pre><code>Get-ClientAccessServer CAS-Stiki | Update-List -Property AutoDiscoverSiteScope -Remove "STEHSON" | Set-ClientAccessServer<code></pre>

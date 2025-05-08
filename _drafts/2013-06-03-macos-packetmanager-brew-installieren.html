@@ -1,0 +1,23 @@
+---
+layout: post
+title: 'MacOS: Packetmanager brew installieren'
+categories:
+- MacOS
+tags:
+- brew; macos
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  sharing_disabled: '1'
+  switch_like_status: '1'
+  _elasticsearch_indexed_on: '2013-06-03 05:37:34'
+---
+[code language="bash" light="true"]# zum installieren einfach folgende Zeile ausfüren
+ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;[/code]
+
+[code language="bash" light="true"]# sollten Rechte Probleme auftreten:
+sudo chown -R $(whoami) /usr/local[/code]
+
+<a href="http://mxcl.github.io/homebrew/" title="Brew Page" target="_blank">Quelle: Brew Webseite</a>

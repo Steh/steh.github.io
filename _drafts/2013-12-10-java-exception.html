@@ -1,0 +1,40 @@
+---
+layout: post
+title: 'Java: Exception'
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+---
+<h1>Exception werfen</h1>
+
+<pre><code>int alter = -1;
+
+if(alter &lt; 0)
+   throw new IllegalArgumentException( "Kein Alter &lt; 0 erlaubt!" );
+</code></pre>
+
+<h1>Eigene Exception schreiben</h1>
+
+<pre><code>public class Geburtstag {
+    private int geburtsjahr;
+
+    public Geburtstag(int geburtsjahr) {
+
+        if( this.geburtsjahr &gt; aktuellesJahr )
+            throw new FalscheErstzulassungAusnahme( "Geburtsjahr liegt in der Zukunft" );
+        this.geburtsjahr = geburtsjahr
+    } //Ende Konstruktor
+
+    static class FalscheErstzulassungAusnahme extends Exception {
+        public FalscheErstzulassungAusnahme(String s) {
+            super(s);
+        }
+    } // Ende Class FalscheErstzulassungAusnahme
+} // Ende class Geburtstag
+
+</code></pre>

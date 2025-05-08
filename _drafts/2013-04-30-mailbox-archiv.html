@@ -1,0 +1,20 @@
+---
+layout: post
+title: Mailbox Archiv
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '444'
+  _wp_old_slug: '444'
+  _elasticsearch_indexed_on: '2013-04-30 08:02:36'
+---
+[code lang="powershell" light="true"]#gibt die Archiv Speichergrenzen aus
+Get-Mailbox stiki@stiki.de -Archiv | Select-Object Archiv*
+
+#gibt die Größe des Archivs aus
+Get-MailboxStatistics stiki@stiki.de -Archiv | Select-Object *[/code]

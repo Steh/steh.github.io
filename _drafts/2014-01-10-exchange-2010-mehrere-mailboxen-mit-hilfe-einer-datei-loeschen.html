@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'Exchange 2010: Mehrere Mailboxen mit Hilfe einer Datei löschen'
+categories:
+- Exchange
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+<pre><code>Import-Csv -Path C:\mailbox.txt -Header Name  | ForEach-Object{Get-Mailbox $_.name | Disable-Mailbox}
+</code></pre>

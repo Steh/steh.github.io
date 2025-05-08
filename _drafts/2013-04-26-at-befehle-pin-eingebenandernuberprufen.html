@@ -1,0 +1,65 @@
+---
+layout: post
+title: AT+ Befehle - PIN eingeben/ändern/überprüfen
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _oembed_4b20bf1d3ff7b71340c2d5faaeb78503: '{{unknown}}'
+  _oembed_9cb1cfda4eb4cb0330e10d44641da5a8: '{{unknown}}'
+  _oembed_94293e4994524d48b9b8795e8066bc42: '{{unknown}}'
+  _oembed_7de77eb87e7a7699922cc17e7ef28a1b: '{{unknown}}'
+  _oembed_200341bd949abb73e8c7dca5f06963b1: '{{unknown}}'
+  _oembed_f485d14def74dcc72342f1cba40ebd74: '{{unknown}}'
+  _oembed_5d4b8f516267dd6dc3a87a683aa4e001: '{{unknown}}'
+  _oembed_66cb8b37144efdfa30e33331ba77998b: '{{unknown}}'
+  _oembed_e92da4464961837ee767e1b0728042b1: '{{unknown}}'
+  _oembed_226bca53df5d1aa3f5bd94245742d6d9: '{{unknown}}'
+  _publicize_pending: '1'
+  _oembed_18c6c978368c8ded6dfd366cdde1a8d2: '{{unknown}}'
+  _oembed_ae09b43cbe5d696fb5cb5f7cf51851bb: '{{unknown}}'
+  _wpas_done_all: '1'
+  _oembed_b32c9cb7cc35542eac2b20a29d431b49: '{{unknown}}'
+  _oembed_45c0e347779288ecf80bba944879f4fc: '{{unknown}}'
+  original_post_id: '435'
+  _wp_old_slug: '435'
+  _oembed_fbc9f949d81352c13f92bd159caa7929: '{{unknown}}'
+  _oembed_8933d9ca19d5e790e00d97a6cf28224d: '{{unknown}}'
+  _oembed_579a4ae88fe3a69a23765e7a30f98cc1: '{{unknown}}'
+  _oembed_08f3cf1bb39023f68f73a4c349c63550: '{{unknown}}'
+  _oembed_836629a81400ecf80a823e61561710b5: '{{unknown}}'
+  _oembed_7cad480742c0cab151696b1ea6770de7: '{{unknown}}'
+  _oembed_86021abe721e67a25ec3445ac8b490b3: '{{unknown}}'
+  _oembed_2f2153921e32e9d960156021b3449069: '{{unknown}}'
+  _oembed_20ccbefcceda080e439f8f3d6097abbf: '{{unknown}}'
+  _oembed_f5271877932c71c313c3cc4e6d32e7cf: '{{unknown}}'
+  _oembed_473e5ee0d12e27b33a8e81cb8f257812: '{{unknown}}'
+  _oembed_2070623fbe581ccf6aab3c39ca9976b9: '{{unknown}}'
+  _oembed_ee41944fe2894dc785ee4b09e88ee5c2: '{{unknown}}'
+  _oembed_df164c51f124ccb5368a0d381b912a47: '{{unknown}}'
+  _oembed_a7a306ae80a6d187090316523aee3523: '{{unknown}}'
+  _oembed_032496581dd31093751c881016d42b67: '{{unknown}}'
+  _oembed_e22cac84f63353bc21a91c3727f60f42: '{{unknown}}'
+  _oembed_e3d46f028c17f46d342a4af66a7b1111: '{{unknown}}'
+  _elasticsearch_indexed_on: '2013-04-26 11:08:23'
+---
+<h2>Pin überprüfen</h2>
+
+AT+CPIN?	Überprüft den Pin Status
+     SIM PIN	wartet auf PIN
+     SIM PUK	wartet auf PUK
+     READY	bereit
+
+
+<h2>Pin ändern/eingeben</h2>
+AT^SPIC				
+AT+CPIN=1234			PIN eingeben
+AT+CPIN="PUK","NEUE-PIN"	PIN ändern
+
+<a href="http://steh-blog.de/wp-content/uploads/2013/04/at.png"><img src="http://steh-blog.de/wp-content/uploads/2013/04/at.png" alt="AT+" width="359" height="316" class="alignnone size-full wp-image-437" /></a>
+
+Quellen:
+http://www.shamrock.de/dfu/dfu7.htm
+http://www.nobbi.com/atgsm.html#+cops

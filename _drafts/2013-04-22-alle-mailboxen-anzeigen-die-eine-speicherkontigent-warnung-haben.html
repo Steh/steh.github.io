@@ -1,0 +1,21 @@
+---
+layout: post
+title: Alle Mailboxen anzeigen die eine Speicherkontigent Warnung haben
+categories:
+- Exchange
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '399'
+  _wp_old_slug: '399'
+  _elasticsearch_indexed_on: '2013-04-22 07:28:27'
+---
+[code language="PowerShell" light="true"]#Ausgabe aller Mailboxen mit Speichergrößen Warnung
+Get-MailboxStatistics | Where-Object {$_.StorageLimitStatus -notLike &quot;BelowLimit&quot; }[/code]

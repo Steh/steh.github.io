@@ -1,0 +1,26 @@
+---
+layout: post
+title: 'Exchange 2010: MessageTracking für Spezifische Domain'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _sd_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+<pre><code>$mbx = Get-Mailbox -OrganizationalUnit &lt;OU&gt;
+$srv = Get-TransportServer stehsa-* | Sort-Object Name
+ForEach($i in $mbx) {
+    $i.PrimarySmtpAddress
+    ForEach($x in $srv) {
+        $x.Name
+        Get-MessageTrackingLog -Server $x.DistinguishedName -Recipients $i.PrimarySmtpAddress | Select-Object Sender &gt;&gt; C:\Export\mail.txt
+    }
+}
+
+Remove-Variable mbx, srv
+</code></pre>

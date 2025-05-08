@@ -1,0 +1,22 @@
+---
+layout: post
+title: 'Exchange 2010: Passwortwechsel über OWA aktivieren'
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  geo_public: '0'
+  _publicize_pending: '1'
+  _elasticsearch_indexed_on: '2013-07-18 05:37:20'
+  _edit_last: '1'
+---
+Um das ändern der Passwörter über Outlook Web App zu erlauben muss folgender Registry Key gesetzt werden:
+
+<pre>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchange OWA
+REG_DWORD: ChangeExpiredPasswordEnabled
+Wert: 1</pre>
+
+<a href="http://technet.microsoft.com/de-de/library/bb684904%28v=exchg.141%29.aspx" target="_blank">Quelle: Technet</a>

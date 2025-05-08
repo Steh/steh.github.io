@@ -1,0 +1,24 @@
+---
+layout: post
+title: fail2ban
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  original_post_id: '448'
+  _wp_old_slug: '448'
+---
+apt-get install fail2ban
+
+Konfig:
+/etc/fail2ban/jail.conf
+/etc/fail2ban/fail2ban.conf
+
+Starten:
+/etc/init.d/fail2ban start
+/etc/init.d/fail2ban restart
+
+Testen:
+fail2ban-client status

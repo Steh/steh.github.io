@@ -1,0 +1,48 @@
+---
+layout: post
+title: Share Mailbox Ressource Calendar
+categories:
+- Exchange
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  sharing_disabled: '1'
+  _wpas_done_all: '1'
+  _sd_is_markdown: ''
+  _wpcom_is_markdown: '1'
+---
+There are <strong>two ways</strong> how to do this:
+
+<h2>Give one User FullAccess</h2>
+
+You can give only one user FullAccess, this user has now the right to set permissions.
+
+<ol>
+<li>Set the right for one User </li>
+</ol>
+
+<pre><code>Add-MailboxFolderPermission -Identity "RES-Steh-Car" -User "steh@stiki.de" -AccessRights "FullAccess"
+</code></pre>
+
+<ol>
+<li>Mount the Calendar in Outlook</li>
+<li>right click on the Calendar -> Properties -> Permissions</li>
+</ol>
+
+<strong>Set the right for one user</strong>
+
+<pre><code>Add-MailboxFolderPermission -Identity "RES-Steh-Car:Calendar" -User "steh@stiki.de" -AccessRights "ReadItems"
+</code></pre>
+
+<h2>Problems</h2>
+
+I had problems by transform the Group everytime i try to Add the Group I became an Error.<br />
+<em>One or more users cannot be added to the folder access list. Non-Local users cannot be given rights on this server.</em><br />
+[code lang="powershell"]Set-DistributionGroup <GROUP-NAME> -MemberDepartRestriction Closed[/code]
+
+<strong>Ressource:</strong><br />
+<a href="http://blogs.msdn.com/b/pepeedu/archive/2010/08/26/how-to-upgrade-a-universal-distribution-group-to-a-universal-security-group.aspx?Redirected=true" title="Distribution Group Problem">http://blogs.msdn.com</a>

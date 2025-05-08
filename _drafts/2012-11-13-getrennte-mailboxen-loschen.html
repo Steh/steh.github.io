@@ -1,0 +1,21 @@
+---
+layout: post
+title: Getrennte Mailboxen löschen
+categories:
+- Exchange
+tags:
+- Exchange
+- Getrennte Mailbox
+- Powershell
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  original_post_id: '60'
+  _wp_old_slug: '60'
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2012-11-13 09:45:27'
+---
+[code lang="powershell" light="true"]Remove-StoreMailbox –database “&lt;DATENBANK&gt;” –identity &quot;&lt;MAILBOX&gt;&quot; –MailboxState Disabled[/code]
+<a title="Microsoft Referenz zu Remove-StoreMailbox" href="http://technet.microsoft.com/en-us/library/ff829913.aspx" target="_blank">Microsoft Referenz zu Remove-StoreMailbox</a>

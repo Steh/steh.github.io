@@ -1,0 +1,25 @@
+---
+layout: post
+title: Datenbankindex aktualisieren
+categories:
+- Database
+- Exchange
+- Exchange 2007
+- Exchange 2010
+- PowerShell
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '335'
+  _wp_old_slug: '335'
+  tagazine-media: a:7:{s:7:"primary";s:0:"";s:6:"images";a:0:{}s:6:"videos";a:0:{}s:11:"image_count";i:0;s:6:"author";s:8:"41094722";s:7:"blog_id";s:8:"41671776";s:9:"mod_stamp";s:19:"2013-07-19
+    13:14:28";}
+  geo_public: '0'
+  _elasticsearch_indexed_on: '2013-04-09 06:33:04'
+---
+[code lang="powershell" light="true"]#Aktualisiert nur den Index für die angegebenen Datenbank
+Update-MailboxDatabaseCopy database01 -CatalogOnly[/code]

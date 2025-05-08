@@ -1,0 +1,20 @@
+---
+layout: post
+title: Checking Logs with PowerShell
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _publicize_pending: '1'
+  _wpas_done_all: '1'
+  original_post_id: '347'
+  _wp_old_slug: '347'
+  _elasticsearch_indexed_on: '2013-04-19 11:34:58'
+---
+[code language="Powershell"]#Zeigt alle Eventlog
+Get-EventLog * -ComputerName cas.stiki.de
+
+#Zeigt alle Fehler aus dem Application Log
+Get-EventLog -LogName Application -EntryType Error -ComputerName cas.stiki.de[/code]
