@@ -67,4 +67,4 @@ background
 
 ## References
 
-[^1]: [tryhackme: Advent of Cyber Day 9]([https://tryhackme.com/room/cyberthreatintel](https://tryhackme.com/room/adventofcyber4))
+[^1]: [tryhackme: Advent of Cyber Day 9]([https://tryhackme.com/room/cyberthreatintel](https://tryhackme.com/room/adventofcyber4)
