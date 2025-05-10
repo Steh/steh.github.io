@@ -5,7 +5,7 @@ categories:
   - tools
   - Information Security
 tags:
-  - blue team
+  - splunk
 classes: 
   - wide
 excerpt: "Learn about Splunk's Asset and Identity Framework, including merging, troubleshooting, and useful commands."

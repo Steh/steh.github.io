@@ -63,5 +63,4 @@ index=* sourcetype=linux:audit:enriched type="PROCTITLE"
 * [Splunk docs: replace](https://docs.splunk.com/Documentation/Splunk/9.0.4/SearchReference/TextFunctions#replace.28X.2CY.2CZ.29)
 * [Splunk docs: urldecode](https://docs.splunk.com/Documentation/SCS/current/SearchReference/TextFunctions#urldecode.28.26lt.3Burl.26gt.3B.29)
 
-
 [def]: https://splunkbase.splunk.com/app/3412

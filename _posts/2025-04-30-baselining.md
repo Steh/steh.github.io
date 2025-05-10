@@ -3,7 +3,7 @@ title: "Splunk: Baselining"
 categories: 
   - informationsecurity
 tags:
-  - blue team
+  - splunk
 classes: 
   - wide
 excerpt: "A guide to statistical measures in Splunk for baselining and anomaly detection."

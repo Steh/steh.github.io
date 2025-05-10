@@ -55,7 +55,12 @@ index=security_logs
 
 ## References
 
-- [Threat Intelligence framework in Splunk ES][https://dev.splunk.com/enterprise/docs/devtools/enterprisesecurity/threatintelligenceframework/]
-- [Using threat intelligence in Splunk Enterprise Security ][https://lantern.splunk.com/Security/UCE/Guided_Insights/Threat_intelligence/Using_threat_intelligence_in_Splunk_Enterprise_Security]
-- [What is Cyber Threat Intelligence? ][https://www.splunk.com/en_us/blog/learn/what-is-cyber-threat-intelligence.html]
-- [Indicators of Compromise (IoCs): An Introductory Guide](https://www.splunk.com/en_us/blog/learn/ioc-indicators-of-compromise.html)
+- [Threat Intelligence framework in Splunk ES][threat-intel-framework]
+- [Using threat intelligence in Splunk Enterprise Security][using-threat-intelligence]
+- [What is Cyber Threat Intelligence?][cyber-threat-intelligence]
+- [Indicators of Compromise (IoCs): An Introductory Guide][def]
+
+[threat-intel-framework]: https://dev.splunk.com/enterprise/docs/devtools/enterprisesecurity/threatintelligenceframework/
+[def]: https://www.splunk.com/en_us/blog/learn/ioc-indicators-of-compromise.html
+[using-threat-intelligence]: https://lantern.splunk.com/Security/UCE/Guided_Insights/Threat_intelligence/Using_threat_intelligence_in_Splunk_Enterprise_Security
+[cyber-threat-intelligence]: https://www.splunk.com/en_us/blog/learn/what-is-cyber-threat-intelligence.html

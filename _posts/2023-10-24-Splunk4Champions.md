@@ -40,15 +40,15 @@ Command + Shift + E
 ## supported languages
 
 ```bash
-German	de-DE
-English	en-GB
-English US	en-US
-French	fr-FR
-Italian	it-IT
-Japanese	ja-JP
-Korean	ko-KR
-Chinese simpl.	zh-CN
-Chinese trad.	zh-TW
+German          de-DE
+English         en-GB
+English-US      en-US
+French          fr-FR
+Italian         it-IT
+Japanese        ja-JP
+Korean          ko-KR
+Chinese simpl.  zh-CN
+Chinese trad.   zh-TW
 ```
 
 ## Using Job inspector to optimize searches
@@ -105,7 +105,7 @@ optimizedSearch - shows an optimized search version
 * Streaming commands
   * eval, fields, head, iplocation, replace...
 * Transforming commands
-  * addtotals, chart, mvcombine, rare, stats, table, timechart, top... 
+  * addtotals, chart, mvcombine, rare, stats, table, timechart, top...
 
 ## tstats
 
