@@ -6,66 +6,88 @@ tags:
 - blue team
 classes: 
 - wide
-excerpt: "based on the Introduction to Detection Engineering with Splunk Free learning from Splunk" 
+excerpt: "Based on the Introduction to Detection Engineering with Splunk Free learning from Splunk." 
 toc: true
---- 
+---
 
-# SOC Maturity
+## SOC Maturity
 
-* Metrics
-    * Mean Time to Detect (MTTD)
-        * MTTD measures the average time it takes for a SOC team to detect an incident or a security breach
-    * Mean Time to Investigate (MTTI)
-        * MTTI is the average time from the fault detection, until an investigation is initiated
-    * Mean Time to Resolution (MTTR)
-        * MTTR is the metric used to evaluate the average time a SOC team takes to completely resolve an incident once it has been detected.
-    * False Positive Rates (FPR) and False Negative Rates (FNR)
-        * FPR, or False positive rate, measures the percentage of incidents that are incorrectly classified as cybersecurity incidents but are not actual threats.
-        * False negative rate (FNR) is the percentage of incidents that are mistakenly categorized as non-cyber threats but are actually cyber threats.
-# detection engineering cycle.
+### Metrics
 
-1. Research
-    * This may include reviewing feedback from experts like threat researchers, analysts, or threat hunters to stay informed about the latest trends and vulnerabilities
-    * dive into the documentation
-2. Collect Data
-    * use sample data sets or run attack simulations to generate meaningful data for analysis and use in building detections.
-3. Build Detections
-    * establish what type of detection you are building, such as a rule/signature or anomaly based detection. You will crafting your search to detect the threat within your raw data.
-4. Test and Tune
-    *  use the data you collect to test and tune your detection to reduce false positives, and align with your organization's unique security needs
-5. Review
-    * don't forget to regularly review and update your detections to ensure they stay effective as threats evolve. This may even involve deprecating obsolete detections.
+- **Mean Time to Detect (MTTD)**  
+  Measures the average time it takes for a SOC team to detect an incident or security breach.
 
-# getting ready
+- **Mean Time to Investigate (MTTI)**  
+  The average time from fault detection until an investigation is initiated.
 
-1. Normalize your Data
-    * convert non-standard field names into a uniform set of standardized fields
-    * use Technologie Addons (TA-)
-2. baselining:
-    * ML
-        * https://docs.splunk.com/Documentation/MLApp/5.5.0/User/AboutMLTK
-        * https://github.com/splunk/security_content/blob/develop/baselines/baseline_of_dns_query_length___mltk.yml
-    * stats
-        * 
-3. Test Detections:
-    * https://attack-range.readthedocs.io/en/latest/
-    * https://github.com/redcanaryco/atomic-red-team
-    * https://github.com/mvelazc0/PurpleSharp
-    * 
+- **Mean Time to Resolution (MTTR)**  
+  Evaluates the average time a SOC team takes to completely resolve an incident once detected.
 
+- **False Positive Rates (FPR) and False Negative Rates (FNR)**  
+  - **FPR**: Percentage of incidents incorrectly classified as cybersecurity threats.  
+  - **FNR**: Percentage of incidents mistakenly categorized as non-threats but are actual threats.
 
-## source
+## Detection Engineering Cycle
 
-* [Cybersec Cafe: My SIEM-Agnostic Creative Process to Detection Engineering][def]
-* [Cybersec Cafe: Engineering the SOC: Writing a Detection Rule][def1]
-* [youtube: Anomaly Detection So Easy Your Grandma Can Do It. No ML degree Required Splunk .conf 2024][def2]
-* [github: Anomaly Detection So Easy Your Grandma Can Do It. No ML degree Required Splunk .conf 2024][def3]
-* [cyberseccafe.com: My SIEM-Agnostic Creative Process to Detection Engineering][def4]
-* [cyberseccafe.com: Detection Engineering the SOC: Writing a Detection Rule][def5]
+1. **Research**  
+   - Review feedback from experts like threat researchers, analysts, or hunters.  
+   - Stay informed about the latest trends and vulnerabilities.  
+   - Dive into relevant documentation.
 
-[def]: https://osintteam.blog/my-siem-agnostic-creative-process-to-detection-engineering-4e401ac60b63
-[def1]: https://www.cyberseccafe.com/p/detection-engineering-the-soc-writing
-[def2]: https://www.youtube.com/watch?v=iFqz9aIfGAI
-[def3]: https://github.com/lameCreations/Splunk-Conf-2024-Material
-[def4]: https://www.cyberseccafe.com/p/my-siem-agnostic-creative-process
-[def5]; https://www.cyberseccafe.com/p/detection-engineering-the-soc-writing
+2. **Collect Data**  
+   - Use sample datasets or run attack simulations to generate meaningful data for analysis.
+
+3. **Build Detections**  
+   - Define the type of detection (e.g., rule/signature-based or anomaly-based).  
+   - Craft searches to detect threats within raw data.
+
+4. **Test and Tune**  
+   - Use collected data to test and refine detections, reducing false positives and aligning with organizational needs.
+
+5. **Review**  
+   - Regularly review and update detections to ensure effectiveness as threats evolve.  
+   - Deprecate obsolete detections when necessary.
+
+## Getting Ready
+
+1. **Normalize Your Data**  
+   - Convert non-standard field names into standardized fields.  
+   - Use Technology Add-ons (TA-).
+
+2. **Baselining**  
+   - **Machine Learning (ML)**:  
+     - [Splunk Machine Learning Toolkit Documentation](https://docs.splunk.com/Documentation/MLApp/5.5.0/User/AboutMLTK)  
+     - [Baseline Example: DNS Query Length](https://github.com/splunk/security_content/blob/develop/baselines/baseline_of_dns_query_length___mltk.yml)  
+   - **Statistics-Based**: Use statistical methods for baselining.
+
+3. **Test Detections**  
+   - [Attack Range](https://attack-range.readthedocs.io/en/latest/)  
+   - [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)  
+   - [PurpleSharp](https://github.com/mvelazc0/PurpleSharp)
+
+## Alert Triage
+
+When triaging alerts, consider the following questions:
+
+- What does this alert mean?  
+- Was this an actual attack?  
+- Was the attack successful?  
+- What assets were affected?  
+- What did the attacker do (or try to do)?  
+- How should we respond?
+
+## Source
+
+- [Cybersec Cafe: My SIEM-Agnostic Creative Process to Detection Engineering][def]  
+- [Cybersec Cafe: Engineering the SOC: Writing a Detection Rule][def1]  
+- [YouTube: Anomaly Detection So Easy Your Grandma Can Do It. No ML Degree Required Splunk .conf 2024][def2]  
+- [GitHub: Anomaly Detection So Easy Your Grandma Can Do It. No ML Degree Required Splunk .conf 2024][def3]  
+- [Cybersec Cafe: My SIEM-Agnostic Creative Process to Detection Engineering][def4]  
+- [Cybersec Cafe: Detection Engineering the SOC: Writing a Detection Rule][def5]
+
+[def]: https://osintteam.blog/my-siem-agnostic-creative-process-to-detection-engineering-4e401ac60b63  
+[def1]: https://www.cyberseccafe.com/p/detection-engineering-the-soc-writing  
+[def2]: https://www.youtube.com/watch?v=iFqz9aIfGAI  
+[def3]: https://github.com/lameCreations/Splunk-Conf-2024-Material  
+[def4]: https://www.cyberseccafe.com/p/my-siem-agnostic-creative-process  
+[def5]: https://www.cyberseccafe.com/p/detection-engineering-the-soc-writing

@@ -1,36 +1,35 @@
 ---
-title: "splunk anomalydetection command"
+title: "Splunk anomalydetection Command"
 categories: 
 - informationsecurity
 tags:
 - blue team
 classes: 
 - wide
-excerpt: "" 
+excerpt: "A guide to using the Splunk 'anomalydetection' command for identifying anomalies in data."
 toc: true
---- 
+---
 
 ```bash
-anomalydetection [<method-option>] [<action-option>] [<pthresh-option>] [<cutoff-option>] [<field-list>]```
+anomalydetection [<method-option>] [<action-option>] [<pthresh-option>] [<cutoff-option>] [<field-list>]
+```
 
-## method-option
-   
-* histogram
-* zscore
-* iqr
+## Method Options
 
-## action
+- **histogram**: Detect anomalies based on histogram analysis.
+- **zscore**: Use z-score to identify outliers.
+- **iqr**: Apply interquartile range for anomaly detection.
 
-* annotae
-* filter
-* summary 
+## Action Options
 
+- **annotate**: Add anomaly information to the results.
+- **filter**: Filter out non-anomalous data.
+- **summary**: Generate a summary of anomalies.
 
+## Source
 
-## source
-
-* [anomalydetection][def]
-* [About the Splunk Machine Learning Toolkit][def1]
+- [Splunk Documentation: anomalydetection Command][def]
+- [About the Splunk Machine Learning Toolkit][def1]
 
 [def]: https://docs.splunk.com/Documentation/Splunk/9.3.3/SearchReference/Anomalydetection
 [def1]: https://docs.splunk.com/Documentation/MLApp/latest/User/AboutMLTK

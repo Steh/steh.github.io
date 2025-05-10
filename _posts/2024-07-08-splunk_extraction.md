@@ -1,7 +1,8 @@
 ---
-title: "Mastering Field Extraction in Splunk: Quick Guide"
+title: "Splunk: Mastering Field Extraction, a Quick Guide"
 categories: 
 - informationsecurity
+- Splunk
 tags:
 - blue team
 classes: 
@@ -19,47 +20,44 @@ In Splunk, `props.conf` and `transforms.conf` define how data is parsed and proc
 - **props.conf**: Specifies source type definitions, time extraction, and field extractions, often referencing `transforms.conf`.
 - **transforms.conf**: Defines complex field extractions, lookups, anonymization, and routing.
 
-## Understanding `extractions`
+## Types of Extractions
 
-In Splunk, you configure field extractions in `props.conf` using three main types: `TRANSFORMS`, `REPORT`, and `EXTRACT`. Here's a brief overview of each:
+Field extractions in `props.conf` can be configured using three main types:
 
-## Index Time vs. Search Time Extractions
+- **`TRANSFORMS`**: Used for index-time extractions by referencing `transforms.conf`.
+- **`REPORT`**: Used for search-time extractions by referencing `transforms.conf`.
+- **`EXTRACT`**: Used for search-time extractions with regex directly in `props.conf`.
 
-- **Index-Time Extractions (`TRANSFORMS`)**:
-  - Occur when data is ingested.
-  - Use sparingly due to performance impact.
+### Index-Time vs. Search-Time Extractions
+
+- **Index-Time Extractions (`TRANSFORMS`)**:  
+  - Occur during data ingestion.  
+  - Use sparingly due to performance impact.  
   - Example:
-
     ```bash
     [source::example_logs]
     TRANSFORMS-add_fields = add_field_transform
     ```
 
-- **Search-Time Extractions (`REPORT` and `EXTRACT`)**:
-  - Occur when you run a search.
-  - Preferred for most cases to avoid index-time load.
-  - `REPORT` references a field transform in `transforms.conf`.
-  - `EXTRACT` includes the regex directly in `props.conf`.
-    - for straightforward extractions that don’t need reuse or complex handling
+- **Search-Time Extractions (`REPORT` and `EXTRACT`)**:  
+  - Occur during search execution.  
+  - Preferred for most cases to avoid index-time load.  
   - Example for `REPORT`:
-  
     ```bash
     [source::example_logs]
     REPORT-add_fields = add_field_transform
     ```
-
   - Example for `EXTRACT`:
-
     ```ini
     [source::example_logs]
     EXTRACT-field = (?<field_name>\w+)
     ```
 
-## Step-by-Step Guide to Field Extraction with transforms.conf
+## Step-by-Step Guide to Field Extraction
 
-### 1. Identifying Data Patterns
+### 1. Identify Data Patterns
 
-Identify the data patterns for extraction. For example, in logs like:
+Identify patterns in your data for extraction. For example, in logs like:
 
 ```bash
 2023-07-08 12:34:56,789 INFO User=john.doe Action=login Status=success
@@ -67,77 +65,55 @@ Identify the data patterns for extraction. For example, in logs like:
 
 You might extract `User`, `Action`, and `Status`.
 
-### 2. Create Extraction in SPL
+### 2. Develop and Test the Extraction in SPL
 
-- develope and test the extraction
+Use the `rex` command to test your extraction:
 
 ```bash
-# extraction on the _raw data
 index=mydata
-| rex field=_raw User=(?P<user>\S+) Action=(?P<action>\S+) Status=(?P<status>\S+)
+| rex field=_raw "User=(?P<user>\S+) Action=(?P<action>\S+) Status=(?P<status>\S+)"
 ```
 
-### 3. Defining Extractions in `transforms.conf`
+### 3. Define Extractions in `transforms.conf`
 
-- Define the extraction in the `transforms.conf`
-- the following are equivalent for search-time field extractions:
-  - Using FORMAT:
-  
-  ```bash
-  REGEX  = ([a-z]+)=([a-z]+)
-  FORMAT = field1::$1 <field-name>::<field-value>
-  ```
-
-  - Without using FORMAT
-  
-  ```bash
-  REGEX  = (?<_KEY_1>[a-z]+)=(?<_VAL_1>[a-z]+)
-  ````
+Define the extraction logic in `transforms.conf`:
 
 ```bash
-# extraction on the _raw data
 [extract_user_action_status]
 REGEX = User=(?P<user>\S+) Action=(?P<action>\S+) Status=(?P<status>\S+)
+```
 
-# extraction on specific field, doesn´t work if field contains an white space
+For extractions on specific fields:
+
+```bash
 [extract_user_action_status]
 REGEX = User=(?P<user>\S+) Action=(?P<action>\S+) Status=(?P<status>\S+)
 SOURCE_KEY = field
 ```
 
-Test the extraction on your data. The extract command reloads the config from props and transforms configuration file.
+### 4. Configure `props.conf`
+
+Reference the extraction in `props.conf`:
 
 ```bash
-index=mydata
-| extract extract_user_action_status
-```
-
-### 4. Configuring `props.conf`
-
-Define the source type and reference the transforms:
-
-```bash
-# Option 1 reference to the stanza in transforms.conf
 [your_log_sourcetype]
 TRANSFORMS-extract_user_action_status = extract_user_action_status
 ```
 
-### 4. Reload config
+### 5. Reload Configurations
 
-- you need to restart the Server to update the configuration
-- until then you can reload the extractions from props.conf and transforms.conf with the following:
+To apply changes without restarting Splunk, reload the configurations:
 
 ```bash
 | extract reload=t
-
 ```
 
-## references
+## References
 
-- [splunk.com props.conf: Field extraction configuration][def]
-- [splunk.com transforms.conf][def1]
-- [splunk.com Configure advanced extractions with field transforms][def2]
+- [Splunk Documentation: props.conf - Field Extraction Configuration][def]
+- [Splunk Documentation: transforms.conf][def1]
+- [Splunk Documentation: Configure Advanced Extractions with Field Transforms][def2]
 
-[def]: https://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf#Field_extraction_configuration
-[def1]: https://docs.splunk.com/Documentation/Splunk/9.2.2/Admin/Transformsconf
+[def]: https://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf#Field_extraction_configuration  
+[def1]: https://docs.splunk.com/Documentation/Splunk/9.2.2/Admin/Transformsconf  
 [def2]: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Configureadvancedextractionswithfieldtransforms
