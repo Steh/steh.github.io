@@ -183,12 +183,23 @@ Suppose you are monitoring the response time of a web application. You can use t
 index=web_logs sourcetype=access_combined action=failed
 | bin _time span=1h
 | stats count as failed_logins by _time
-| stats avg(failed_logins) as mean_failed, stdev(failed_logins) as stddev_failed
-| eval z_score = (response_time - failed_logins) / stddev_failed
+| stats avg(failed_logins) as mean, stdev(failed_logins) as stdev
+| eval z_score = (response_time - failed_logins) / stdev
 | where abs(z_score) > 3
 ```
 
 This search calculates the mean and standard deviation of response times, computes the Z-Score for each event, and filters out events with Z-Scores greater than 3 or less than -3.
+
+## Optional
+
+If you only want to see the anomalies from the last 24h you could at the following befor the last where
+
+```bash
+....
+# filter only for events from the last day
+| where _time >= relative_time(now(), "-1d@d") AND _time < relative_time(now(), "@d")
+...Y
+```
 
 ## Sources
 
@@ -200,6 +211,7 @@ For further reading and practical examples, refer to the following resources:
 4. [Unravel the Mysteries of Variance and Standard Deviation][def3]
 5. [Using Stats in Splunk Part 1: Basic Anomaly Detection][def4]
 6. [Statistics How To: Empirical Rule ( 68-95-99.7)][def5]
+7. [Using stats, eventstats & streamstats for Threat Hunting…Stat! ][def7]
 
 
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Findingandremovingoutliers
@@ -209,3 +221,4 @@ For further reading and practical examples, refer to the following resources:
 [def4]: https://hurricanelabs.com/splunk-tutorials/using-stats-in-splunk-part-1-basic-anomaly-detection/
 [def5]: https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/empirical-rule/
 [def6]: https://medium.com/detect-fyi/powershell-threat-hunting-identifying-obfuscation-using-standard-deviation-9b2d9f53697f
+[def7]: https://www.splunk.com/en_us/blog/security/stats-eventstats-streamstats-threat-hunting.html
