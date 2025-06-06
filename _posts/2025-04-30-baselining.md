@@ -15,7 +15,7 @@ date: 2025-04-30
 
 When working with Splunk, understanding statistical measures is crucial for baselining and anomaly detection. Below are some common statistical functions and their usage:
 
-### Mean
+### average/mean
 
 - **Command**: `stats avg(field)`
 - **Purpose**: Calculate the average value of a field to identify the central tendency of your data.
@@ -91,20 +91,29 @@ When working with Splunk, understanding statistical measures is crucial for base
 
 Baselining with standard deviation is a statistical method used to identify normal behavior and detect anomalies in data. Here's how you can use it in Splunk:
 
+* avg vs. median for Baselining
+   * use Median for Skewed Data or Outliers
+      * **Median** is robust against extreme values and better represents the “typical” case when data is uneven or contains anomalies.
+      * **Example:** Login counts, network traffic with occasional spikes.
+
+   * use Mean for Symmetric, Consistent Data
+      * **Mean (average)** works well when data is evenly distributed without significant outliers.
+      *  **Example**: Sensor readings, consistent process counts.
+
 ### Steps to Baseline with Standard Deviation
 
 1. **Calculate the Mean**:
    Use the `stats avg(field)` command to calculate the average value of the field you want to baseline.
 
    ```bash
-   | stats avg(response_time) as mean_response_time
+   | stats avg(response_time) as mean
    ```
 
 2. **Calculate the Standard Deviation**:
    Use the `stats stdev(field)` command to calculate the standard deviation of the field.
 
    ```bash
-   | stats stdev(response_time) as stddev_response_time
+   | stats stdev(response_time) as stddev
    ```
 
 3. **Define Thresholds**:
@@ -116,8 +125,8 @@ Baselining with standard deviation is a statistical method used to identify norm
    Use a `where` clause to filter events that fall outside the thresholds.
 
    ```bash
-   | eval lower_threshold = mean_response_time - (2 * stddev_response_time)
-   | eval upper_threshold = mean_response_time + (2 * stddev_response_time)
+   | eval lower_threshold = mean - (2 * stddev)
+   | eval upper_threshold = mean + (2 * stddev)
    | where response_time < lower_threshold OR response_time > upper_threshold
    ```
 
@@ -127,9 +136,9 @@ Suppose you are monitoring the response time of a web application. You can use t
 
 ```bash
 index=web_logs sourcetype=access_combined
-| stats avg(response_time) as mean_response_time, stdev(response_time) as stddev_response_time
-| eval lower_threshold = mean_response_time - (2 * stddev_response_time)
-| eval upper_threshold = mean_response_time + (2 * stddev_response_time)
+| stats avg(response_time) as mean, stdev(response_time) as stddev
+| eval lower_threshold = mean - (2 * stddev)
+| eval upper_threshold = mean + (2 * stddev)
 | where response_time < lower_threshold OR response_time > upper_threshold
 ```
 
@@ -200,6 +209,49 @@ If you only want to see the anomalies from the last 24h you could at the followi
 | where _time >= relative_time(now(), "-1d@d") AND _time < relative_time(now(), "@d")
 ...Y
 ```
+
+## Examples
+
+```bash
+index=_internal source=*license_usage.log* type="Usage" 
+| stats sum(b) as bytes by idx,_time
+| bin _time span=1d
+| stats sum(bytes) as bytes by _time,idx
+| eval GB=round(bytes/1024/1024/1024, 10)
+| eventstats avg(GB) as mean stdev(GB) as stdev by idx
+| eval lower_threshold = mean - (2 * stdev)
+| eval upper_threshold = mean + (2 * stdev)
+| where GB > upper_threshold
+| fields - lower_threshold - stdev - bytes
+| sort - _time
+```
+
+### show only the complete index data for each index that is over the threashold
+```bash
+index=_internal source=*license_usage.log* type="Usage" 
+# Step 1: Bin the _time field into daily intervals for time-based anal
+| bin _time span=1d
+
+# Step 2: Aggregate raw license usage data by index and time
+| stats sum(b) as bytes by idx,_time
+
+# Step 3: Convert bytes to gigabytes for easier readability
+| eval GB=bytes/1024/1024/1024
+
+# Step 4: For each index, calculate the maximum daily GB usage, mean, and standard deviation across all days
+| eventstats max(GB) as max_GB avg(GB) as mean stdev(GB) as stdev by idx
+
+# Step 5: Calculate lower and upper thresholds (mean ± 2*stdev) for anomaly detection per index
+| eval lower_threshold = mean - (2 * stdev)
+| eval upper_threshold = mean + (2 * stdev)
+
+# Step 6: Keep only indexes where the maximum daily usage exceeds the upper threshold
+| where max_GB > upper_threshold
+
+# Step 7: Remove intermediate fields for cleaner output
+| fields - lower_threshold - stdev - bytes - max_GB
+```
+
 
 ## Sources
 
