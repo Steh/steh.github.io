@@ -50,6 +50,21 @@ When working with Splunk, understanding statistical measures is crucial for base
 - **Importance**: Provides a detailed view of data distribution for precise baselining and anomaly detection.
 - **Example**: For values `10, 20, 30, 60, 80`, the 25th percentile is `20` and the 75th percentile is `60`.
 
+## Statistic Baselining
+
+### Z-Score:
+A z-score tells you how many standard deviations a value is from the mean.
+
+### IQR (Interquartile Range):
+
+IQR = Q3 - Q1 (difference between 75th and 25th percentiles).
+Advantage: Works even if data isn’t normally distribute
+
+### When to use which?
+
+* Use z-score for symmetric, bell-shaped data.
+* Use IQR for skewed or non-normal data
+
 ## Splunk Commands
 
 ### Stats
@@ -159,18 +174,18 @@ Baselining with Z-Score is a statistical method used to identify anomalies by me
    Use the `stats` command to calculate the average and standard deviation of the field you want to baseline.
 
    ```bash
-   | stats avg(response_time) as mean_response_time, stdev(response_time) as stddev_response_time
+   | stats avg(count) as mean, stdev(count) as stddev
    ```
 
 2. **Calculate the Z-Score**:
    Use the `eval` command to calculate the Z-Score for each event. The formula for Z-Score is:
    ```bash
-   Z-Score = (value - mean) / standard deviation
+   Z-Score = (count - mean) / standard deviation
    ```
 
    In Splunk:
    ```bash
-   | eval z_score = (response_time - mean_response_time) / stddev_response_time
+   | eval z_score = (count - mean) / stddev
    ```
 
 3. **Define Thresholds**:
@@ -193,7 +208,7 @@ index=web_logs sourcetype=access_combined action=failed
 | bin _time span=1h
 | stats count as failed_logins by _time
 | stats avg(failed_logins) as mean, stdev(failed_logins) as stdev
-| eval z_score = (response_time - failed_logins) / stdev
+| eval z_score = (failed_logins - mean) / stdev
 | where abs(z_score) > 3
 ```
 
@@ -252,6 +267,20 @@ index=_internal source=*license_usage.log* type="Usage"
 | fields - lower_threshold - stdev - bytes - max_GB
 ```
 
+## Optimize your results
+
+* think about how many datapoints you need for a reliable baseline
+   * n >= 30 should be the minimum
+
+### how many datapoints do you need to create a reliable baseline (experimental)
+
+* [see][def10]
+
+```bash
+## filter telidP with fewer than 20 datapoint
+| eventstats count as count_datapoints by your_values
+| where count_datapoints > 20
+```
 
 ## Sources
 
@@ -263,8 +292,10 @@ For further reading and practical examples, refer to the following resources:
 4. [Unravel the Mysteries of Variance and Standard Deviation][def3]
 5. [Using Stats in Splunk Part 1: Basic Anomaly Detection][def4]
 6. [Statistics How To: Empirical Rule ( 68-95-99.7)][def5]
-7. [Using stats, eventstats & streamstats for Threat Hunting…Stat! ][def7]
-
+7. [Using stats, eventstats & streamstats for Threat Hunting…Stat!][def7]
+8. [][def8]
+9. [Intel: Anomaly Detection ][def9]
+10. [How to Determine the Minimum Size Needed for a Statistical Sample][def10]
 
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Findingandremovingoutliers
 [def1]: https://dispatch.thorcollective.com/p/z-scoring-your-way-to-better-threat-detection
@@ -274,3 +305,6 @@ For further reading and practical examples, refer to the following resources:
 [def5]: https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/empirical-rule/
 [def6]: https://medium.com/detect-fyi/powershell-threat-hunting-identifying-obfuscation-using-standard-deviation-9b2d9f53697f
 [def7]: https://www.splunk.com/en_us/blog/security/stats-eventstats-streamstats-threat-hunting.html
+[def8]: https://dataheroes.ai/blog/anomaly-detection-techniques-you-need-to-know/
+[def9]: https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/course-anomaly-detection.html
+[def10]: https://www.dummies.com/article/academics-the-arts/math/statistics/how-to-determine-the-minimum-size-needed-for-a-statistical-sample-169793/
