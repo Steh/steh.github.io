@@ -1,5 +1,5 @@
 ---
-title: "Splunk: Baselining"
+title: "Splunk: Anomalydetection with statistics"
 categories: 
   - informationsecurity
 tags:
@@ -296,6 +296,10 @@ For further reading and practical examples, refer to the following resources:
 8. [][def8]
 9. [Intel: Anomaly Detection ][def9]
 10. [How to Determine the Minimum Size Needed for a Statistical Sample][def10]
+11. Machine Learning
+    * [Using DensityFunction for Outlier Detection in Splunk][def11]
+    * [Central Limit Theorem][def12]
+    * [Splunk Standard Scaling: ML Preprocessing, Normalization][def13]
 
 [def]: https://docs.splunk.com/Documentation/Splunk/latest/Search/Findingandremovingoutliers
 [def1]: https://dispatch.thorcollective.com/p/z-scoring-your-way-to-better-threat-detection
@@ -308,3 +312,7 @@ For further reading and practical examples, refer to the following resources:
 [def8]: https://dataheroes.ai/blog/anomaly-detection-techniques-you-need-to-know/
 [def9]: https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/course-anomaly-detection.html
 [def10]: https://www.dummies.com/article/academics-the-arts/math/statistics/how-to-determine-the-minimum-size-needed-for-a-statistical-sample-169793/
+
+[def11]: https://discoveredintelligence.com/using-densityfunction-for-outlier-detection-in-splunk/
+[def12]: https://web.archive.org/web/20180720210625/https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html
+[def13]: https://www.optimizationcore.com/guides/splunk-standard-scaling-ml-preprocessing-normalization/

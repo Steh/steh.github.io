@@ -13,7 +13,7 @@ toc: true
 
 ## 🎯 Dial-In Pourover Recipe (Lance Hedrick Style, 3× Bloom)
 
-### 📋 Brew Parameters
+### 📋 Brew Parameters V60
 
 | Parameter               | 20 g Dose                       | 15 g Dose                     |
 |-------------------------|--------------------------------|-------------------------------|
