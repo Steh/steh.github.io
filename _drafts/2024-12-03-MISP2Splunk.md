@@ -1,5 +1,5 @@
 ---
-title: "MISP2Splunk"
+title: "MISP 2 Splunk"
 categories: 
 - informationsecurity
 tags:
@@ -10,7 +10,7 @@ excerpt: ""
 toc: true
 --- 
 
-## Installation
+## Installation MISP
 
 ´´´bash
 ### generate temp install user
@@ -65,3 +65,4 @@ https://github.com/MISP/MISP/blob/2.4/INSTALL/INSTALL.sh
 * [Text][def]
 
 [def]: https://www.misp-project.org/best-practices-in-threat-intelligence.html
+https://www.misp-project.org/2024/10/22/misp_ioc_retrosearch_with_misp42splunk.html/

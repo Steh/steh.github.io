@@ -31,7 +31,7 @@ At first validate your kv-store status:
    * in my case the default cert are expired and i need to create new ones
       * At first copy the old ones to *.old (as a backup if something goes wrong)
          * ```mv ca.pem ca.pem.bak, mv cacert.pem cacert.pem.bak, mv server.pem server.pem.bak```
-      * ```bin/genRootCA.sh -d etc/auth``
+      * ```bin/genRootCA.sh -d etc/auth```
 
 # References
 
