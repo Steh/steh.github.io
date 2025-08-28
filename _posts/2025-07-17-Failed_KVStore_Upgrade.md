@@ -20,6 +20,11 @@ date: 2025-07-17
 
 # How did we resolve this?
 
+```
+#. validate cert Enddate
+openssl x509 -enddate -noout -in /opt/splunk/etc/auth/server.pem 
+```
+
 At first validate your kv-store status:
 * ```bin/splunk show kvstore-status --verbose```
 
@@ -33,10 +38,20 @@ At first validate your kv-store status:
          * ```mv ca.pem ca.pem.bak, mv cacert.pem cacert.pem.bak, mv server.pem server.pem.bak```
       * ```bin/genRootCA.sh -d etc/auth```
 
+# generate Splunk Cert with splunk
+
+* you need to uncomment the ```sslPassword``` in ```etc/system/local/server.conf```
+
+```bash
+bin/splunk createssl server-cert -d etc/auth -n server -c <server-name>
+```
+
 # References
 
 1. [Preparing custom certificates for use with KV store][def]
 2. [About self-renewing default splunk certificates][def1]
+3. [Useful OpenSSL Commands for Splunk][def2]
 
 [def]: https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/9.4/administer-the-app-key-value-store/preparing-custom-certificates-for-use-with-kv-store
 [def1]:  https://splunk.my.site.com/customer/s/article/About-renewing-default-splunk-certificates
+[def2]: https://splunk.my.site.com/customer/s/article/Useful-OpenSSL-Commands-for-Splunk
