@@ -157,11 +157,20 @@ toc: true
 - Pause: Let water nearly drain (~30 sec) between main pours
 - Ice: Add cubes one by one, wait for each to melt before adding the next
 
+
+# tornqvistcoffee kalita
+
+```bash
+First Pulse 	0s → 30g
+Second Pulse 	30s → 120g
+Third Pulse 	50s → 190g
+Fourth Pulse 	1.20min → 250g
+```
+
 ---
 
 ## Tips
 
-- Rinse filters thoroughly to avoid papery taste
 - For slow filters (e.g., CAFEC), grind coarser or shorten contact time
 - Adjust grind if brew time is not 2:30–3:00 min
 
