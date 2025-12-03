@@ -34,11 +34,11 @@ index=games
 # commands
 
 ## addtotal
-The addtotals command computes the arithmetic sum of all numeric fields for each search result. The results appear in the Statistics tab. 
+The addtotals command computes the arithmetic sum of all numeric fields for each search result. The results appear in the Statistics tab.
 
 ´´´bash
-# Calculate the sums for the fields that begin with amount or that contain the text size in the field name. Save the sums in the field called TotalAmount. 
-source="addtotalsData.csv" 
+# Calculate the sums for the fields that begin with amount or that contain the text size in the field name. Save the sums in the field called TotalAmount.
+source="addtotalsData.csv"
 | chart sum(sales) by products quarter
 | addtotals fieldname=TotalAmount amount* *size*
 
