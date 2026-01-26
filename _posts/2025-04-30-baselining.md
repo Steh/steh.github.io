@@ -28,19 +28,19 @@ When working with Splunk, understanding statistical measures is crucial for base
 - **Importance**: Less affected by extreme values, offering a robust baseline.
 - **Example**: For values `10, 20, 30, 60, 80`, the median is `30`.
 
-### Mode
-
-- **Command**: `stats mode(field)`
-- **Purpose**: Determine the most frequently occurring value in a field.
-- **Importance**: Highlights common patterns or repeated values in your dataset.
-- **Example**: For values `10, 20, 20, 60, 80`, the mode is `20`.
-
 ### Standard Deviation
 
 - **Command**: `stats stdev(field)`
 - **Purpose**: Measure the amount of variation or dispersion in a dataset.
 - **Importance**: Quantifies data spread, helping to define thresholds for normal versus abnormal behavior.
 - **Example**: For values `10, 20, 30, 60, 80`, the standard deviation is approximately `31.62`.
+
+### Mode
+
+- **Command**: `stats mode(field)`
+- **Purpose**: Determine the most frequently occurring value in a field.
+- **Importance**: Highlights common patterns or repeated values in your dataset.
+- **Example**: For values `10, 20, 20, 60, 80`, the mode is `20`.
 
 ### Quartiles and Percentiles
 
@@ -96,14 +96,14 @@ Baselining with standard deviation is a statistical method used to identify norm
    Use the `stats avg(field)` command to calculate the average value of the field you want to baseline.
 
    ```bash
-   | stats avg(response_time) as mean_response_time
+   | stats avg(count) as mean
    ```
 
 2. **Calculate the Standard Deviation**:
-   Use the `stats stdev(field)` command to calculate the standard deviation of the field.
+   Use the `stats stdev(count)` command to calculate the standard deviation of the field.
 
    ```bash
-   | stats stdev(response_time) as stddev_response_time
+   | stats stdev(count) as stdev
    ```
 
 3. **Define Thresholds**:
@@ -115,9 +115,9 @@ Baselining with standard deviation is a statistical method used to identify norm
    Use a `where` clause to filter events that fall outside the thresholds.
 
    ```bash
-   | eval lower_threshold = mean_response_time - (2 * stddev_response_time)
-   | eval upper_threshold = mean_response_time + (2 * stddev_response_time)
-   | where response_time < lower_threshold OR response_time > upper_threshold
+   | eval lower_threshold = mean - (2 * stdev)
+   | eval upper_threshold = mean + (2 * stdev)
+   | where count < lower_threshold OR count > upper_threshold
    ```
 
 ### Example Use Case: Standard Deviation
@@ -125,11 +125,11 @@ Baselining with standard deviation is a statistical method used to identify norm
 Suppose you are monitoring the response time of a web application. You can use the following search to identify anomalies:
 
 ```bash
-index=web_logs sourcetype=access_combined
-| stats avg(response_time) as mean_response_time, stdev(response_time) as stddev_response_time
-| eval lower_threshold = mean_response_time - (2 * stddev_response_time)
-| eval upper_threshold = mean_response_time + (2 * stddev_response_time)
-| where response_time < lower_threshold OR response_time > upper_threshold
+| tstats count from datamodel=Network_Traffic by _time span=1d
+| eventstats avg(count) as mean, stddev(count) as stddev
+| eval lower_threshold = mean - (2 * stddev)
+| eval upper_threshold = mean + (2 * stddev)
+| where count < lower_threshold OR count > upper_threshold
 ```
 
 This search calculates the mean and standard deviation of response times, defines thresholds, and filters out events that are outside the normal range.
@@ -139,9 +139,9 @@ This search calculates the mean and standard deviation of response times, define
 Baselining with Z-Score is a statistical method used to identify anomalies by measuring how far a data point is from the mean in terms of standard deviations. 
 
 > **The Empirical Rule [1][def1], [2][def5]**
->  - 68% of data falls within ±1 standard deviation
->  - 95% falls within ±2 standard deviations
->  - 99.7% falls within ±3 standard deviations
+> 68% of data falls within ±1 standard deviation
+> 95% falls within ±2 standard deviations
+> 99.7% falls within ±3 standard deviations
 
 ### Steps to Baseline with Z-Score
 
@@ -149,18 +149,20 @@ Baselining with Z-Score is a statistical method used to identify anomalies by me
    Use the `stats` command to calculate the average and standard deviation of the field you want to baseline.
 
    ```bash
-   | stats avg(response_time) as mean_response_time, stdev(response_time) as stddev_response_time
+   | stats avg(count) as mean, stddev(count) as stddev
    ```
 
 2. **Calculate the Z-Score**:
    Use the `eval` command to calculate the Z-Score for each event. The formula for Z-Score is:
+
    ```bash
-   Z-Score = (value - mean) / standard deviation
+   Z-Score = (value - mean) / "standard deviation"
    ```
 
    In Splunk:
+
    ```bash
-   | eval z_score = (response_time - mean_response_time) / stddev_response_time
+   | eval z_score = (count - mean) / stddev
    ```
 
 3. **Define Thresholds**:
@@ -168,7 +170,7 @@ Baselining with Z-Score is a statistical method used to identify anomalies by me
    - Z-Score > 3 or Z-Score < -3 (indicating the data point is more than 3 standard deviations away from the mean).
 
 4. **Filter Anomalies**:
-   Use a `where` clause to filter events with Z-Scores outside the threshold.
+   Use a `where` clause to filter events with Z-Scores outside the threshold. `abs()` returns the absolute value.
 
    ```bash
    | where abs(z_score) > 3
@@ -182,12 +184,12 @@ Suppose you are monitoring the response time of a web application. You can use t
 index=web_logs sourcetype=access_combined action=failed
 | bin _time span=1h
 | stats count as failed_logins by _time
-| stats avg(failed_logins) as mean_failed, stdev(failed_logins) as stddev_failed
-| eval z_score = (response_time - failed_logins) / stddev_failed
+| stats avg(failed_logins) as mean_failed, stddev(failed_logins) as stddev_failed
+| eval z_score = (failed_logins - mean_failed) / stddev_failed
 | where abs(z_score) > 3
 ```
 
-This search calculates the mean and standard deviation of response times, computes the Z-Score for each event, and filters out events with Z-Scores greater than 3 or less than -3.
+This search calculates the mean and standard deviation of failed login counts, computes the Z-Score for each event, and filters out events with Z-Scores greater than 3 or less than -3.
 
 ## Sources
 
