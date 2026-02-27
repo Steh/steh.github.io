@@ -23,10 +23,9 @@ Outlier Detection Algorithms
 ## commands
 
 ```| anomalydetection```
-* 
 
 ## source
 
 * [Text][def]
-äl
+
 [def]: https://steh.github.io
